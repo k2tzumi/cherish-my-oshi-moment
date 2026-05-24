@@ -1,31 +1,30 @@
 ---
 # You can also start simply with 'default'
 theme: seriph
-# random image from a curated Unsplash collection by Anthony
-# like them? see https://unsplash.com/collections/94734566/slidev
+# TODO: 背景画像を変更する（現在はデフォルト）
 background: https://cover.sli.dev
-# some information about your slides (markdown enabled)
-title: Welcome to Slidev
+title: 推しは推せるときに推せ！ライフステージ変化に向き合う
 info: |
-  ## Slidev Starter Template
-  Presentation slides for developers.
-
-  Learn more at [Sli.dev](https://sli.dev)
-# apply unocss classes to the current slide
+  エンジニアがこの先生きのこるためのカンファレンス2026
+  https://fortee.jp/kinoko-2026/proposal/9fcb212e-f5d8-4f7f-94ad-cda8478712b8
 class: text-center
-# https://sli.dev/features/drawing
 drawings:
   persist: false
-# slide transition: https://sli.dev/guide/animations.html#slide-transitions
 transition: slide-left
-# enable MDC Syntax: https://sli.dev/features/mdc
+seoMeta:
+  ogImage: auto
+duration: 20min
+timer: stopwatch
 mdc: true
+highlighter: shiki
+css: unocss
+colorSchema: dark
+routerMode: hash
 ttsConfig:
-  voiceName: "en-US-Neural2-D"
-  languageCode: "en-US"
-  usePregenerated: false
+  voiceName: "ja-JP-Neural2-B"
+  languageCode: "ja-JP"
   clickBreakTime: "500ms"
-  prefetch: true
+  usePregenerated: true
 addons:
   - '@katzumi/slidev-addon-qrcode'
   - '@katzumi/slidev-addon-ogp-image'
@@ -34,9 +33,11 @@ addons:
   - slidev-addon-rabbit
 ---
 
-# Welcome to Slidev
+# 推しは推せるときに推せ！<br />ライフステージ変化に向き合う
 
-Presentation slides for developers @ v0.3.2
+エンジニアがこの先生きのこるためのカンファレンス 2026 June 28, 2026.  
+v0.0.1  
+@katzumi（かつみ）
 
 <div @click="$slidev.nav.next" class="mt-12 py-1" hover:bg="white op-10">
   Press Space for next page <carbon:arrow-right />
@@ -46,39 +47,62 @@ Presentation slides for developers @ v0.3.2
   <button @click="$slidev.nav.openInEditor" title="Open in Editor" class="slidev-icon-btn">
     <carbon:edit />
   </button>
-  <a href="https://github.com/k2tzumi/slidev-boilerplate" target="_blank" class="slidev-icon-btn">
+  <a href="https://github.com/k2tzumi/cherish-my-oshi-moment" target="_blank" class="slidev-icon-btn">
     <carbon:logo-github />
   </a>
 </div>
 
 <!--
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
+本日は「推しは推せるときに推せ！ライフステージ変化に向き合う」というタイトルで、お話しさせていただきます。  
+どうぞよろしくお願いいたします。
 -->
 
 ---
 transition: fade-out
+layout: two-cols-header
+class: text-left
 ---
 
-# What is Slidev？
+# <carbon-user-avatar /> 自己紹介
 
-Slidev is a slides maker and presenter designed for developers, consist of the following features
+katzumi（かつみ）と申します。
 
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - themes can be shared and re-used as npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embed Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export to PDF, PPTX, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - virtually anything that's possible on a webpage is possible in Slidev
-<br>
-<br>
+「障害のない社会をつくる」をビジョンとする「LITALICO（りたりこ）」に所属しています。
+<a href="https://litalico.co.jp/" target="_blank">
+  <img src="https://litalico.co.jp/ogp.png" class="w-40 mt-3 mb-8" />
+</a>
 
-Read more about [Why Slidev?](https://sli.dev/guide/why)
+以下のアカウントで活動しています。
 
-<!--
-You can have `style` tag in markdown to override the style for the current page.
-Learn more: https://sli.dev/features/slide-scope-style
--->
+::left::
+
+<div class="flex items-center mb-6">
+  <img src="https://pbs.twimg.com/profile_images/1961960367351005184/LpDD3fDz_400x400.jpg" class="rounded-full w-24 mr-6"/>
+  <QRCode value="https://twitter.com/katzchum" class="w-28 h-28" />
+</div>
+
+<div class="flex items-center text-xl mt-4">
+  <simple-icons-x class="mr-2" />
+  <a href="https://twitter.com/katzchum" target="_blank" class="font-bold">katzchum</a>
+</div>
+
+::right::
+
+<div class="flex flex-col space-y-4">
+  <div class="flex items-center">
+    <img src="https://avatars.githubusercontent.com/u/1182787?v=4" class="rounded-full w-24 mr-6"/>
+    <div class="flex flex-col">
+      <div class="flex items-center text-xl">
+        <logos-github-octocat class="mr-2" />
+        <a href="https://github.com/k2tzumi" target="_blank" class="font-bold">k2tzumi</a>
+      </div>
+      <div class="flex items-center text-xl mt-2">
+        <simple-icons-zenn class="mr-2 text-green-400" />
+        <a href="https://zenn.dev/katzumi" target="_blank" class="font-bold">katzumi</a>
+      </div>
+    </div>
+  </div>
+</div>
 
 <style>
 h1 {
@@ -93,569 +117,1159 @@ h1 {
 </style>
 
 <!--
-Here is another comment.
+みなさん、こんにちは。LITALICOの「かつみ」と申します。  
+ご覧のXとGitHub等で活動しています。
 -->
 
 ---
-transition: slide-up
-level: 2
+layout: two-cols-header
+transition: fade-out
 ---
 
-# Navigation
+# <carbon-information /> お願い 🙏
 
-Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/ui#navigation-bar)
+写真撮影、SNS での実況について
 
-## Keyboard Shortcuts
+登壇者の励みになるので是非ともご意見やご感想など、フィードバック頂けると助かります mm  
+スライドの内容は、すでに以下の場所で公開されていますので、ぜひお手元でご覧ください
 
-|                                                     |                             |
-| --------------------------------------------------- | --------------------------- |
-| <kbd>right</kbd> / <kbd>space</kbd>                 | next animation or slide     |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd>                                       | previous slide              |
-| <kbd>down</kbd>                                     | next slide                  |
+* [forteeのプロポーザルページ](https://fortee.jp/kinoko-2026/proposal/9fcb212e-f5d8-4f7f-94ad-cda8478712b8)
+* または <fa6-brands-square-x-twitter /> の投稿
 
-<!-- https://sli.dev/guide/animations.html#click-animation -->
-<img
-  v-click
-  class="absolute -bottom-9 -left-7 w-80 opacity-50"
-  src="https://sli.dev/assets/arrow-bottom-left.svg"
-  alt=""
-/>
-<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
+::left::
 
----
-layout: two-cols
-layoutClass: gap-16
----
-
-# Table of contents
-
-You can use the `Toc` component to generate a table of contents for your slides:
-
-```html
-<Toc minDepth="1" maxDepth="1" />
-```
-
-The title will be inferred from your slide content, or you can override it with `title` and `level` in your frontmatter.
+<Transform :scale="2.5">
+　　　🙆‍♀📷<ph-projector-screen-chart-light /><br />
+　　　🙅‍♂📹💸<br />
+　　　🙅📸👨‍👦‍👦<br />
+</Transform>
 
 ::right::
 
-<Toc text-sm minDepth="1" maxDepth="2" />
-
----
-layout: image-right
-image: https://cover.sli.dev
----
-
-# Code
-
-Use code snippets and get the highlighting directly, and even types hover！
-
-```ts {all|5|7|7-8|10|all} twoslash
-// TwoSlash enables TypeScript hover information
-// and errors in markdown code blocks
-// More at https://shiki.style/packages/twoslash
-
-import { computed, ref } from 'vue'
-
-const count = ref(0)
-const doubled = computed(() => count.value * 2)
-
-doubled.value = 2
-```
-
-<arrow v-click="[4, 5]" x1="350" y1="310" x2="195" y2="334" color="#953" width="2" arrowSize="1" />
-
-<!-- This allow you to embed external code blocks -->
-<<< @/snippets/external.ts#snippet
-
-<!-- Footer -->
-
-[Learn more](https://sli.dev/features/line-highlighting)
-
-<!-- Inline style -->
-<style>
-.footnotes-sep {
-  @apply mt-5 opacity-10;
-}
-.footnotes {
-  @apply text-sm opacity-75;
-}
-.footnote-backref {
-  display: none;
-}
-</style>
+<br />
+<Transform :scale="2">
+<fa6-brands-square-x-twitter />
+</Transform>
+<br />
+<a href="https://x.com/search?q=%23%E3%81%8D%E3%81%AE%E3%81%932026%20%23a&f=live">#きのこ2026 #a</a>
 
 <!--
-Notes can also sync with clicks
-
-[click] This will be highlighted after the first click
-
-[click] Highlighted with `count = ref(0)`
-
-[click:3] Last click (skip two clicks)
+まずはじめにお願いです。写真撮影、SNSでの実況、大歓迎です。スライドも公開済みですので、ぜひハッシュタグをつけて、ご意見やご感想をフィードバックいただけると励みになります。
 -->
 
 ---
-level: 2
----
 
-# Shiki Magic Move
+# <carbon-presentation-file /> 本日のお話すること
+推し駆動で人生が変わった話
 
-Powered by [shiki-magic-move](https://shiki-magic-move.netlify.app/), Slidev supports animations across multiple code snippets.
-
-Add multiple code blocks and wrap them with <code>````md magic-move</code> (four backticks) to enable the magic move. For example:
-
-````md magic-move {lines: true}
-```ts {*|2|*}
-// step 1
-const author = reactive({
-  name: 'John Doe',
-  books: [
-    'Vue 2 - Advanced Guide',
-    'Vue 3 - Basic Guide',
-    'Vue 4 - The Mystery'
-  ]
-})
-```
-
-```ts {*|1-2|3-4|3-4,8}
-// step 2
-export default {
-  data() {
-    return {
-      author: {
-        name: 'John Doe',
-        books: [
-          'Vue 2 - Advanced Guide',
-          'Vue 3 - Basic Guide',
-          'Vue 4 - The Mystery'
-        ]
-      }
-    }
-  }
-}
-```
-
-```ts
-// step 3
-export default {
-  data: () => ({
-    author: {
-      name: 'John Doe',
-      books: [
-        'Vue 2 - Advanced Guide',
-        'Vue 3 - Basic Guide',
-        'Vue 4 - The Mystery'
-      ]
-    }
-  })
-}
-```
-
-Non-code blocks are ignored.
-
-```vue
-<!-- step 4 -->
-<script setup>
-const author = {
-  name: 'John Doe',
-  books: [
-    'Vue 2 - Advanced Guide',
-    'Vue 3 - Basic Guide',
-    'Vue 4 - The Mystery'
-  ]
-}
-</script>
-```
-````
-
----
-
-# Components
-
-<div grid="~ cols-2 gap-4">
-<div>
-
-You can use Vue components directly inside your slides.
-
-We have provided a few built-in components like `<Tweet/>` and `<Youtube/>` that you can use directly. And adding your custom components is also super easy.
-
-```html
-<Counter :count="10" />
-```
-
-<!-- ./components/Counter.vue -->
-<Counter :count="10" m="t-4" />
-
-Check out [the guides](https://sli.dev/builtin/components.html) for more.
-
-</div>
-<div>
-
-```html
-<Tweet id="1390115482657726468" />
-```
-
-<Tweet id="1390115482657726468" scale="0.65" />
-
-</div>
+<div class="mt-6 grid grid-cols-5 gap-3">
+  <div class="rounded-xl border-2 border-slate-300/70 bg-slate-100/10 px-3 py-4 flex flex-col shadow-lg">
+    <div class="text-xs text-slate-200/90 tracking-widest">🔇 PART 1</div>
+    <div class="mt-3 text-base leading-snug font-bold">沈黙の数年間</div>
+    <div class="mt-3 text-xs text-white/80 leading-relaxed">対外アウトプット・ゼロの日々</div>
+  </div>
+  <div class="rounded-xl border-2 border-pink-300/70 bg-pink-100/10 px-3 py-4 flex flex-col shadow-lg">
+    <div class="text-xs text-pink-200/90 tracking-widest">⚡ PART 2</div>
+    <div class="mt-3 text-base leading-snug font-bold">運命の出会い</div>
+    <div class="mt-3 text-xs text-white/80 leading-relaxed">OSSと推しとの出会い</div>
+  </div>
+  <div class="rounded-xl border-2 border-green-300/70 bg-green-100/10 px-3 py-4 flex flex-col shadow-lg">
+    <div class="text-xs text-green-200/90 tracking-widest">🔄 PART 3</div>
+    <div class="mt-3 text-base leading-snug font-bold">推し駆動<br />サイクル</div>
+    <div class="mt-3 text-xs text-white/80 leading-relaxed">フィードバックの連鎖</div>
+  </div>
+  <div class="rounded-xl border-2 border-amber-300/70 bg-amber-100/10 px-3 py-4 flex flex-col shadow-lg">
+    <div class="text-xs text-amber-200/90 tracking-widest">🌊 PART 4</div>
+    <div class="mt-3 text-base leading-snug font-bold">ライフステージ<br />を味方に</div>
+    <div class="mt-3 text-xs text-white/80 leading-relaxed">3つの追い風</div>
+  </div>
+  <div class="rounded-xl border-2 border-rose-300/70 bg-rose-100/10 px-3 py-4 flex flex-col shadow-lg">
+    <div class="text-xs text-rose-200/90 tracking-widest">🏄 PART 5</div>
+    <div class="mt-3 text-base leading-snug font-bold">推しは推せる<br />ときに推せ</div>
+    <div class="mt-3 text-xs text-white/80 leading-relaxed">波乗りの戦略</div>
+  </div>
 </div>
 
 <!--
-Presenter note with **bold**, *italic*, and ~~striked~~ text.
-
-Also, HTML elements are valid:
-<div class="flex w-full">
-  <span style="flex-grow: 1;">Left content</span>
-  <span>Right content</span>
-</div>
+本日は5つのパートでお話しします。  
+私自身が「何者でもなかった」状態から、どのように変化していったのか。  
+その実体験を通して、みなさんの背中を少し押せたらいいなと思っています。
 -->
 
 ---
-class: px-20
+layout: center
+transition: fade-out
+class: py-4
 ---
 
-# Themes
+# <mdi-clock-time-eight-outline /> Before: 40代になるまでの私
 
-Slidev comes with powerful theming support. Themes can provide styles, layouts, components, or even configurations for tools. Switching between themes by just **one edit** in your frontmatter:
-
-<div grid="~ cols-2 gap-2" m="t-2">
-
-```yaml
----
-theme: default
----
-```
-
-```yaml
----
-theme: seriph
----
-```
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-default/01.png?raw=true" alt="">
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-seriph/01.png?raw=true" alt="">
-
+<div class="mt-4 text-left max-w-3xl mx-auto space-y-2 text-base">
+  <div>31歳：協力会社だけど営業同行して東京・大阪中心に日本全国出張の旅</div>
+  <div>32歳：協力会社間の抗争に負け自社に復帰。案件を一本釣りする為に単身引っ越し（8年ぶり2回目）</div>
+  <div>33歳：前職関連のリファラルでEC系ベンチャーに。ブラックな環境になじんむ</div>
+  <div>34歳：B社モールのPLに。3拠点最大50名規模に。ホテル住まい</div>
+  <div>35歳：モールリリース保守フェーズ。CMで死亡。部下の結婚式で弄られる</div>
+  <div>36歳：モール事業が早々に終焉。2匹目のドジョウはおらず本業サービスが辛い状態に</div>
+  <div>37歳：ゲーム会社に買われる。Naver本社に呼ばれてサービスを説明。単身赴任へ切替</div>
+  <div>38歳：前職のリファラルでVGへ。ポイントメディアの中の人に</div>
+  <div>39歳：前職部下を協力会社として召喚し各種ポイント・アイテム交換の繋ぎこみ。大手とも連携</div>
+  <div>40歳：航空大手A社モールをローンチ。所属部署が統合される</div>
+  <div class="text-amber-300 font-bold">41歳：転職。そしてコロナ禍へ——</div>
 </div>
 
-Read more about [How to use a theme](https://sli.dev/guide/theme-addon#use-theme) and
-check out the [Awesome Themes Gallery](https://sli.dev/resources/theme-gallery).
-
----
-
-# Clicks Animations
-
-You can add `v-click` to elements to add a click animation.
-
-<div v-click>
-
-This shows up when you click the slide:
-
-```html
-<div v-click>This shows up when you click the slide.</div>
-```
-
+<div v-click="1" class="mt-6 text-3xl font-extrabold text-center text-red-300">
+  対外的なアウトプット、ゼロでした。
 </div>
 
-<br>
-
-<v-click>
-
-The <span v-mark.red="3"><code>v-mark</code> directive</span>
-also allows you to add
-<span v-mark.circle.orange="4">inline marks</span>
-, powered by [Rough Notation](https://roughnotation.com/):
-
-```html
-<span v-mark.underline.orange>inline markers</span>
-```
-
-</v-click>
-
-<div mt-20 v-click>
-
-[Learn more](https://sli.dev/guide/animations#click-animation)
-
-</div>
+<!--
+まず、自己紹介がてら40代になるまでの私を振り返ってみます。  
+見ての通り、転職・単身赴任・ホテル住まい・会社買収と、怒涛の10年でした。  
+ポジション・ポジションではやれることをやってきたつもりでした。  
+でもこれだけ動いてきたのに——。  
+この会場にいる方で、私に憧れてるような良いモデルがいたと思って来た方はいないと思いますが（笑）、  
+[click] 対外的なアウトプット、ゼロでした。
+-->
 
 ---
+transition: fade-out
+---
 
-# Motions
+# <mdi-trending-up /> After: 2023年以降の私
 
-Motion animations are powered by [@vueuse/motion](https://motion.vueuse.org/), triggered by `v-motion` directive.
+<div class="mt-6 grid grid-cols-3 gap-6">
+  <div class="rounded-xl border-2 border-green-400/70 bg-green-400/10 p-5 flex flex-col items-center shadow-lg">
+    <simple-icons-zenn class="text-5xl text-green-400 mb-3" />
+    <div class="text-lg font-bold mb-2">Zenn</div>
+    <a href="https://zenn.dev/katzumi" target="_blank" class="text-sm text-green-300">zenn.dev/katzumi</a>
+    <div class="mt-3 text-sm text-white/80 text-center">65記事・Zenn Book著者<br />トータル1,328Likes</div>
+  </div>
+  <div class="rounded-xl border-2 border-slate-400/70 bg-slate-400/10 p-5 flex flex-col items-center shadow-lg">
+    <logos-github-octocat class="text-5xl mb-3" />
+    <div class="text-lg font-bold mb-2">GitHub</div>
+    <a href="https://github.com/k2tzumi" target="_blank" class="text-sm text-slate-300">github.com/k2tzumi</a>
+    <div class="mt-3 text-sm text-white/80 text-center">OSS貢献を拡大中<br /><a href="https://github.com/k1LoW/runn/issues?q=is%3Apr%20author%3Ak2tzumi%20sort%3Acreated-asc">runn 77PR</a>・他OSSにも貢献<br />自身のOSSも公開・開発</div>
+  </div>
+  <div class="rounded-xl border-2 border-blue-400/70 bg-blue-400/10 p-5 flex flex-col items-center shadow-lg">
+    <carbon-presentation-file class="text-5xl text-blue-400 mb-3" />
+    <div class="text-lg font-bold mb-2">Docswell</div>
+    <a href="https://www.docswell.com/user/katzumi" target="_blank" class="text-sm text-blue-300">docswell.com/user/katzumi</a>
+    <div class="mt-3 text-sm text-white/80 text-center">カンファレンス登壇多数<br />公開スライド21本</div>
+  </div>
+</div>
 
-```html
 <div
-  v-motion
-  :initial="{ x: -80 }"
-  :enter="{ x: 0 }"
-  :click-3="{ x: 80 }"
-  :leave="{ x: 1000 }"
+  v-click="1"
+  class="absolute inset-0 z-20 flex items-center justify-center bg-black/50 backdrop-blur-sm transition duration-700 ease-in-out"
+  :class="$clicks < 1 ? 'opacity-0 pointer-events-none' : 'opacity-100 pointer-events-auto'"
 >
-  Slidev
-</div>
-```
-
-<div class="w-60 relative">
-  <div class="relative w-40 h-40">
-    <img
-      v-motion
-      :initial="{ x: 800, y: -100, scale: 1.5, rotate: -50 }"
-      :enter="final"
-      class="absolute inset-0"
-      src="https://sli.dev/logo-square.png"
-      alt=""
-    />
-    <img
-      v-motion
-      :initial="{ y: 500, x: -100, scale: 2 }"
-      :enter="final"
-      class="absolute inset-0"
-      src="https://sli.dev/logo-circle.png"
-      alt=""
-    />
-    <img
-      v-motion
-      :initial="{ x: 600, y: 400, scale: 2, rotate: 100 }"
-      :enter="final"
-      class="absolute inset-0"
-      src="https://sli.dev/logo-triangle.png"
-      alt=""
-    />
-  </div>
-
-  <div
-    class="text-5xl absolute top-14 left-40 text-[#2B90B6] -z-1"
-    v-motion
-    :initial="{ x: -80, opacity: 0}"
-    :enter="{ x: 0, opacity: 1, transition: { delay: 2000, duration: 1000 } }">
-    Slidev
+  <div class="semantic-overlay semantic-positive p-10 backdrop-blur-lg rounded-2xl shadow-2xl transform scale-125 transition duration-500">
+    <h3 class="text-5xl font-extrabold text-white mb-4">
+      <mdi-account-arrow-right class="inline mr-2 text-amber-300" />
+      同じ人間です
+    </h3>
+    <p class="text-2xl text-green-300 font-bold tracking-wide leading-relaxed">
+      <span class="text-yellow-300 font-bold">
+        <mdi-calendar-star class="inline mr-2" />40代から、本格始動しました
+      </span>
+    </p>
   </div>
 </div>
 
-<!-- vue script setup scripts can be directly used in markdown, and will only affects current page -->
-<script setup lang="ts">
-const final = {
-  x: 0,
-  y: 0,
-  rotate: 0,
-  scale: 1,
-  transition: {
-    type: 'spring',
-    damping: 10,
-    stiffness: 20,
-    mass: 2
-  }
-}
-</script>
-
-<div
-  v-motion
-  :initial="{ x:35, y: 30, opacity: 0}"
-  :enter="{ y: 0, opacity: 1, transition: { delay: 3500 } }">
-
-[Learn more](https://sli.dev/guide/animations.html#motion)
-
-</div>
-
----
-
-# LaTeX
-
-LaTeX is supported out-of-box. Powered by [KaTeX](https://katex.org/).
-
-<div h-3 />
-
-Inline $\sqrt{3x-1}+(1+x)^2$
-
-Block
-$$ {1|3|all}
-\begin{aligned}
-\nabla \cdot \vec{E} &= \frac{\rho}{\varepsilon_0} \\
-\nabla \cdot \vec{B} &= 0 \\
-\nabla \times \vec{E} &= -\frac{\partial\vec{B}}{\partial t} \\
-\nabla \times \vec{B} &= \mu_0\vec{J} + \mu_0\varepsilon_0\frac{\partial\vec{E}}{\partial t}
-\end{aligned}
-$$
-
-[Learn more](https://sli.dev/features/latex)
-
----
-
-# Diagrams
-
-You can create diagrams / graphs from textual descriptions, directly in your Markdown.
-
-<div class="grid grid-cols-4 gap-5 pt-4 -mb-6">
-
-```mermaid {scale: 0.5, alt: 'A simple sequence diagram'}
-sequenceDiagram
-    Alice->John: Hello John, how are you?
-    Note over Alice,John: A typical interaction
-```
-
-```mermaid {theme: 'neutral', scale: 0.8}
-graph TD
-B[Text] --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
-```
-
-```mermaid
-mindmap
-  root((mindmap))
-    Origins
-      Long history
-      ::icon(fa fa-book)
-      Popularisation
-        British popular psychology author Tony Buzan
-    Research
-      On effectiveness<br/>and features
-      On Automatic creation
-        Uses
-            Creative techniques
-            Strategic planning
-            Argument mapping
-    Tools
-      Pen and paper
-      Mermaid
-```
-
-```plantuml {scale: 0.7}
-@startuml
-
-package "Some Group" {
-  HTTP - [First Component]
-  [Another Component]
-}
-
-node "Other Groups" {
-  FTP - [Second Component]
-  [First Component] --> FTP
-}
-
-cloud {
-  [Example 1]
-}
-
-database "MySql" {
-  folder "This is my folder" {
-    [Folder 3]
-  }
-  frame "Foo" {
-    [Frame 4]
-  }
-}
-
-[Another Component] --> [Example 1]
-[Example 1] --> [Folder 3]
-[Folder 3] --> [Frame 4]
-
-@enduml
-```
-
-</div>
-
-Learn more: [Mermaid Diagrams](https://sli.dev/features/mermaid) and [PlantUML Diagrams](https://sli.dev/features/plantuml)
-
----
-foo: bar
-dragPos:
-  square: 691,32,167,_,-16
----
-
-# Draggable Elements
-
-Double-click on the draggable elements to edit their positions.
-
-<br>
-
-###### Directive Usage
-
-```md
-<img v-drag="'square'" src="https://sli.dev/logo.png">
-```
-
-<br>
-
-###### Component Usage
-
-```md
-<v-drag text-3xl>
-  <div class="i-carbon:arrow-up" />
-  Use the `v-drag` component to have a draggable container!
-</v-drag>
-```
-
-<v-drag pos="618,206,261,_,-15">
-  <div text-center text-3xl border border-main rounded>
-    Double-click me!
-  </div>
-</v-drag>
-
-<img v-drag="'square'" src="https://sli.dev/logo.png">
-
-###### Draggable Arrow
-
-```md
-<v-drag-arrow two-way />
-```
-
-<v-drag-arrow pos="67,452,253,46" two-way op70 />
-
----
-src: ./pages/imported-slides.md
-hide: false
----
-
----
-
-# Monaco Editor
-
-Slidev provides built-in Monaco Editor support.
-
-Add `{monaco}` to the code block to turn it into an editor:
-
-```ts {monaco}
-import { ref } from 'vue'
-import { emptyArray } from './external'
-
-const arr = ref(emptyArray(10))
-```
-
-Use `{monaco-run}` to create an editor that can execute the code directly in the slide:
-
-```ts {monaco-run}
-import { version } from 'vue'
-import { emptyArray, sayHello } from './external'
-
-sayHello()
-console.log(`vue ${version}`)
-console.log(emptyArray<number>(10).reduce(fib => [...fib, fib.at(-1)! + fib.at(-2)!], [1, 1]))
-```
+<!--
+そして2023年以降はこんな感じになっています。  
+Zennでの記事執筆、GitHubへのOSS貢献、各地のカンファレンスでの登壇。  
+おかげさまで記事がバズったり、登壇の機会を頂いたりしています。  
+今回もこの場で発表させて頂いているわけですが、もっと凄いエンジニアもいる中で、申し訳ない気もしています（笑）。  
+[click] ただ、2023年からのこの流れというのはあまりない事例だと思うので、僭越ながら発表させていただきます。  
+同じ人間です。40代から、本格始動しました。
+-->
 
 ---
 layout: center
 class: text-center
 ---
 
-# Learn More
-
-[Documentation](https://sli.dev) · [GitHub](https://github.com/slidevjs/slidev) · [Showcases](https://sli.dev/resources/showcases)
-
-<div class="flex justify-center">
-
-<QRCode value="https://github.com/k2tzumi/slidev-boilerplate" color="0e0c0d" image="github-mark.svg" />
-
+<div class="text-8xl font-extrabold mb-8">
+  🔇
+</div>
+<div class="text-5xl font-bold mb-4">PART 1</div>
+<div class="text-3xl font-bold text-slate-300">
+  沈黙の数年間
+</div>
+<div class="mt-4 text-xl text-white/60">
+  対外アウトプット・ゼロの日々
 </div>
 
-<div class="flex justify-center">
+<!--
+まずPART 1。沈黙の数年間についてお話しします。
+-->
 
-<OgpImage url="https://github.com/k2tzumi/slidev-boilerplate" />
+---
+transition: fade-out
+layout: center
+---
 
+# <mdi-comment-question-outline /> 「自分には特別な強みなんてない」
+
+<div class="mt-8 text-2xl font-bold text-center text-white/90">
+  この気持ち、ありませんか？
 </div>
 
-<PoweredBySlidev mt-10 />
+<div class="mt-8 grid grid-cols-2 gap-6 max-w-3xl mx-auto">
+  <div v-click="1" class="rounded-xl border-2 border-white/20 bg-white/5 p-5 text-center">
+    <div class="text-4xl mb-3">😔</div>
+    <div class="text-base">"対外的に活躍するエンジニアは<br />特別な人たちだ"</div>
+  </div>
+  <div v-click="2" class="rounded-xl border-2 border-white/20 bg-white/5 p-5 text-center">
+    <div class="text-4xl mb-3">⏳</div>
+    <div class="text-base">"年齢的にも今さら<br />始めても遅い気がする"</div>
+  </div>
+  <div v-click="3" class="rounded-xl border-2 border-white/20 bg-white/5 p-5 text-center">
+    <div class="text-4xl mb-3">🏠</div>
+    <div class="text-base">"子育て・家庭があって<br />時間が取れない"</div>
+  </div>
+  <div v-click="4" class="rounded-xl border-2 border-white/20 bg-white/5 p-5 text-center">
+    <div class="text-4xl mb-3">🗣️</div>
+    <div class="text-base">"語れるような<br />ネタが自分にはない"</div>
+  </div>
+</div>
 
+<!--
+「自分には特別な強みなんてない」。そう思って過ごした時期が、私にもありました。  
+[click] 対外的に活躍するエンジニアは特別な人たちだと思っていました。  
+[click] 年齢的にも今さら始めても遅いかなと。  
+[click] 子育てや家庭があって時間も取れない。  
+[click] 語れるようなネタが自分にはない。  
+このセッションは、そういう気持ちを抱えているすべての方に向けてお話しします。
+-->
+
+---
+transition: fade-out
+---
+
+# <carbon-building /> 前職にはあったもの：技術力評価会
+
+<div class="mt-6 grid grid-cols-2 gap-6">
+  <div class="rounded-xl border-2 border-blue-400/50 bg-blue-400/10 p-6">
+    <div class="text-lg font-bold text-blue-300 mb-4"><carbon-group class="inline mr-2" />Voyage Group（現 CARTA HOLDINGS）時代</div>
+    <ul class="space-y-3 text-base">
+      <li>周りはつよつよエンジニアのタレント集団</li>
+      <li>半期ごとに技術的アウトプットを<br />発表する文化（技術力評価会）</li>
+      <li>評価会は正直、<span class="text-blue-300 font-bold">辛かった…</span></li>
+    </ul>
+  </div>
+  <div class="rounded-xl border-2 border-amber-400/50 bg-amber-400/10 p-6">
+    <div class="text-lg font-bold text-amber-300 mb-4"><mdi-thought-bubble-outline class="inline mr-2" />心の中では</div>
+    <ul class="space-y-3 text-base">
+      <li>アウトプットはしていたが<span class="text-amber-300 font-bold">自発的</span>ではなかった</li>
+      <li>評価としても正直イマイチだった</li>
+      <li>でも社外発表している人への<br /><span class="text-amber-300 font-bold">憧れ</span>はずっとあった</li>
+    </ul>
+  </div>
+</div>
+
+<!--
+前職のVoyageGroupには「技術力評価会」という文化がありました。  
+つよつよエンジニアのタレント集団の中で、半期ごとにアウトプットを発表する場があったんです。  
+評価会は正直辛かったです。  
+ただ、アウトプットはしていたものの、自発的なものではありませんでした。評価もイマイチでした。  
+でも、社外で発表しているエンジニアへの憧れは、ずっと心の中にありました。
+-->
+
+---
+transition: fade-out
+---
+
+# <mdi-weather-lightning-rainy /> 転職＋コロナ禍＝アウトプットの場が消えた
+
+<div class="mt-8 flex flex-col items-center gap-6">
+  <div class="flex items-center gap-6 text-xl">
+    <div class="rounded-xl border-2 border-blue-400/50 bg-blue-400/10 px-6 py-4 text-center">
+      <div class="text-3xl mb-2">🏢</div>
+      <div class="font-bold">事業会社へ転職</div>
+      <div class="text-sm text-white/70 mt-1">Web系ではない</div>
+    </div>
+    <div class="text-3xl text-white/50">＋</div>
+    <div class="rounded-xl border-2 border-red-400/50 bg-red-400/10 px-6 py-4 text-center">
+      <div class="text-3xl mb-2">😷</div>
+      <div class="font-bold">コロナ禍</div>
+      <div class="text-sm text-white/70 mt-1">転職直後に直撃</div>
+    </div>
+    <div class="text-3xl text-white/50">＝</div>
+    <div class="rounded-xl border-2 border-gray-400/50 bg-gray-400/10 px-6 py-4 text-center">
+      <div class="text-3xl mb-2">🔇</div>
+      <div class="font-bold">アウトプットの場</div>
+      <div class="text-sm text-white/70 mt-1">すべてゼロに</div>
+    </div>
+  </div>
+
+  <div v-click="1" class="mt-4 max-w-2xl w-full space-y-3">
+    <div class="rounded-lg border border-white/20 bg-white/5 px-6 py-3 flex items-center">
+      <carbon-close-filled class="mr-3 text-red-400 shrink-0" />技術力評価会 → <span class="text-red-400 ml-2">事業会社なので存在しない</span>
+    </div>
+    <div class="rounded-lg border border-white/20 bg-white/5 px-6 py-3 flex items-center">
+      <carbon-close-filled class="mr-3 text-red-400 shrink-0" />社内LT会 → <span class="text-red-400 ml-2">コロナでなくなった</span>
+    </div>
+    <div class="rounded-lg border border-white/20 bg-white/5 px-6 py-3 flex items-center">
+      <carbon-close-filled class="mr-3 text-red-400 shrink-0" />勉強会・カンファレンス → <span class="text-red-400 ml-2">全滅</span>
+    </div>
+  </div>
+</div>
+
+<!--
+転職した直後に、すぐコロナ禍になってしまいました。  
+[click] 前職にあった技術力評価会は、事業会社への転職でなくなりました。  
+唯一あった社内LT会もコロナでなくなり、勉強会やカンファレンスも全滅。  
+外の世界への接点が、完全にゼロになったんです。
+-->
+
+---
+transition: fade-out
+---
+
+# <mdi-robot-outline /> Slack Bot Officer を自称していた頃
+
+<div class="mt-6 grid grid-cols-2 gap-8">
+  <div class="space-y-4">
+    <div class="rounded-xl border-2 border-green-400/50 bg-green-400/10 p-6">
+      <div class="text-lg font-bold text-green-300 mb-4"><mdi-lightbulb-outline class="inline mr-2" />きっかけ</div>
+      <ul class="space-y-3 text-base">
+        <li>社内Slackのworkspaceが<br />少し寂しかった</li>
+        <li>前職のworkspaceには<br />bot職人がいてその雰囲気が好きだった</li>
+        <li>ちょうどTypeScriptを学びたい時期だった</li>
+      </ul>
+    </div>
+    <div v-click="1" class="rounded-xl border-2 border-amber-400/50 bg-amber-400/10 p-6">
+      <div class="text-lg font-bold text-amber-300 mb-3"><mdi-emoticon-wink-outline class="inline mr-2" />正直な動機</div>
+      <div class="text-base">「部門を超えてエンジニアの注目を浴びるには、bot開発は良いムーブだ」という<span class="text-amber-300 font-bold">スケベ根性</span>もありました 笑</div>
+    </div>
+  </div>
+
+  <div v-click="2" class="rounded-xl border-2 border-red-400/50 bg-red-400/10 p-6 flex flex-col justify-center">
+    <div class="text-lg font-bold text-red-300 mb-4"><carbon-warning-filled class="inline mr-2" />でも結局</div>
+    <ul class="space-y-3 text-base">
+      <li><mdi-check class="inline mr-2 text-green-400" />会社の中では良い名刺代わりに</li>
+      <li><carbon-close-filled class="inline mr-2 text-red-400" />ただフィードバックループはない</li>
+      <li><carbon-close-filled class="inline mr-2 text-red-400" />一緒にbot作る仲間はいない</li>
+      <li><carbon-close-filled class="inline mr-2 text-red-400" />スポットな認知に留まる</li>
+    </ul>
+    <div class="mt-5 p-3 rounded-lg bg-red-400/10 border border-red-400/30 text-sm text-center text-white/80">
+      外の世界への接点は<br />何も変わらなかった
+    </div>
+  </div>
+</div>
+
+<!--
+そんな中、社内Slackのworkspaceが以前に比べて寂しくて、まずは自分でいくつかbotを生やし始めました。  
+前職のworkspaceにはbot職人がいて、その姿に憧れていた分、Slack文化を持ち込みたかったのと、TypeScriptを学びたい時期だったのが大きいです。Vueも触りましたが、当時はTS活用がまだ手探りで正直アレでした（笑）。  
+その流れで、いつしか「Slack Bot Officer」を自称するようになりました。  
+[click] 正直に言うと、「部門を超えてエンジニアの注目を浴びるには、bot開発は良いムーブだ」というスケベ根性もありました（笑）。  
+[click] でも結局、会社の中では良い名刺代わりにはなったものの、フィードバックループはない。一緒にbotを作る仲間も増えない。外の世界への接点は何も変わらなかった。  
+これが「沈黙の数年間」の正体でした。
+-->
+
+---
+layout: center
+class: text-center
+---
+
+<div class="text-8xl font-extrabold mb-8">
+  ⚡
+</div>
+<div class="text-5xl font-bold mb-4">PART 2</div>
+<div class="text-3xl font-bold text-pink-300">
+  運命の出会い
+</div>
+<div class="mt-4 text-xl text-white/60">
+  OSSと推しとの出会い
+</div>
+
+<!--
+ではPART 2。運命の出会いについてお話しします。
+-->
+
+---
+transition: fade-out
+---
+
+# <carbon-api /> 転機：レセプトBaaSという業務課題
+
+<div class="mt-6 grid grid-cols-2 gap-8">
+  <div class="rounded-xl border-2 border-blue-400/50 bg-blue-400/10 p-6">
+    <div class="text-lg font-bold text-blue-300 mb-4"><carbon-api class="inline mr-2" />課題</div>
+    <ul class="space-y-3 text-base">
+      <li>APIのみのサービス（BaaS）を開発</li>
+      <li>QA部隊でのポチポチテストは不可</li>
+      <li>コアドメインなので<br /><span class="text-blue-300 font-bold">早く品質を確保したい</span></li>
+      <li>I/Fとして正しいことを<br /><span class="text-blue-300 font-bold">早く保証したい</span></li>
+    </ul>
+  </div>
+
+  <div class="rounded-xl border-2 border-green-400/50 bg-green-400/10 p-6">
+    <div class="text-lg font-bold text-green-300 mb-4"><carbon-search class="inline mr-2" />探していたもの</div>
+    <div class="text-base">シナリオベースで<br />APIテストができるツール</div>
+    <div class="text-sm text-white/70 mt-2">当時、そういうツールが少なかった</div>
+  </div>
+</div>
+
+<!--
+転機は業務課題から始まりました。  
+レセプトのBaaSを開発する際に、APIのみのサービスでQA部隊のポチポチテストができない状況になりました。  
+コアドメインなので早く品質を確保したい。I/Fとして正しいことを早く保証したい。  
+シナリオベースでAPIテストができるツールを探していました。当時、それができるツールが少なかったんです。  
+その中で、ペパボの技術ブログの記事を見つけます。
+-->
+
+---
+transition: fade-out
+layout: center
+---
+
+# <carbon-document /> 衝撃的なrunnとの出会い
+
+<div class="mt-6 flex justify-center">
+  <OgpImage url="https://tech.pepabo.com/2022/06/07/scenario-testing-in-go/" width="960" height="504" />
+</div>
+
+<div class="mt-4 text-sm text-white/70 text-center">
+  作者のk1LoWさんの記事でrunnを知る
+</div>
+
+<!--
+このペパボ技術ブログの、作者k1LoWさんの記事でrunnを見つけました。  
+「これだ！」と思って、すぐ試し始めたのが最初の一歩でした。
+-->
+
+---
+transition: fade-out
+---
+
+# <logos-github-octocat /> 勇気を出して、最初のPRを送った日
+
+<div class="mt-6 grid grid-cols-2 gap-8">
+  <div class="space-y-4">
+    <div class="rounded-xl border-2 border-amber-400/50 bg-amber-400/10 p-5">
+      <div class="text-lg font-bold text-amber-300 mb-3"><mdi-timeline-text-outline class="inline mr-2" />最初はうまく動かなかった</div>
+      <div class="space-y-2 text-base">
+        <div>コードを読んでみると…</div>
+        <div class="pl-4 border-l-2 border-amber-400/50 space-y-1">
+          <div>✅ Goがシンプル</div>
+          <div>✅ 初期段階でコード量が少ない</div>
+          <div>✅ ちょうどGoを勉強中だった</div>
+        </div>
+        <div class="mt-3 text-amber-300 font-bold text-lg">「自分でも分かるかも！」</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="space-y-4">
+    <div class="rounded-xl border-2 border-green-400/50 bg-green-400/10 p-5">
+      <div class="text-lg font-bold text-green-300 mb-3"><carbon-send-filled class="inline mr-2" />PR → マージ → 喜び → 繰り返す</div>
+      <div class="space-y-2 text-base">
+        <div>すぐマージしてもらえた！</div>
+        <div class="text-green-300">サービスが成長するたびに、<br />新しい課題が現れる</div>
+        <div class="text-white/80 text-sm">Issueで機能を提案・検討し、PRで改善を積み上げる</div>
+        <div class="text-4xl font-extrabold text-center mt-3 text-green-300 tracking-wide">77 PR</div>
+        <div class="text-sm text-white/80 text-center leading-relaxed">
+          <span class="text-amber-300 font-bold">小さな改善</span>を積み上げた結果、<br />現場の課題と一緒にrunnも育っていった
+        </div>
+        <div class="text-[10px] text-white/45 text-center mt-1">※ 累計コントリビュートPR数</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--
+試してみたら最初はうまく動きませんでした。  
+でもコードを読んでみると、GoがシンプルでコードQuantityも少なく、ちょうどGoを勉強していた自分でも読めそうだと思って。  
+「自分でも分かるかも！」とPRを送ってみました。  
+すぐマージしてもらえた嬉しさと、「もっとこうなれば…」という思いがどんどん出てきて、気づいたら77PRを送るようになっていました。
+-->
+
+---
+transition: fade-out
+---
+
+# <carbon-email /> 9PRの頃、届いた一通の招待
+
+<div class="mt-6 max-w-4xl mx-auto space-y-5">
+  <div class="rounded-xl border-2 border-amber-400/50 bg-amber-400/10 p-5 text-left">
+    <div class="text-base text-amber-200 mb-2">k1LoWさんに会う前、まだ <span class="text-amber-300 font-bold">9PR</span> くらいの時期</div>
+    <div class="text-sm text-white/80">継続して改善提案していたところ、リポジトリ招待が届いた</div>
+  </div>
+
+  <div class="rounded-xl border-2 border-blue-400/50 bg-blue-400/10 p-5 text-left">
+    <div class="text-sm text-blue-200 mb-2">title</div>
+    <div class="font-bold text-lg text-white">k1LoW invited you to k1LoW/runn</div>
+    <div class="text-sm text-blue-200 mt-4 mb-2">description</div>
+    <div class="text-sm text-white/90">@k1LoW has invited you to collaborate on the k1LoW/runn repository</div>
+  </div>
+
+  <div class="rounded-xl border border-green-400/40 bg-green-400/10 p-4 text-center text-sm text-white/90">
+    「改善を積み上げると、信頼が返ってくる」
+  </div>
+</div>
+
+<!--
+k1LoWさんにリアルで会う前、まだ9PRくらいの頃にリポジトリ招待をいただきました。  
+継続して改善提案していたことが、信頼として返ってきた瞬間でした。  
+この出来事が、その後のコミットメントをさらに強くしてくれました。
+-->
+
+---
+transition: fade-out
+---
+
+# <carbon-star /> 学んだことと、昔の憧れがつながった
+
+<div class="mt-6 grid grid-cols-2 gap-8">
+  <div class="rounded-xl border-2 border-blue-400/50 bg-blue-400/10 p-5">
+    <div class="text-lg font-bold text-blue-300 mb-3"><mdi-school-outline class="inline mr-2" />runnで学んだこと</div>
+    <ul class="space-y-2 text-sm">
+      <li>開発者フレンドリーなツール設計（runn本体・tagprによるリリースプロセス）</li>
+      <li>Documentation as Code の考え方</li>
+      <li>CLIでもインタフェース設計が重要になるということ</li>
+      <li>テスティングライブラリとCLIツールのバランス設計</li>
+      <li>Golangのモダンな開発スタイル</li>
+    </ul>
+  </div>
+
+  <div class="rounded-xl border-2 border-amber-400/50 bg-amber-400/10 p-5">
+    <div class="text-lg font-bold text-amber-300 mb-3"><mdi-handshake-outline class="inline mr-2" />OSSで共同開発する楽しさ</div>
+    <ul class="space-y-2 text-sm">
+      <li>対話しながら機能を育てる、共創の面白さ</li>
+      <li>発展的な機能拡張は、議論が難しいぶんワクワクする</li>
+      <li>提案が形になり、ユーザー価値へつながる手応え</li>
+    </ul>
+  </div>
+</div>
+
+<div class="mt-6 rounded-xl border-2 border-green-400/50 bg-green-400/10 p-4 text-center text-sm">
+  学びと共創の楽しさが重なったとき、<span class="text-green-300 font-bold">runnへの改善</span>は継続できる推進力になった
+</div>
+
+<!--
+この流れの中で、runn開発から多くを学びました。  
+開発者フレンドリーな設計、Documentation as Code、CLIのインタフェース設計、ライブラリとCLIのバランス、そしてGolangのモダンな開発スタイル。  
+さらにOSS共同開発では、発展的な機能拡張の議論に難しさがありつつ、その分ワクワクも大きい。  
+この学びと共創の楽しさが、改善を続ける推進力になっていきました。
+-->
+
+---
+transition: fade-out
+---
+
+# <mdi-account-group-outline /> 伏線：ちゃまほりさんがつないでくれた縁
+
+<div class="mt-6 text-center">
+  <div class="text-lg mb-8 text-white/80">同僚の <span class="text-pink-300 font-bold">ちゃまほり（@tyamahori）</span>さんが動いてくれた</div>
+
+  <div class="flex items-center justify-center gap-4 flex-wrap">
+    <div class="rounded-xl border-2 border-pink-400/50 bg-pink-400/10 p-5 text-center w-36">
+      <div class="text-3xl mb-2">👨‍💻</div>
+      <div class="font-bold text-sm">katzumi</div>
+      <div class="text-xs text-white/60 mt-2">runnをドッグフーディング<br />改善提案を継続</div>
+    </div>
+    <div class="text-2xl text-white/50">→</div>
+    <div class="rounded-xl border-2 border-blue-400/50 bg-blue-400/10 p-5 text-center w-36">
+      <div class="text-3xl mb-2">🤝</div>
+      <div class="font-bold text-sm">ちゃまほり</div>
+      <div class="text-xs text-white/60 mt-2">PHPerRoomで<br />k1LoW氏と繋がる</div>
+    </div>
+    <div class="text-2xl text-white/50">→</div>
+    <div class="rounded-xl border-2 border-green-400/50 bg-green-400/10 p-5 text-center w-36">
+      <div class="text-3xl mb-2">⭐</div>
+      <div class="font-bold text-sm">k1LoW氏</div>
+      <div class="text-xs text-white/60 mt-2">runnの作者</div>
+    </div>
+    <div class="text-2xl text-white/50">＋</div>
+    <div class="rounded-xl border-2 border-amber-400/50 bg-amber-400/10 p-5 text-center w-36">
+      <div class="text-3xl mb-2">🎙️</div>
+      <div class="font-bold text-sm">赤瀬さん</div>
+      <div class="text-xs text-white/60 mt-2">ツナギメエフエム</div>
+    </div>
+  </div>
+
+  <div v-click="1" class="mt-8 text-2xl text-amber-300 font-bold">
+    <mdi-calendar-heart class="inline mr-2" />
+    PHPerKaigi 2023 で初めてお会いする機会が訪れた
+  </div>
+</div>
+
+<!--
+実際にk1LoW氏にリアルでお会いするきっかけを作ってくれたのは、同僚のちゃまほりさんでした。  
+自分のrunnの取り組みをちゃまほりさんに伝えていて、彼がPHPerRoomというオンラインの場でk1LoW氏と繋がってくれたんです。  
+ツナギメエフエムの赤瀬さんも一緒に繋がりができました。  
+[click] そしてPHPerKaigi 2023で、初めてリアルでお会いする機会が訪れました。
+-->
+
+---
+transition: fade-out
+---
+
+# <mdi-balloon /> PHPerKaigi 2023：廊下という魔法
+
+<div class="mt-4 grid grid-cols-2 gap-5">
+  <div class="space-y-4">
+    <div class="rounded-xl border-2 border-blue-400/50 bg-blue-400/10 p-4">
+      <div class="font-bold text-blue-300 mb-2"><carbon-presentation-file class="inline mr-1" />k1LoW氏のセッションを客席で聴く</div>
+      <div class="text-sm">"Win Testing Trophy Easily"<br />runnが生まれた動機が語られる</div>
+    </div>
+    <div v-click="1" class="rounded-xl border-2 border-pink-400/50 bg-pink-400/10 p-4">
+      <div class="font-bold text-pink-300 mb-2"><mdi-microphone class="inline mr-1" />登壇中のサプライズ言及</div>
+      <div class="text-sm italic">"データ駆動テストの拡張をしてくれたコントリビューターが<span class="text-pink-300 font-bold">本日会場に来てくれていると思います（ニヤリ）</span>"</div>
+      <div class="text-xs text-white/60 mt-2">→ 想定外のタイミングで名指しされて驚く</div>
+    </div>
+  </div>
+
+  <div class="space-y-4">
+    <div v-click="2" class="rounded-xl border-2 border-green-400/50 bg-green-400/10 p-4">
+      <div class="font-bold text-green-300 mb-2"><mdi-glass-mug-variant class="inline mr-1" />池袋Night → Day2ホワイトボード</div>
+      <div class="text-sm">IssueやPRでの英語コミュニケーションとは全然違う。<br /><span class="text-green-300">対面で日本語で話すと、解像度が一気に上がる。</span><br />ハッカソン的にその場でコーディング。</div>
+    </div>
+    <div v-click="3" class="rounded-xl border-2 border-amber-400/50 bg-amber-400/10 p-4">
+      <div class="font-bold text-amber-300 mb-2"><mdi-map-marker class="inline mr-1" />運命のひとこと</div>
+      <div class="text-sm">"福岡でPHPカンファレンスやりますよ"<br /><span class="text-amber-300 font-bold text-base">「絶対参加しよう！」</span><br /><span class="text-xs text-white/60">（k1LoWさん・赤瀬さんは福岡在住）</span></div>
+    </div>
+  </div>
+</div>
+
+<!--
+PHPerKaigi 2023で、初めてk1LoW氏とリアルで会いました。  
+k1LoW氏のセッション「Win Testing Trophy Easily」を客席で聴いていました。  
+[click] まさかのサプライズは登壇中に来ました。「データ駆動テストの拡張をしてくれたコントリビューターが本日会場に来てくれていると思います」と大勢の前で言及されて、かなり驚きました。  
+[click] その後、Ask the Speakerでようやく「はじめまして」ができました。  
+[click] 池袋Nightでは内容が濃すぎて「Podcastにしたら面白そう」と思うほど。普段はIssueやPRで英語コミュニケーションですが、対面で日本語で会話できると解像度が一気に上がる感覚がありました。Day2はホワイトボードでアイデアをぶつけ合い、お酒を飲みながらコーディングも。カンファレンスの廊下という特別なシチュエーションの魔力にあてられました。  
+[click] そして「福岡でPHPカンファレンスやりますよ」という話を聞いて、「絶対参加しよう！」という気持ちになりました。
+-->
+
+---
+layout: center
+class: text-center
+---
+
+<div class="text-8xl font-extrabold mb-8">
+  🔄
+</div>
+<div class="text-5xl font-bold mb-4">PART 3</div>
+<div class="text-3xl font-bold text-green-300">
+  推し駆動サイクル
+</div>
+<div class="mt-4 text-xl text-white/60">
+  フィードバックの連鎖
+</div>
+
+<!--
+PART 3。推し駆動サイクルについてお話しします。
+-->
+
+---
+transition: fade-out
+---
+
+# <mdi-fire /> 5本のプロポーザル——推し駆動の気合
+
+<div class="mt-6 text-center">
+  <div class="text-xl mb-8 text-white/80">
+    「推しに会いに行く」という動機で<br />
+    <span class="text-orange-300 font-bold text-2xl">PHPカンファレンス福岡2023にプロポーザル5本提出</span>
+  </div>
+
+  <div class="flex items-center justify-center gap-10">
+    <div class="rounded-xl border-2 border-orange-400/50 bg-orange-400/10 p-8 text-center">
+      <div class="text-7xl font-extrabold text-orange-300">5</div>
+      <div class="text-lg mt-2">本のプロポーザル</div>
+      <div class="text-sm text-white/60 mt-1">LT含む</div>
+    </div>
+    <div class="text-4xl text-white/50">→</div>
+    <div class="rounded-xl border-2 border-green-400/50 bg-green-400/10 p-8 text-center">
+      <div class="text-7xl">🎉</div>
+      <div class="text-lg mt-2">採択！</div>
+      <div class="text-sm text-white/60 mt-1">前夜祭LTで初登壇</div>
+    </div>
+  </div>
+
+  <div v-click="1" class="mt-8 rounded-xl border-2 border-white/20 bg-white/5 p-4 max-w-lg mx-auto">
+    <mdi-comment-quote-outline class="inline mr-2 text-white/60" />
+    <span class="text-white/80 italic">"プロポーザルが落ちても行くつもりでいた"</span>
+  </div>
+</div>
+
+<!--
+PHPカンファレンス福岡2023に、プロポーザルを5本提出しました。  
+「推しに会いに行く！」という気合で。  
+[click] 正直に言うと、プロポーザルが落ちても行くつもりでいました。  
+でも幸い採択されて、前夜祭LTで初めての対外登壇を果たしました。
+-->
+
+---
+transition: fade-out
+---
+
+# <mdi-cached /> サイクルが回り始めた
+
+<div class="mt-6 max-w-3xl mx-auto">
+  <div class="flex flex-col items-center gap-2">
+    <div class="rounded-xl border-2 border-blue-400/50 bg-blue-400/10 px-8 py-3 w-full text-center font-bold">
+      前夜祭LT「クリーンアーキテクチャのアンチパターン」
+    </div>
+    <div class="text-center text-white/50 text-sm">↓ フィードバックをもらう</div>
+    <div v-click="1" class="rounded-xl border-2 border-green-400/50 bg-green-400/10 px-8 py-3 w-full text-center font-bold">
+      PHPカンファレンス沖縄「ActiveRecordパターンの呪縛を学びほぐす」
+    </div>
+    <div v-click="1" class="text-center text-white/50 text-sm">↓ 廊下でrunnへの要望・質問を受ける → 実装する</div>
+    <div v-click="2" class="rounded-xl border-2 border-amber-400/50 bg-amber-400/10 px-8 py-3 w-full text-center font-bold">
+      各地のカンファレンス「APIカバレッジ計測」「モブワーク事例」など
+    </div>
+    <div v-click="2" class="text-center text-white/50 text-sm">↓ 改善内容がOSS化 → 次の登壇ネタに</div>
+    <div v-click="3" class="rounded-xl border-2 border-pink-400/50 bg-pink-400/10 px-8 py-3 w-full text-center font-bold">
+      PHPカンファレンス福岡2025「アーキテクチャレベルの依存性逆転」（前回登壇）
+    </div>
+    <div v-click="3" class="text-center text-white/50 text-sm">↓ そして今日のこのセッションへ</div>
+  </div>
+</div>
+
+<!--
+前夜祭LTでフィードバックをもらい、それを次の登壇につなげました。  
+[click] PHPカンファレンス沖縄でも登壇。  
+[click] カンファレンスの廊下でrunnへの要望や質問を受け、実装してOSS改善し、それが次の登壇ネタになる——。  
+[click] このサイクルが、自分でも驚くほどの速度で回り始めました。そして今日ここにいます。
+-->
+
+---
+transition: fade-out
+---
+
+# <mdi-book-heart-outline /> 一人アドベントカレンダー → 「本にしてみない？」
+
+<div class="mt-6 grid grid-cols-2 gap-8">
+  <div class="space-y-4">
+    <div class="rounded-xl border-2 border-blue-400/50 bg-blue-400/10 p-5">
+      <div class="font-bold text-blue-300 mb-3"><carbon-calendar class="inline mr-2" />runnの一人アドベントカレンダー</div>
+      <div class="text-sm space-y-2">
+        <div>12/1から毎日runnの記事を書き続ける</div>
+        <div class="text-white/60">→ Zennに連載記事シリーズ</div>
+      </div>
+    </div>
+    <div v-click="1" class="rounded-xl border-2 border-pink-400/50 bg-pink-400/10 p-5">
+      <div class="font-bold text-pink-300 mb-3"><mdi-star class="inline mr-2" />k1LoW氏から連絡</div>
+      <div class="text-xl italic text-pink-200 font-bold">"本にしてみない？"</div>
+      <div class="text-sm text-white/60 mt-3">推しから直接声をかけてもらえた瞬間</div>
+    </div>
+  </div>
+
+  <div v-click="2" class="flex flex-col justify-center">
+    <div class="rounded-xl border-2 border-green-400/50 bg-green-400/10 p-6 text-center">
+      <simple-icons-zenn class="text-5xl text-green-400 mb-4" />
+      <div class="font-bold text-2xl mb-2">Zenn Book</div>
+      <div class="text-base">"runnチュートリアル"</div>
+      <div class="mt-4 text-lg font-bold text-green-300">
+        <mdi-pen class="inline mr-2" />技術書著者 になりました
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--
+runnの一人アドベントカレンダーを書き始めました。12月1日から毎日、runnに関する記事をZennに投稿していたんです。  
+[click] すると、k1LoW氏から「本にしてみない？」と声がかかりました。  
+推しから直接声をかけてもらえたこの瞬間は、本当に忘れられません。  
+[click] こうして「runnチュートリアル」というZenn Bookを書き、技術書著者になりました。
+-->
+
+---
+transition: fade-out
+layout: center
+---
+
+# <simple-icons-zenn /> Zenn Book: runnチュートリアル
+
+<div class="mt-6 flex justify-center">
+  <OgpImage url="https://zenn.dev/katzumi/books/runn-tutorial" width="960" height="504" />
+</div>
+
+<div class="mt-4 text-sm text-white/70 text-center">
+  https://zenn.dev/katzumi/books/runn-tutorial
+</div>
+
+<!--
+こちらが、runnチュートリアルのZenn Bookです。  
+アドベントカレンダーで積み上げた内容を体系化して、初学者でも追える形にまとめました。  
+「小さく続けたアウトプットが、技術書という形になる」ことを実感した一冊です。
+-->
+
+---
+transition: fade-out
+---
+
+# <carbon-enterprise /> 個人の推し活が、対外的なアウトプットになった
+
+<div class="mt-6 grid grid-cols-2 gap-8">
+  <div class="flex flex-col gap-4">
+    <div class="rounded-xl border-2 border-amber-400/50 bg-amber-400/10 p-5">
+      <div class="font-bold text-amber-300 mb-3"><carbon-presentation-file class="inline mr-2" />スキーマ駆動開発フローのスライドを公開</div>
+      <div class="text-sm">登壇・公開した内容に反響があった</div>
+    </div>
+    <div class="text-center text-3xl text-white/40">↓</div>
+    <div class="rounded-xl border-2 border-green-400/50 bg-green-400/10 p-5">
+      <div class="font-bold text-green-300 mb-3"><logos-github-octocat class="inline mr-2" />eg-r2 をOSS化</div>
+      <div class="text-sm">LITALICOとして<span class="text-green-300 font-bold">初めて</span>のOSS化</div>
+    </div>
+  </div>
+
+  <div v-click="1" class="flex flex-col justify-center">
+    <div class="rounded-xl border-2 border-pink-400/50 bg-pink-400/10 p-8 text-center">
+      <div class="text-6xl mb-5">🌊</div>
+      <div class="text-2xl font-bold mb-4">行動が変わったポイント</div>
+      <div class="text-base text-white/80 leading-relaxed">
+        外部公開によって<br />
+        <span class="text-pink-300 font-bold">フィードバックサイクル</span>を得られると実感し<br />
+        <span class="text-green-300 font-bold">OSS活動を続ける行動</span>に変わった
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--
+個人の推し活が、対外的なアウトプットとして形になりました。  
+スキーマ駆動開発フローを発表したスライドへの反響をもとに、eg-r2というライブラリをLITALICOとして初めてOSS化することができました。  
+[click] 外部公開することでフィードバックサイクルを得られる、OSS活動の尊さを実感しました。  
+その実感が、その後もOSS活動を継続する行動変容につながったと感じています。
+-->
+
+---
+layout: center
+class: text-center
+---
+
+<div class="text-8xl font-extrabold mb-8">
+  🌊
+</div>
+<div class="text-5xl font-bold mb-4">PART 4</div>
+<div class="text-3xl font-bold text-amber-300">
+  ライフステージを味方に
+</div>
+<div class="mt-4 text-xl text-white/60">
+  3つの追い風
+</div>
+
+<!--
+PART 4。ライフステージを味方にする話をします。
+-->
+
+---
+transition: fade-out
+layout: center
+---
+
+# <carbon-warning-alt /> 「若いうちに頑張らないと手遅れ」？
+
+<div class="mt-10 text-4xl font-bold text-center text-red-300">
+  それ、本当ですか？
+</div>
+
+<div
+  v-click="1"
+  class="absolute inset-0 z-20 flex items-center justify-center bg-black/50 backdrop-blur-sm transition duration-700 ease-in-out"
+  :class="$clicks < 1 ? 'opacity-0 pointer-events-none' : 'opacity-100 pointer-events-auto'"
+>
+  <div class="semantic-overlay semantic-positive p-10 backdrop-blur-lg rounded-2xl shadow-2xl transform scale-110 transition duration-500">
+    <h3 class="text-4xl font-extrabold text-white mb-6">
+      <mdi-check-decagram class="inline mr-2 text-green-300" />私のデータが反証します
+    </h3>
+    <p class="text-2xl text-green-300 font-bold tracking-wide leading-relaxed">
+      <span class="text-yellow-300 font-bold">
+        <mdi-account-child-outline class="inline mr-2" />40代・元地方在住・子育て世代
+      </span>
+      <br />
+      <span class="text-white font-semibold text-xl mt-2 block">
+        → 人生で<span class="text-amber-300 font-bold">今が一番</span>アウトプットできている
+      </span>
+    </p>
+  </div>
+</div>
+
+<!--
+「若いうちに頑張らないと手遅れ」という言説があります。  
+[click] でもそれは本当でしょうか？  
+私のデータが反証します。40代・元地方在住・子育て世代の私が、人生で今が一番アウトプットできています。  
+その理由を3つの追い風として説明します。
+-->
+
+---
+transition: fade-out
+---
+
+# <mdi-weather-windy /> 3つの追い風
+
+<div class="mt-5 grid grid-cols-3 gap-5">
+  <div class="rounded-xl border-2 border-amber-400/50 bg-amber-400/10 p-5">
+    <div class="text-3xl mb-3 text-center">👨‍👩‍👦</div>
+    <div class="text-base font-bold text-amber-300 mb-3">① 子育てのフェーズ変化</div>
+    <div class="text-sm space-y-2">
+      <div>一番下の子が中学生に</div>
+      <div>→ 部活が入り、<span class="text-amber-300">親離れ</span>が進む</div>
+      <div>→ 「構ってもらえなくなる」タイミングで時間が生まれる</div>
+    </div>
+    <div v-click="1" class="mt-4 p-3 rounded-lg bg-amber-400/10 border border-amber-400/30 text-xs text-center">
+      <mdi-hand-wave-outline class="inline mr-1" />
+      会場の皆さんはいかがですか？
+    </div>
+  </div>
+
+  <div v-click="2" class="rounded-xl border-2 border-blue-400/50 bg-blue-400/10 p-5">
+    <div class="text-3xl mb-3 text-center">🤖</div>
+    <div class="text-base font-bold text-blue-300 mb-3">② 技術的障壁の低下</div>
+    <div class="text-sm space-y-2">
+      <div>k1LoW氏のリポジトリは全英語</div>
+      <div>→ <span class="text-blue-300 font-bold">DeepL</span>で乗り越えた</div>
+      <div>→ AIでコードリーディング・Issue化も</div>
+      <div class="mt-2 text-blue-200 text-xs">「以前は限られた人しかできなかった<br />OSS活動が民主化されている」</div>
+    </div>
+  </div>
+
+  <div v-click="3" class="rounded-xl border-2 border-green-400/50 bg-green-400/10 p-5">
+    <div class="text-3xl mb-3 text-center">🗾</div>
+    <div class="text-base font-bold text-green-300 mb-3">③ コミュニティの成熟</div>
+    <div class="text-sm space-y-2">
+      <div>地方カンファレンスが活発化</div>
+      <div>funabashi.dev・多摩.devなど<br /><span class="text-green-300">マイクロコミュニティ</span>も誕生</div>
+      <div class="mt-2 text-xs text-white/70">元地方在住だからこそ<br />積極的に地方カンファへ</div>
+    </div>
+  </div>
+</div>
+
+<!--
+3つの追い風があります。  
+一つ目が子育てのフェーズ変化。一番下の子が中学生になり、部活が入って親離れが進みました。「構ってもらえなくなる」タイミングで、逆に自分の活動時間が生まれたんです。  
+[click] この点はみなさんの家庭の事情にもよると思うので、ぜひ聞いてみたいところです。  
+[click] 二つ目は技術的障壁の低下。k1LoW氏のリポジトリは全て英語でしたが、DeepLで乗り越えました。最近ではAIでコードリーディングやIssue化もできて、以前は限られた人しかできなかったOSS活動が民主化されていると感じています。  
+[click] 三つ目はコミュニティの成熟。地方カンファレンスが活発化し、funabashi.devや多摩.devのようなマイクロコミュニティも次々と生まれています。元地方在住だからこそ、積極的に地方カンファに参加したいという気持ちになっています。
+-->
+
+---
+layout: center
+class: text-center
+---
+
+<div class="text-8xl font-extrabold mb-8">
+  🏄
+</div>
+<div class="text-5xl font-bold mb-4">PART 5</div>
+<div class="text-3xl font-bold text-rose-300">
+  推しは推せるときに推せ
+</div>
+<div class="mt-4 text-xl text-white/60">
+  波乗りの戦略
+</div>
+
+<!--
+最後のPART 5です。
+-->
+
+---
+transition: fade-out
+---
+
+# <mdi-heart-broken-outline /> 一期一会：PHPカンファレンス福岡の終焉
+
+<div class="mt-6 grid grid-cols-2 gap-8">
+  <div class="space-y-4">
+    <div class="rounded-xl border-2 border-red-400/50 bg-red-400/10 p-5">
+      <div class="font-bold text-red-300 mb-3"><mdi-candle class="inline mr-2" />10年の節目に幕引き</div>
+      <div class="text-sm space-y-2">
+        <div>PHPカンファレンス福岡が10年目を節目に終了</div>
+        <div class="text-white/70">赤瀬さんが幕引きを宣言</div>
+        <div class="mt-2 text-red-300 font-bold">去年（2025年）が最後になってしまった</div>
+        <div class="text-sm text-white/60 mt-1">k1LoW氏の足元のイベントがなくなり、凄く悲しい気持ち</div>
+      </div>
+    </div>
+    <div class="rounded-xl border-2 border-amber-400/50 bg-amber-400/10 p-5">
+      <div class="font-bold text-amber-300 mb-2"><mdi-map-marker class="inline mr-2" />Go Conference mini in 鴨川</div>
+      <div class="text-sm">「押しかけ」でrunn開発者会議を開催<br />憧れの<span class="text-amber-300 font-bold">はてな社</span>にもお邪魔できた<br /><span class="text-xs text-white/60">→ あの時行っておいてよかった</span></div>
+    </div>
+  </div>
+
+  <div v-click="1" class="flex flex-col justify-center">
+    <div class="rounded-xl border-2 border-white/20 bg-white/5 p-8 text-center space-y-5">
+      <div class="text-xl font-bold text-white/90">コミュニティも</div>
+      <div class="text-xl font-bold text-white/90">憧れのエンジニアとの接点も</div>
+      <div class="text-xl font-bold text-white/90">自分の「動ける状況」も</div>
+      <div class="mt-4 text-4xl font-extrabold text-red-300">永遠ではない</div>
+    </div>
+  </div>
+</div>
+
+<!--
+PHPカンファレンス福岡が、10年目を節目に幕を閉じました。  
+赤瀬さんが幕引きを宣言されていて、去年が最後の開催になってしまいました。  
+k1LoW氏の足元のイベントがなくなってしまい、本当に悲しい気持ちです。  
+Go Conference mini in 鴨川では「押しかけ」でrunn開発者会議を開催して、憧れのはてな社にもお邪魔できました。あの時行っておいてよかったと思っています。  
+[click] コミュニティも、憧れのエンジニアとの接点も、自分の「動ける状況」も——永遠ではありません。
+-->
+
+---
+transition: fade-out
+glowSeed: 42
+---
+
+# <mdi-surfing /> 波乗りの戦略
+
+<div class="mt-4 text-center text-base text-white/70 mb-5">
+  駆け出しの頃から意識してきたこと
+</div>
+
+<div class="text-2xl font-bold text-center text-amber-300 mb-6">
+  「1番にならなくてもいい。<br />ただ <span v-mark.underline.amber="0">時流がわかるポジション</span> でいること」
+</div>
+
+<div class="grid grid-cols-3 gap-5 max-w-3xl mx-auto">
+  <div v-click="1" class="rounded-xl border-2 border-blue-400/50 bg-blue-400/10 p-5 text-center">
+    <div class="text-4xl mb-3">🏄</div>
+    <div class="font-bold text-blue-300 text-base">パドリング期</div>
+    <div class="text-xs mt-2 text-white/70">業界・サービスをやり込む<br />興味を持ったことを試し続ける</div>
+  </div>
+  <div v-click="2" class="rounded-xl border-2 border-amber-400/50 bg-amber-400/10 p-5 text-center">
+    <div class="text-4xl mb-3">🌊</div>
+    <div class="font-bold text-amber-300 text-base">波を読む</div>
+    <div class="text-xs mt-2 text-white/70">タイミングを見定める<br />波の先端に乗れるか</div>
+  </div>
+  <div v-click="3" class="rounded-xl border-2 border-green-400/50 bg-green-400/10 p-5 text-center">
+    <div class="text-4xl mb-3">🚀</div>
+    <div class="font-bold text-green-300 text-base">波に乗る</div>
+    <div class="text-xs mt-2 text-white/70">一気に良い連鎖が<br />やってくる</div>
+  </div>
+</div>
+
+<div v-click="4" class="mt-5 rounded-xl border-2 border-pink-400/50 bg-pink-400/10 p-4 max-w-3xl mx-auto text-center text-sm">
+  波は出来上がってから<span class="text-red-400 font-bold">パドリングしては間に合わない</span><br />
+  推し活（パドリング）を続けながら、<span class="text-pink-300 font-bold">波がどこから来るかを感じ取る</span>
+</div>
+
+<!--
+駆け出しのエンジニアになった時から意識してきたことがあります。  
+「1番にならなくてもいい。ただ時流がわかるポジションでいること」  
+イメージは波乗り（サーフィン）です。  
+[click] パドリング期：OSSに限らず、自分の身を置く業界やサービスを必死にやり込む。  
+ 興味を持ったことはまず試す。やってみないと、自分に合うか・好きかは分からない。  
+ 私の場合は、自宅サーバーを作って遊ぶところから始まりました。  
+[click] 波を読む：どのタイミングで、どの方向に波が来るかを感じ取る。  
+[click] 波に乗る：タイミングが合えば、一気に良い連鎖がやってくる。  
+[click] 波は出来上がってからパドリングしては間に合わない。  
+推し活（パドリング）を続けながら、波がどこから来るかを感じ取る。  
+今回の話で言えば、runnという推しへの活動がパドリングで、PHPerKaigi 2023が波のタイミングでした。
+-->
+
+---
+layout: center
+class: text-center
+---
+
+# <mdi-heart /> 推しは推せるときに推せ
+
+<div class="mt-8 text-xl text-white/80 max-w-2xl mx-auto leading-loose">
+  推し活動ができるタイミング<br />
+  推して<span class="text-pink-300 font-bold">プラスの連鎖</span>が発生するタイミング<br />
+  自分自身の<span class="text-amber-300 font-bold">熱量のピーク</span><br />
+  時流を読む力と、<span class="text-green-300 font-bold">自分にとっての楽しいのシンクロ</span>
+</div>
+
+<div v-click="1" class="mt-8 text-3xl font-extrabold text-pink-300">
+  すべてが揃うタイミングは、今だけかもしれない
+</div>
+
+<div v-click="2" class="mt-10 text-2xl font-bold text-amber-300">
+  あなたの「推し」は何ですか？<br />
+  そのタイミング、<span v-mark.underline.amber="2">今じゃないですか？</span>
+</div>
+
+<!--
+今年は家庭の事情でイベント参加を控えめにしています。だからこそ言えることがあります。  
+推し活動ができるタイミング、プラスの連鎖が発生するタイミング、自分の熱量のピーク。  
+そこに「時流や盛り上がりを読む力」と「それが自分には楽しいという内的な気づき」が重なることが大事です。  
+[click] すべてが揃うタイミングは、今だけかもしれない。  
+[click] あなたの「推し」は何ですか？そのタイミング、今じゃないですか？
+-->
+
+---
+layout: center
+class: text-center
+---
+
+# <mdi-sprout /> まとめ：いまから、ここから
+
+<div class="mt-8 grid grid-cols-3 gap-6 max-w-3xl mx-auto">
+  <div class="rounded-xl border-2 border-pink-400/50 bg-pink-400/10 p-6 text-center">
+    <div class="text-5xl mb-4">💖</div>
+    <div class="text-lg font-bold text-pink-300">推しを見つける</div>
+    <div class="text-sm text-white/70 mt-3 leading-relaxed">特別な強みは不要<br />熱量だけあればいい</div>
+  </div>
+  <div class="rounded-xl border-2 border-blue-400/50 bg-blue-400/10 p-6 text-center">
+    <div class="text-5xl mb-4">🏄</div>
+    <div class="text-lg font-bold text-blue-300">パドリングを続ける</div>
+    <div class="text-sm text-white/70 mt-3 leading-relaxed">好き・興味を発信する<br />発信が次の情報を呼び込む<br />意識してフィードバック循環へ</div>
+  </div>
+  <div class="rounded-xl border-2 border-green-400/50 bg-green-400/10 p-6 text-center">
+    <div class="text-5xl mb-4">🚀</div>
+    <div class="text-lg font-bold text-green-300">波が来たら全部賭ける</div>
+    <div class="text-sm text-white/70 mt-3 leading-relaxed">フィードバックを受けて次を出す<br />深くも広くも試してみる<br />取り組みを変えて飽きずに続ける</div>
+  </div>
+</div>
+
+<div v-click="1" class="mt-8 text-2xl font-bold text-white/90">
+  何歳からでも、どんな環境からでも<br />
+  <span class="text-amber-300">熱量さえあれば未来は変えられる</span>
+</div>
+
+<!--
+まとめです。  
+推しを見つける。特別な強みは不要で、熱量だけあればいい。  
+パドリングを続ける。好き・興味を発信すると、必要な情報や反応が自分のところに集まってきます。  
+そのために、自分なりのフィードバックサイクルを意識して作るのが大事です。  
+フィードバックが返ってきたら、次のアウトプットを出す。深くも広くも試し、取り組みを変えながら飽きずに回していく。  
+やり方は人それぞれなので、自分に合う回し方を見つけるのがポイントです。  
+[click] 何歳からでも、どんな環境からでも、熱量さえあれば未来は変えられる。  
+「いまから、ここから」、ぜひ一歩踏み出してみてください。  
+ご清聴ありがとうございました！
+-->
+
+---
+layout: two-cols-header
+transition: fade-out
+---
+
+# <carbon-document-export /> 参考リンク
+
+::left::
+
+<div class="space-y-4 mt-4">
+  <div>
+    <div class="text-sm text-white/60 mb-2">このスライド・プロポーザル</div>
+    <QRCode value="https://fortee.jp/kinoko-2026/proposal/9fcb212e-f5d8-4f7f-94ad-cda8478712b8" class="w-28 h-28" />
+  </div>
+  <div class="text-sm space-y-2 mt-4">
+    <div><simple-icons-zenn class="inline mr-2 text-green-400" /><a href="https://zenn.dev/katzumi" target="_blank">zenn.dev/katzumi</a></div>
+    <div><logos-github-octocat class="inline mr-2" /><a href="https://github.com/k2tzumi" target="_blank">github.com/k2tzumi</a></div>
+    <div><carbon-presentation-file class="inline mr-2 text-blue-400" /><a href="https://www.docswell.com/user/katzumi" target="_blank">docswell.com/user/katzumi</a></div>
+  </div>
+</div>
+
+::right::
+
+<div class="space-y-2 mt-4 text-sm">
+  <div class="font-bold text-white/80 mb-3">本日言及した記事・登壇など</div>
+  <div><a href="https://zenn.dev/katzumi/articles/api-scenario-testing-with-runn" target="_blank">📝 runnとの出会い記事（Zenn）</a></div>
+  <div><a href="https://zenn.dev/katzumi/articles/runn-developers-conference-in-phperkaigi2023" target="_blank">📝 PHPerKaigi 2023 runn開発者会議</a></div>
+  <div><a href="https://zenn.dev/katzumi/books/runn-tutorial" target="_blank">📚 Zenn Book: runnチュートリアル</a></div>
+  <div><a href="https://zenn.dev/litalico/articles/what-is-eg-r2" target="_blank">📝 eg-r2 OSS化（Zenn）</a></div>
+  <div><a href="https://zenn.dev/akase244/articles/4292dfaf05b7a2" target="_blank">📝 PHPカンファレンス福岡終了の記事</a></div>
+  <div><a href="https://listen.style/p/tsunagimefm/0gdrzkts" target="_blank">🎙️ ツナギメエフエム Podcast</a></div>
+  <div><a href="https://k1low.hatenablog.com/entry/2023/12/06/234248" target="_blank">📝 Go Conference mini in 鴨川 runn開発者会議</a></div>
+</div>
+
+<!--
+参考リンクをまとめました。  
+ぜひQRコードからプロポーザルページやスライドをご覧ください。  
+本日は「推しは推せるときに推せ！」をお聞きいただき、ありがとうございました！
+-->
