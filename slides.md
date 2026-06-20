@@ -2,7 +2,7 @@
 # You can also start simply with 'default'
 theme: seriph
 # TODO: 背景画像を変更する（現在はデフォルト）
-background: https://cover.sli.dev
+# background: https://cover.sli.dev
 title: 推しは推せるときに推せ！ライフステージ変化に向き合う
 info: |
   エンジニアがこの先生きのこるためのカンファレンス2026
@@ -18,13 +18,24 @@ timer: stopwatch
 mdc: true
 highlighter: shiki
 css: unocss
-colorSchema: dark
+colorSchema: auto
 routerMode: hash
 ttsConfig:
   voiceName: "ja-JP-Neural2-B"
   languageCode: "ja-JP"
   clickBreakTime: "500ms"
-  usePregenerated: true
+  usePregenerated: false
+  dictionary:
+    - from: "runn"
+      to: "ランエヌ"
+    - from: "k1LoW"
+      to: "けーいちろー"  
+    - from: "PR"
+      to: "Pull Request"  
+    - from: "PHPerKaigi"
+      to: "ペチパー会議"  
+    - from: "BaaS"
+      to: "Backend as a Service"  
 addons:
   - '@katzumi/slidev-addon-qrcode'
   - '@katzumi/slidev-addon-ogp-image'
@@ -52,6 +63,11 @@ v0.0.1
   </a>
 </div>
 
+<div class="absolute bottom-10 right-4 opacity-80" style="z-index: -1;">
+  <img src="./kinoko-conf-character.png" class="h-100 w-auto" alt="公式ロゴ" />
+</div>
+
+
 <!--
 本日は「推しは推せるときに推せ！ライフステージ変化に向き合う」というタイトルで、お話しさせていただきます。  
 どうぞよろしくお願いいたします。
@@ -66,11 +82,6 @@ class: text-left
 # <carbon-user-avatar /> 自己紹介
 
 katzumi（かつみ）と申します。
-
-「障害のない社会をつくる」をビジョンとする「LITALICO（りたりこ）」に所属しています。
-<a href="https://litalico.co.jp/" target="_blank">
-  <img src="https://litalico.co.jp/ogp.png" class="w-40 mt-3 mb-8" />
-</a>
 
 以下のアカウントで活動しています。
 
@@ -117,7 +128,7 @@ h1 {
 </style>
 
 <!--
-みなさん、こんにちは。LITALICOの「かつみ」と申します。  
+みなさん、こんにちは。「かつみ」と申します。  
 ご覧のXとGitHub等で活動しています。
 -->
 
@@ -192,8 +203,8 @@ transition: fade-out
 
 <!--
 本日は5つのパートでお話しします。  
-私自身が「何者でもなかった」状態から、どのように変化していったのか。  
-その実体験を通して、みなさんの背中を少し押せたらいいなと思っています。
+私自身が40代前半まで「何者でもなかった」状態から、推し活動を通してどのように変化していったのか？  
+その実体験を通して、「何かを始めるのに遅すぎることはないんだ」と、みなさんに少しでも勇気をお届けできれば幸いです。
 -->
 
 ---
@@ -224,11 +235,14 @@ class: py-4
 
 <!--
 まず、自己紹介がてら40代になるまでの私を振り返ってみます。  
-見ての通り、転職・単身赴任・ホテル住まい・会社買収と、怒涛の10年でした。  
-ポジション・ポジションではやれることをやってきたつもりでした。  
-でもこれだけ動いてきたのに——。  
-この会場にいる方で、私に憧れてるような良いモデルがいたと思って来た方はいないと思いますが（笑）、  
-[click] 対外的なアウトプット、ゼロでした。
+キャリアの初期は、地方のSES会社を経てベンチャー企業などに所属して、ずっとEC畑で大小様々なECサイトやモールなどの開発・運用に泥臭くやってきました。
+そこから色々あって、旧VOYAGE　GROUPへ転職するなど、怒涛の10年でした。  
+従事していた業務内容としては技術営業っぽい動きだったり、プロジェクトリーダーやらバックエンドエンジニア、SREなど、今どきのカッコつけた言い方をするとフルスタック・フルサイクル的なムーブをしていました。でも実態としては何でも屋でした。ポジション・ポジションで、やれることはやってきたつもりでした。  
+しかし、です。
+[click] これだけ多くのプロダクトの裏側にいながら、当時の私は『完全なる社内弁慶』でした。  
+技術コミュニティに出向くこともなければ、OSSにコントリビュートしたこともない。世の中の『キラキラした有名エンジニア』の活動を、ただ遠くから『すごいなぁ』と眺めているだけの、外の世界からは一切見えない、文字通り『何者でもないエンジニア』でした。　　
+
+そんな私が、40代になってからなぜ、どうやって外の世界に飛び出すことになったのか。次からのパート以降でお話ししていきます
 -->
 
 ---
@@ -260,7 +274,7 @@ transition: fade-out
 
 <div
   v-click="1"
-  class="absolute inset-0 z-20 flex items-center justify-center bg-black/50 backdrop-blur-sm transition duration-700 ease-in-out"
+  class="absolute inset-0 z-20 flex items-center justify-center bg-black/60 backdrop-blur-sm transition duration-700 ease-in-out"
   :class="$clicks < 1 ? 'opacity-0 pointer-events-none' : 'opacity-100 pointer-events-auto'"
 >
   <div class="semantic-overlay semantic-positive p-10 backdrop-blur-lg rounded-2xl shadow-2xl transform scale-125 transition duration-500">
@@ -277,12 +291,12 @@ transition: fade-out
 </div>
 
 <!--
-そして2023年以降はこんな感じになっています。  
+まずアウトプットゼロの状態からどれくらい変わったのか？についてですが、現在ではこんな感じになっています。  
 Zennでの記事執筆、GitHubへのOSS貢献、各地のカンファレンスでの登壇。  
 おかげさまで記事がバズったり、登壇の機会を頂いたりしています。  
-今回もこの場で発表させて頂いているわけですが、もっと凄いエンジニアもいる中で、申し訳ない気もしています（笑）。  
-[click] ただ、2023年からのこの流れというのはあまりない事例だと思うので、僭越ながら発表させていただきます。  
-同じ人間です。40代から、本格始動しました。
+今回もこの場で発表させて頂いているわけですが、30代の自分からは想像できませんでした。  
+[click] 遅咲きではありますが、40代から急に駆け出した格好です。 　
+次のスライドから私がどう変化していったか？お話していきます。
 -->
 
 ---
@@ -295,14 +309,15 @@ class: text-center
 </div>
 <div class="text-5xl font-bold mb-4">PART 1</div>
 <div class="text-3xl font-bold text-slate-300">
-  沈黙の数年間
+  沈黙の十数年間
 </div>
-<div class="mt-4 text-xl text-white/60">
+<div class="mt-4 text-xl text-white/80">
   対外アウトプット・ゼロの日々
 </div>
 
 <!--
-まずPART 1。沈黙の数年間についてお話しします。
+PART 1。  
+まず対外的なアウトプットがなかった期間についてお話します。
 -->
 
 ---
@@ -317,19 +332,19 @@ layout: center
 </div>
 
 <div class="mt-8 grid grid-cols-2 gap-6 max-w-3xl mx-auto">
-  <div v-click="1" class="rounded-xl border-2 border-white/20 bg-white/5 p-5 text-center">
+  <div v-click="1" class="rounded-xl border-2 border-white/20 bg-white/10 p-5 text-center">
     <div class="text-4xl mb-3">😔</div>
     <div class="text-base">"対外的に活躍するエンジニアは<br />特別な人たちだ"</div>
   </div>
-  <div v-click="2" class="rounded-xl border-2 border-white/20 bg-white/5 p-5 text-center">
+  <div v-click="2" class="rounded-xl border-2 border-white/20 bg-white/10 p-5 text-center">
     <div class="text-4xl mb-3">⏳</div>
     <div class="text-base">"年齢的にも今さら<br />始めても遅い気がする"</div>
   </div>
-  <div v-click="3" class="rounded-xl border-2 border-white/20 bg-white/5 p-5 text-center">
+  <div v-click="3" class="rounded-xl border-2 border-white/20 bg-white/10 p-5 text-center">
     <div class="text-4xl mb-3">🏠</div>
     <div class="text-base">"子育て・家庭があって<br />時間が取れない"</div>
   </div>
-  <div v-click="4" class="rounded-xl border-2 border-white/20 bg-white/5 p-5 text-center">
+  <div v-click="4" class="rounded-xl border-2 border-white/20 bg-white/10 p-5 text-center">
     <div class="text-4xl mb-3">🗣️</div>
     <div class="text-base">"語れるような<br />ネタが自分にはない"</div>
   </div>
@@ -341,7 +356,7 @@ layout: center
 [click] 年齢的にも今さら始めても遅いかなと。  
 [click] 子育てや家庭があって時間も取れない。  
 [click] 語れるようなネタが自分にはない。  
-このセッションは、そういう気持ちを抱えているすべての方に向けてお話しします。
+本セッションは、そういう気持ちを抱えているすべての方に向けてお話しします。
 -->
 
 ---
@@ -356,24 +371,24 @@ transition: fade-out
     <ul class="space-y-3 text-base">
       <li>周りはつよつよエンジニアのタレント集団</li>
       <li>半期ごとに技術的アウトプットを<br />発表する文化（技術力評価会）</li>
-      <li>評価会は正直、<span class="text-blue-300 font-bold">辛かった…</span></li>
+      <li>評価会は正直、<span class="text-blue-300 font-bold">プレッシャーもあり辛かった…</span></li>
     </ul>
   </div>
   <div class="rounded-xl border-2 border-amber-400/50 bg-amber-400/10 p-6">
     <div class="text-lg font-bold text-amber-300 mb-4"><mdi-thought-bubble-outline class="inline mr-2" />心の中では</div>
     <ul class="space-y-3 text-base">
       <li>アウトプットはしていたが<span class="text-amber-300 font-bold">自発的</span>ではなかった</li>
-      <li>評価としても正直イマイチだった</li>
+      <li>「評価されるために義務感でやっている」感が自分にはなじまなかった</li>
       <li>でも社外発表している人への<br /><span class="text-amber-300 font-bold">憧れ</span>はずっとあった</li>
     </ul>
   </div>
 </div>
 
 <!--
-前職のVoyageGroupには「技術力評価会」という文化がありました。  
+前職の企業には「技術力評価会」という文化がありました。  
 つよつよエンジニアのタレント集団の中で、半期ごとにアウトプットを発表する場があったんです。  
-評価会は正直辛かったです。  
-ただ、アウトプットはしていたものの、自発的なものではありませんでした。評価もイマイチでした。  
+評価会は正直、プレッシャーもあって辛い側面もありました。 
+業務としての成果やアウトプットは出してはいたものの、どこか「評価されるために義務感でやっている」という感覚が拭えず、自分の中で今ひとつしっくりきていませんでした。  
 でも、社外で発表しているエンジニアへの憧れは、ずっと心の中にありました。
 -->
 
@@ -390,13 +405,13 @@ transition: fade-out
       <div class="font-bold">事業会社へ転職</div>
       <div class="text-sm text-white/70 mt-1">Web系ではない</div>
     </div>
-    <div class="text-3xl text-white/50">＋</div>
+    <div class="text-3xl text-white/70">＋</div>
     <div class="rounded-xl border-2 border-red-400/50 bg-red-400/10 px-6 py-4 text-center">
       <div class="text-3xl mb-2">😷</div>
       <div class="font-bold">コロナ禍</div>
       <div class="text-sm text-white/70 mt-1">転職直後に直撃</div>
     </div>
-    <div class="text-3xl text-white/50">＝</div>
+    <div class="text-3xl text-white/70">＝</div>
     <div class="rounded-xl border-2 border-gray-400/50 bg-gray-400/10 px-6 py-4 text-center">
       <div class="text-3xl mb-2">🔇</div>
       <div class="font-bold">アウトプットの場</div>
@@ -405,13 +420,13 @@ transition: fade-out
   </div>
 
   <div v-click="1" class="mt-4 max-w-2xl w-full space-y-3">
-    <div class="rounded-lg border border-white/20 bg-white/5 px-6 py-3 flex items-center">
+    <div class="rounded-lg border border-white/20 bg-white/10 px-6 py-3 flex items-center">
       <carbon-close-filled class="mr-3 text-red-400 shrink-0" />技術力評価会 → <span class="text-red-400 ml-2">事業会社なので存在しない</span>
     </div>
-    <div class="rounded-lg border border-white/20 bg-white/5 px-6 py-3 flex items-center">
+    <div class="rounded-lg border border-white/20 bg-white/10 px-6 py-3 flex items-center">
       <carbon-close-filled class="mr-3 text-red-400 shrink-0" />社内LT会 → <span class="text-red-400 ml-2">コロナでなくなった</span>
     </div>
-    <div class="rounded-lg border border-white/20 bg-white/5 px-6 py-3 flex items-center">
+    <div class="rounded-lg border border-white/20 bg-white/10 px-6 py-3 flex items-center">
       <carbon-close-filled class="mr-3 text-red-400 shrink-0" />勉強会・カンファレンス → <span class="text-red-400 ml-2">全滅</span>
     </div>
   </div>
@@ -420,15 +435,15 @@ transition: fade-out
 <!--
 転職した直後に、すぐコロナ禍になってしまいました。  
 [click] 前職にあった技術力評価会は、事業会社への転職でなくなりました。  
-唯一あった社内LT会もコロナでなくなり、勉強会やカンファレンスも全滅。  
-外の世界への接点が、完全にゼロになったんです。
+唯一あった社内LT会もコロナでなくなり、世の中的にも勉強会やカンファレンスも全滅した時期でした。  
+外の世界への接点が、完全にゼロになってしまいました。
 -->
 
 ---
 transition: fade-out
 ---
 
-# <mdi-robot-outline /> Slack Bot Officer を自称していた頃
+# <mdi-robot-outline /> Slack Bot Officer を自称する様になるものの
 
 <div class="mt-6 grid grid-cols-2 gap-8">
   <div class="space-y-4">
@@ -442,7 +457,7 @@ transition: fade-out
     </div>
     <div v-click="1" class="rounded-xl border-2 border-amber-400/50 bg-amber-400/10 p-6">
       <div class="text-lg font-bold text-amber-300 mb-3"><mdi-emoticon-wink-outline class="inline mr-2" />正直な動機</div>
-      <div class="text-base">「部門を超えてエンジニアの注目を浴びるには、bot開発は良いムーブだ」という<span class="text-amber-300 font-bold">スケベ根性</span>もありました 笑</div>
+      <div class="text-base">「部門を超えてエンジニアからのフィードバックを得るには、bot開発は良いムーブだ」という<span class="text-amber-300 font-bold">想い</span>がありました</div>
     </div>
   </div>
 
@@ -461,12 +476,17 @@ transition: fade-out
 </div>
 
 <!--
-そんな中、社内Slackのworkspaceが以前に比べて寂しくて、まずは自分でいくつかbotを生やし始めました。  
-前職のworkspaceにはbot職人がいて、その姿に憧れていた分、Slack文化を持ち込みたかったのと、TypeScriptを学びたい時期だったのが大きいです。Vueも触りましたが、当時はTS活用がまだ手探りで正直アレでした（笑）。  
-その流れで、いつしか「Slack Bot Officer」を自称するようになりました。  
-[click] 正直に言うと、「部門を超えてエンジニアの注目を浴びるには、bot開発は良いムーブだ」というスケベ根性もありました（笑）。  
-[click] でも結局、会社の中では良い名刺代わりにはなったものの、フィードバックループはない。一緒にbotを作る仲間も増えない。外の世界への接点は何も変わらなかった。  
-これが「沈黙の数年間」の正体でした。
+そんな中、転職先のSlackが以前の環境に比べてどこか静かで寂しく感じ、まずは自分でいくつかBotを生やし始めました。　　
+前職にいた「Bot職人」への憧れもありましたし、ちょうど新しい技術をインプットしたい時期でもありました。
+
+その活動を続けるうちに、いつしか社内で「Slack Bot Officer」を自称するようになりました。
+
+[click] 正直に白状すると、「部門を超えて社内のエンジニアからフィードバックを得るには、Bot開発は良いムーブだ」という、想いがありました。
+
+[click] でも結局、社内での良い名刺代わりにはなったものの、そこから先への広がりはありませんでした。
+フィードバックが返ってくるわけでもなく、一緒にBotを作る仲間が増えるわけでもない。当然、外の世界への接点も何も変わらないままでした。
+
+ここまでが「沈黙の数十年間」でした。
 -->
 
 ---
@@ -481,7 +501,7 @@ class: text-center
 <div class="text-3xl font-bold text-pink-300">
   運命の出会い
 </div>
-<div class="mt-4 text-xl text-white/60">
+<div class="mt-4 text-xl text-white/80">
   OSSと推しとの出会い
 </div>
 
@@ -514,11 +534,16 @@ transition: fade-out
 </div>
 
 <!--
-転機は業務課題から始まりました。  
-レセプトのBaaSを開発する際に、APIのみのサービスでQA部隊のポチポチテストができない状況になりました。  
-コアドメインなので早く品質を確保したい。I/Fとして正しいことを早く保証したい。  
-シナリオベースでAPIテストができるツールを探していました。当時、それができるツールが少なかったんです。  
-その中で、ペパボの技術ブログの記事を見つけます。
+転機は、新しいシステム開発における技術的な課題から始まりました。
+障害福祉サービスの請求に関わる『レセプト業務』を共通基盤を構築しようとしていました。  
+画面を持たないAPI（BaaS）をスキーマ駆動開発することになりました。
+
+ここで大きな問題に直面しました。画面がないため、QA（品質保証）部隊がこれまですすめてきた「画面をポチポチ操作するテスト」が物理的にできません。
+
+しかし、請求システムのコアドメインだからこそ、いち早く品質を担保して、インターフェースとして正しいことを保証する必要がありました。
+
+複数のAPIをまたぐ『シナリオベース』で自動テストができるツールを必死に探しましたが、当時はその要求を満たせる選択肢はほとんどありませんでした。
+そんな切実な状況の中、とある技術ブログが目に止まりました。
 -->
 
 ---
@@ -537,7 +562,7 @@ layout: center
 </div>
 
 <!--
-このペパボ技術ブログの、作者k1LoWさんの記事でrunnを見つけました。  
+その記事がこちらのk1LoWさんのブログで、runnというAPIシナリオテストツールの存在を始めてしりました。    
 「これだ！」と思って、すぐ試し始めたのが最初の一歩でした。
 -->
 
@@ -581,10 +606,13 @@ transition: fade-out
 </div>
 
 <!--
-試してみたら最初はうまく動きませんでした。  
-でもコードを読んでみると、GoがシンプルでコードQuantityも少なく、ちょうどGoを勉強していた自分でも読めそうだと思って。  
-「自分でも分かるかも！」とPRを送ってみました。  
-すぐマージしてもらえた嬉しさと、「もっとこうなれば…」という思いがどんどん出てきて、気づいたら77PRを送るようになっていました。
+さっそく試してみたのですが、最初はうまく動きませんでした。　　
+
+ですが、コードを開いてみると非常にシンプルで、当時Go言語を勉強していた自分でも読めそうなボリュームだったんです。「自分にも直せるかもしれない」と思い、バグを特定して初めてのPRを送ってみました。
+
+それがすぐにマージされた嬉しさと、「もっと良くしたい！」という思いからIssueとPRを積極的に送るようになりました。  
+
+サービスの成長とあわせてrunnの改善したいポイントがどんどん湧き出てきて、気づけば、送ったPRの数が現時点までに77件となりました。
 -->
 
 ---
@@ -612,9 +640,11 @@ transition: fade-out
 </div>
 
 <!--
-k1LoWさんにリアルで会う前、まだ9PRくらいの頃にリポジトリ招待をいただきました。  
-継続して改善提案していたことが、信頼として返ってきた瞬間でした。  
-この出来事が、その後のコミットメントをさらに強くしてくれました。
+まだリアルで対面すらしていない、送ったPRも10件に満たない頃でした。
+突然リポジトリへ招待され、公式のコミッター権限を頂きました。
+
+1ユーザーである自分の小さい改善や提案を、k1LoWさんは受け入れてくれ、また、議論にも積極的に答えてくれていた中でした。  
+信頼してくれたことも嬉しかったのですが、提案内容から裏にあったコンセプトを汲み取ってくれて感動したのを覚えています。
 -->
 
 ---
@@ -669,25 +699,25 @@ transition: fade-out
     <div class="rounded-xl border-2 border-pink-400/50 bg-pink-400/10 p-5 text-center w-36">
       <div class="text-3xl mb-2">👨‍💻</div>
       <div class="font-bold text-sm">katzumi</div>
-      <div class="text-xs text-white/60 mt-2">runnをドッグフーディング<br />改善提案を継続</div>
+      <div class="text-xs text-white/80 mt-2">runnをドッグフーディング<br />改善提案を継続</div>
     </div>
-    <div class="text-2xl text-white/50">→</div>
+    <div class="text-2xl text-white/70">→</div>
     <div class="rounded-xl border-2 border-blue-400/50 bg-blue-400/10 p-5 text-center w-36">
       <div class="text-3xl mb-2">🤝</div>
       <div class="font-bold text-sm">ちゃまほり</div>
-      <div class="text-xs text-white/60 mt-2">PHPerRoomで<br />k1LoW氏と繋がる</div>
+      <div class="text-xs text-white/80 mt-2">PHPerRoomで<br />k1LoW氏と繋がる</div>
     </div>
-    <div class="text-2xl text-white/50">→</div>
+    <div class="text-2xl text-white/70">→</div>
     <div class="rounded-xl border-2 border-green-400/50 bg-green-400/10 p-5 text-center w-36">
       <div class="text-3xl mb-2">⭐</div>
       <div class="font-bold text-sm">k1LoW氏</div>
-      <div class="text-xs text-white/60 mt-2">runnの作者</div>
+      <div class="text-xs text-white/80 mt-2">runnの作者</div>
     </div>
-    <div class="text-2xl text-white/50">＋</div>
+    <div class="text-2xl text-white/70">＋</div>
     <div class="rounded-xl border-2 border-amber-400/50 bg-amber-400/10 p-5 text-center w-36">
       <div class="text-3xl mb-2">🎙️</div>
       <div class="font-bold text-sm">赤瀬さん</div>
-      <div class="text-xs text-white/60 mt-2">ツナギメエフエム</div>
+      <div class="text-xs text-white/80 mt-2">ツナギメエフエム</div>
     </div>
   </div>
 
@@ -719,7 +749,7 @@ transition: fade-out
     <div v-click="1" class="rounded-xl border-2 border-pink-400/50 bg-pink-400/10 p-4">
       <div class="font-bold text-pink-300 mb-2"><mdi-microphone class="inline mr-1" />登壇中のサプライズ言及</div>
       <div class="text-sm italic">"データ駆動テストの拡張をしてくれたコントリビューターが<span class="text-pink-300 font-bold">本日会場に来てくれていると思います（ニヤリ）</span>"</div>
-      <div class="text-xs text-white/60 mt-2">→ 想定外のタイミングで名指しされて驚く</div>
+      <div class="text-xs text-white/80 mt-2">→ 想定外のタイミングで名指しされて驚く</div>
     </div>
   </div>
 
@@ -730,7 +760,7 @@ transition: fade-out
     </div>
     <div v-click="3" class="rounded-xl border-2 border-amber-400/50 bg-amber-400/10 p-4">
       <div class="font-bold text-amber-300 mb-2"><mdi-map-marker class="inline mr-1" />運命のひとこと</div>
-      <div class="text-sm">"福岡でPHPカンファレンスやりますよ"<br /><span class="text-amber-300 font-bold text-base">「絶対参加しよう！」</span><br /><span class="text-xs text-white/60">（k1LoWさん・赤瀬さんは福岡在住）</span></div>
+      <div class="text-sm">"福岡でPHPカンファレンスやりますよ"<br /><span class="text-amber-300 font-bold text-base">「絶対参加しよう！」</span><br /><span class="text-xs text-white/80">（k1LoWさん・赤瀬さんは福岡在住）</span></div>
     </div>
   </div>
 </div>
@@ -756,7 +786,7 @@ class: text-center
 <div class="text-3xl font-bold text-green-300">
   推し駆動サイクル
 </div>
-<div class="mt-4 text-xl text-white/60">
+<div class="mt-4 text-xl text-white/80">
   フィードバックの連鎖
 </div>
 
@@ -780,18 +810,18 @@ transition: fade-out
     <div class="rounded-xl border-2 border-orange-400/50 bg-orange-400/10 p-8 text-center">
       <div class="text-7xl font-extrabold text-orange-300">5</div>
       <div class="text-lg mt-2">本のプロポーザル</div>
-      <div class="text-sm text-white/60 mt-1">LT含む</div>
+      <div class="text-sm text-white/80 mt-1">LT含む</div>
     </div>
-    <div class="text-4xl text-white/50">→</div>
+    <div class="text-4xl text-white/70">→</div>
     <div class="rounded-xl border-2 border-green-400/50 bg-green-400/10 p-8 text-center">
       <div class="text-7xl">🎉</div>
       <div class="text-lg mt-2">採択！</div>
-      <div class="text-sm text-white/60 mt-1">前夜祭LTで初登壇</div>
+      <div class="text-sm text-white/80 mt-1">前夜祭LTで初登壇</div>
     </div>
   </div>
 
-  <div v-click="1" class="mt-8 rounded-xl border-2 border-white/20 bg-white/5 p-4 max-w-lg mx-auto">
-    <mdi-comment-quote-outline class="inline mr-2 text-white/60" />
+  <div v-click="1" class="mt-8 rounded-xl border-2 border-white/20 bg-white/10 p-4 max-w-lg mx-auto">
+    <mdi-comment-quote-outline class="inline mr-2 text-white/80" />
     <span class="text-white/80 italic">"プロポーザルが落ちても行くつもりでいた"</span>
   </div>
 </div>
@@ -814,19 +844,19 @@ transition: fade-out
     <div class="rounded-xl border-2 border-blue-400/50 bg-blue-400/10 px-8 py-3 w-full text-center font-bold">
       前夜祭LT「クリーンアーキテクチャのアンチパターン」
     </div>
-    <div class="text-center text-white/50 text-sm">↓ フィードバックをもらう</div>
+    <div class="text-center text-white/70 text-sm">↓ フィードバックをもらう</div>
     <div v-click="1" class="rounded-xl border-2 border-green-400/50 bg-green-400/10 px-8 py-3 w-full text-center font-bold">
       PHPカンファレンス沖縄「ActiveRecordパターンの呪縛を学びほぐす」
     </div>
-    <div v-click="1" class="text-center text-white/50 text-sm">↓ 廊下でrunnへの要望・質問を受ける → 実装する</div>
+    <div v-click="1" class="text-center text-white/70 text-sm">↓ 廊下でrunnへの要望・質問を受ける → 実装する</div>
     <div v-click="2" class="rounded-xl border-2 border-amber-400/50 bg-amber-400/10 px-8 py-3 w-full text-center font-bold">
       各地のカンファレンス「APIカバレッジ計測」「モブワーク事例」など
     </div>
-    <div v-click="2" class="text-center text-white/50 text-sm">↓ 改善内容がOSS化 → 次の登壇ネタに</div>
+    <div v-click="2" class="text-center text-white/70 text-sm">↓ 改善内容がOSS化 → 次の登壇ネタに</div>
     <div v-click="3" class="rounded-xl border-2 border-pink-400/50 bg-pink-400/10 px-8 py-3 w-full text-center font-bold">
       PHPカンファレンス福岡2025「アーキテクチャレベルの依存性逆転」（前回登壇）
     </div>
-    <div v-click="3" class="text-center text-white/50 text-sm">↓ そして今日のこのセッションへ</div>
+    <div v-click="3" class="text-center text-white/70 text-sm">↓ そして今日のこのセッションへ</div>
   </div>
 </div>
 
@@ -849,13 +879,13 @@ transition: fade-out
       <div class="font-bold text-blue-300 mb-3"><carbon-calendar class="inline mr-2" />runnの一人アドベントカレンダー</div>
       <div class="text-sm space-y-2">
         <div>12/1から毎日runnの記事を書き続ける</div>
-        <div class="text-white/60">→ Zennに連載記事シリーズ</div>
+        <div class="text-white/80">→ Zennに連載記事シリーズ</div>
       </div>
     </div>
     <div v-click="1" class="rounded-xl border-2 border-pink-400/50 bg-pink-400/10 p-5">
       <div class="font-bold text-pink-300 mb-3"><mdi-star class="inline mr-2" />k1LoW氏から連絡</div>
       <div class="text-xl italic text-pink-200 font-bold">"本にしてみない？"</div>
-      <div class="text-sm text-white/60 mt-3">推しから直接声をかけてもらえた瞬間</div>
+      <div class="text-sm text-white/80 mt-3">推しから直接声をかけてもらえた瞬間</div>
     </div>
   </div>
 
@@ -950,7 +980,7 @@ class: text-center
 <div class="text-3xl font-bold text-amber-300">
   ライフステージを味方に
 </div>
-<div class="mt-4 text-xl text-white/60">
+<div class="mt-4 text-xl text-white/80">
   3つの追い風
 </div>
 
@@ -971,7 +1001,7 @@ layout: center
 
 <div
   v-click="1"
-  class="absolute inset-0 z-20 flex items-center justify-center bg-black/50 backdrop-blur-sm transition duration-700 ease-in-out"
+  class="absolute inset-0 z-20 flex items-center justify-center bg-black/60 backdrop-blur-sm transition duration-700 ease-in-out"
   :class="$clicks < 1 ? 'opacity-0 pointer-events-none' : 'opacity-100 pointer-events-auto'"
 >
   <div class="semantic-overlay semantic-positive p-10 backdrop-blur-lg rounded-2xl shadow-2xl transform scale-110 transition duration-500">
@@ -1060,7 +1090,7 @@ class: text-center
 <div class="text-3xl font-bold text-rose-300">
   推しは推せるときに推せ
 </div>
-<div class="mt-4 text-xl text-white/60">
+<div class="mt-4 text-xl text-white/80">
   波乗りの戦略
 </div>
 
@@ -1082,17 +1112,17 @@ transition: fade-out
         <div>PHPカンファレンス福岡が10年目を節目に終了</div>
         <div class="text-white/70">赤瀬さんが幕引きを宣言</div>
         <div class="mt-2 text-red-300 font-bold">去年（2025年）が最後になってしまった</div>
-        <div class="text-sm text-white/60 mt-1">k1LoW氏の足元のイベントがなくなり、凄く悲しい気持ち</div>
+        <div class="text-sm text-white/80 mt-1">k1LoW氏の足元のイベントがなくなり、凄く悲しい気持ち</div>
       </div>
     </div>
     <div class="rounded-xl border-2 border-amber-400/50 bg-amber-400/10 p-5">
       <div class="font-bold text-amber-300 mb-2"><mdi-map-marker class="inline mr-2" />Go Conference mini in 鴨川</div>
-      <div class="text-sm">「押しかけ」でrunn開発者会議を開催<br />憧れの<span class="text-amber-300 font-bold">はてな社</span>にもお邪魔できた<br /><span class="text-xs text-white/60">→ あの時行っておいてよかった</span></div>
+      <div class="text-sm">「押しかけ」でrunn開発者会議を開催<br />憧れの<span class="text-amber-300 font-bold">はてな社</span>にもお邪魔できた<br /><span class="text-xs text-white/80">→ あの時行っておいてよかった</span></div>
     </div>
   </div>
 
   <div v-click="1" class="flex flex-col justify-center">
-    <div class="rounded-xl border-2 border-white/20 bg-white/5 p-8 text-center space-y-5">
+    <div class="rounded-xl border-2 border-white/20 bg-white/10 p-8 text-center space-y-5">
       <div class="text-xl font-bold text-white/90">コミュニティも</div>
       <div class="text-xl font-bold text-white/90">憧れのエンジニアとの接点も</div>
       <div class="text-xl font-bold text-white/90">自分の「動ける状況」も</div>
@@ -1245,7 +1275,7 @@ transition: fade-out
 
 <div class="space-y-4 mt-4">
   <div>
-    <div class="text-sm text-white/60 mb-2">このスライド・プロポーザル</div>
+    <div class="text-sm text-white/80 mb-2">このスライド・プロポーザル</div>
     <QRCode value="https://fortee.jp/kinoko-2026/proposal/9fcb212e-f5d8-4f7f-94ad-cda8478712b8" class="w-28 h-28" />
   </div>
   <div class="text-sm space-y-2 mt-4">
