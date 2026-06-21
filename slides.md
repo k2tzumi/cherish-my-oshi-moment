@@ -70,7 +70,7 @@ v0.0.1
 </div>
 
 <div class="absolute bottom-10 right-4 opacity-80" style="z-index: -1;">
-  <img src="./kinoko-conf-character.png" class="h-100 w-auto" alt="公式ロゴ" />
+  <img src="./public/kinoko-conf-character.png" class="h-100 w-auto" alt="公式ロゴ" />
 </div>
 
 
@@ -667,7 +667,7 @@ transition: fade-out
     k1LoWさんに会う前、まだ <span class="text-amber-700 dark:text-amber-300 font-bold">9PR</span> くらいの時期。<br />
     改善提案を続けていたところ、リポジトリ招待が届いた
   </div>
-  <img src="./invitation.png" alt="k1LoW invited you to k1LoW/runn" class="w-full max-w-[60%] object-contain" />
+  <img src="./public/invitation.png" alt="k1LoW invited you to k1LoW/runn" class="w-full max-w-[60%] object-contain" />
   <div class="text-center text-lg md:text-xl font-bold text-green-700 dark:text-green-300">
     「改善を積み上げると、信頼が返ってくる」
   </div>
