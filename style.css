@@ -1,6 +1,35 @@
 /* add any global style here */
 
 /* ----------------------------------------
+   slide typography baseline
+---------------------------------------- */
+.slidev-layout .text-xs {
+  font-size: 0.82rem !important;
+  line-height: 1.25rem;
+}
+
+.slidev-layout .text-sm {
+  font-size: 0.95rem !important;
+  line-height: 1.4rem;
+}
+
+.slidev-layout [class*="text-[10px]"] {
+  font-size: 0.82rem !important;
+  line-height: 1.2rem;
+}
+
+.slidev-layout [class*="text-[13px]"] {
+  font-size: 0.9rem !important;
+  line-height: 1.35rem;
+}
+
+.slidev-layout .ogp-site-name,
+.slidev-layout .error-url {
+  font-size: 0.85rem !important;
+  line-height: 1.25rem;
+}
+
+/* ----------------------------------------
    mention
 ---------------------------------------- */
 .mention {
