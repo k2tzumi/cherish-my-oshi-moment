@@ -1,120 +1,171 @@
 /* add any global style here */
+
+/* ----------------------------------------
+   slide typography baseline
+---------------------------------------- */
+.slidev-layout .text-xs {
+  font-size: 0.82rem !important;
+  line-height: 1.25rem;
+}
+
+.slidev-layout .text-sm {
+  font-size: 0.95rem !important;
+  line-height: 1.4rem;
+}
+
+.slidev-layout [class*="text-[10px]"] {
+  font-size: 0.82rem !important;
+  line-height: 1.2rem;
+}
+
+.slidev-layout [class*="text-[13px]"] {
+  font-size: 0.9rem !important;
+  line-height: 1.35rem;
+}
+
+.slidev-layout .ogp-site-name,
+.slidev-layout .error-url {
+  font-size: 0.85rem !important;
+  line-height: 1.25rem;
+}
+
+/* ----------------------------------------
+   mention
+---------------------------------------- */
 .mention {
-    color: red;
-    font-weight: bold;
-    display: inline-block;
-  }
-  
-  .fusen {
-    display: flex;
-    align-items: center;
-    position: relative;
-    padding: 2em 2.2em;
-    border-left: 27px solid #2589d0;
-    background-color: #a9ceec;
-    color: #333333;
-  }
-  
-  .fusen::before {
-    position: absolute;
-    bottom: -5px;
-    right: 7px;
-    z-index: -1;
-    transform: rotate(5deg);
-    width: 70%;
-    height: 50%;
-    background-color: #d0d0d0;
-    content: "";
-    filter: blur(4px);
-  }
-  
-  .box-text-memo {
-    position: relative;
-    border: 3px dashed #000055;
-    border-radius: 5px;
-    margin: 20px 0;
-    padding: 20px 20px 5px 20px;
-  }
-  .box-text-memo::before {
-    content: "MEMO";
-    position: absolute;
-    background-color: #f4f4f4;
-    color: #000055;
-    font-weight: bold;
-    left: 20px;
-    top: -23px;
-    padding: 10px;
-  }
-  
-  
-  .slidev-layout blockquote {
-    position: relative;
-    padding: 10px 15px 10px 60px;
-    box-sizing: border-box;
-    font-style: italic;
-    background: #f5f5f5;
-    color: #777777;
-    border-left: 4px solid #9dd4ff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.14);
-  }
-  
-  .slidev-layout blockquote:before{
-    display: inline-block;
-    position: absolute;
-    top: 7px;
-    left: 0;
-    content: "“";
-    font-family: sans-serif;
-    color: #9dd4ff;
-    font-size: 90px;
-    line-height: 1;
-  }
-  
-  .slidev-layout blockquote p {
-    padding: 0;
-    margin: 7px 0;
-    line-height: 1.7;
-  }
-  
-  .slidev-layout blockquote cite {
-    display: block;
-    text-align: right;
-    color: #888888;
-    font-size: 0.9em;
-  }
-  
-  .speech-bubble {
-    position: relative;
-    background: #fffacd;
-    border: 2px solid #ff8c00;
-    border-radius: 10px;
-    padding: 15px;
-    color: #ff8c00;
-    width: fit-content;
-    max-width: 100%;
-    font-size: 1.2em;
-    font-weight: bold;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
-  }
-  
-  .speech-bubble::before {
-    content: '';
-    position: absolute;
-    bottom: -21px;
-    top: 100%;
-    left: 20px;
-    border-width: 12px 12px 0px;
-    border-style: solid;
-    border-color: #ff8c00 transparent transparent;
-  }
-  
-  .speech-bubble::after {
-    content: '';
-    position: absolute;
-    bottom: -20px;
-    top: 100%;
-    left: 20px;
-    border-width: 10px 10px 0;
-    border-style: solid;
-    border-color: #fffacd transparent transparent transparent;
-  }
+  color: #c0392b;
+  font-weight: bold;
+  display: inline-block;
+}
+
+/* ----------------------------------------
+   fusen
+---------------------------------------- */
+.fusen {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 1.2em 1.8em;
+  border-left: 6px solid #1a6fb5;
+  background-color: #e8f3fb;
+  color: #1a3a5c;
+  border-radius: 0 6px 6px 0;
+}
+
+.fusen::before {
+  position: absolute;
+  bottom: -5px;
+  right: 7px;
+  z-index: -1;
+  transform: rotate(5deg);
+  width: 70%;
+  height: 50%;
+  background-color: #c8c8c8;
+  content: "";
+  filter: blur(4px);
+}
+
+/* ----------------------------------------
+   box-text-memo
+---------------------------------------- */
+.box-text-memo {
+  position: relative;
+  border: 2px dashed #2255aa;
+  border-radius: 5px;
+  margin: 28px 0 20px;
+  padding: 16px 16px 8px 16px;
+  background: #f0f4ff;
+  color: #1a2a4a;
+}
+
+.box-text-memo::before {
+  content: "MEMO";
+  position: absolute;
+  background-color: #f8fafc;
+  color: #2255aa;
+  font-weight: bold;
+  left: 14px;
+  top: -20px;
+  padding: 4px 10px;
+  font-size: 0.78em;
+  border: 1.5px solid #2255aa;
+  border-radius: 3px;
+}
+
+/* ----------------------------------------
+   blockquote
+---------------------------------------- */
+.slidev-layout blockquote {
+  position: relative;
+  padding: 10px 15px 10px 60px;
+  box-sizing: border-box;
+  font-style: italic;
+  background: #f0f4f8;
+  color: #2a4a6a;
+  border-left: 4px solid #2589d0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.10);
+}
+
+.slidev-layout blockquote:before {
+  display: inline-block;
+  position: absolute;
+  top: 2px;
+  left: 4px;
+  content: "\201C";
+  font-family: sans-serif;
+  color: #2589d0;
+  font-size: 80px;
+  line-height: 1;
+}
+
+.slidev-layout blockquote p {
+  padding: 0;
+  margin: 7px 0;
+  line-height: 1.7;
+}
+
+.slidev-layout blockquote cite {
+  display: block;
+  text-align: right;
+  color: #4a6a8a;
+  font-size: 0.9em;
+}
+
+/* ----------------------------------------
+   speech-bubble
+---------------------------------------- */
+.speech-bubble {
+  position: relative;
+  background: #fffacd;
+  border: 2px solid #d0720a;
+  border-radius: 10px;
+  padding: 15px;
+  color: #8a4800;
+  width: fit-content;
+  max-width: 100%;
+  font-size: 1.2em;
+  font-weight: bold;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.speech-bubble::before {
+  content: '';
+  position: absolute;
+  bottom: -21px;
+  top: 100%;
+  left: 20px;
+  border-width: 12px 12px 0px;
+  border-style: solid;
+  border-color: #d0720a transparent transparent;
+}
+
+.speech-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  top: 100%;
+  left: 21px;
+  border-width: 10px 10px 0;
+  border-style: solid;
+  border-color: #fffacd transparent transparent transparent;
+}
