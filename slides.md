@@ -509,7 +509,7 @@ Slack Bot Officer を自称する様になるものの
 
 気づけばBotの数もどんどん増えていって、そのうち社内で「Slack Bot Officer」を自称するようになりました。
 
-[click] 実は、ひとつ狙いがあり、部門を超えてエンジニアからフィードバックをもらうには、Bot開発は良い手段だと思っていました。
+[click] 実は、このBot開発の取り組みには狙いがあり、部門を超えてエンジニアからフィードバックをもらうのに良い手段だと思っていました。
 
 [click] でも結局、この取り組みは社内での良い名刺代わりにはなったものの、そこから先への広がりはありませんでした。
 フィードバックが返ってくるわけでもなく、一緒にBotを作る仲間が増えるわけでもない。当然、対外的なアウトプットもゼロのままでした。
@@ -567,9 +567,9 @@ transition: fade-out
 
 <!--
 転機は、新しいシステム開発における技術的な課題から始まりました。  
-画面を持たないAPI（BaaS）をスキーマ駆動開発することになったんですが、画面がないので従来のブラウザテストが使えない。  
+画面を持たないAPI（BaaS）をスキーマ駆動開発する方針としましたが、画面がないので従来のブラウザテストを行えないという課題です。  
 しかも請求処理は複数ステップにまたがり、組み合わせも膨大で、単体のAPIテストだけでは品質を担保できませんでした。  
-シナリオベースでAPIテストできるツールが必要だったんですが、当時はほとんど選択肢がありませんでした。
+シナリオベースでAPIテストできるツールが必要と考えましたが、当時はほとんど選択肢がありませんでした。
 -->
 
 ---
@@ -651,10 +651,10 @@ transition: slide-left
 しかし最初はうまく動きませんでした。  
 動かない原因を調べるために、ソースコードを読んでみることにしました。
 
-すると、runnはまだ初期段階でコード量が少なく、Go言語自体もシンプルで、当時Goを勉強中だった自分でも追える規模だったんです。  
+すると、runnはまだ初期段階でコード量が少なく、Go言語自体もシンプルで、当時Goを勉強中だった自分でも追える規模でした。  
 「もしかして自分でもわかるのでは？」と感じて、動かなかった箇所を修正し、初めてのPRを送ってみました。
 
-それがすぐにマージされたんです。  
+それがすぐにマージしてもらえました！  
 一度受け入れてもらえると「次もいけるかも」と思えて、Issue作成やPRを積極的に送るようになりました。
 
 BaaSの開発が進むにつれてrunnへの改善ポイントも次々と見つかり、気づけば送ったPRの数は現時点で77件になりました。
@@ -836,12 +836,12 @@ hallway track の魅力
 </div>
 
 <!--
-そのPHPerKaigi 2023の当日。まずk1LoW氏のセッション「Win Testing Trophy Easily」を客席で聴いていました。  
+そのPHPerKaigi 2023の当日。まずk1LoW氏のセッションをトラックで聴いていました。  
 [click] そしたら登壇中に突然、「データ駆動テストの拡張をしてくれたコントリビューターが本日会場に来てくれていると思います」と触れられて、かなり驚きました。  
-セッション後のAsk the Speakerで、ようやくk1LoWさんに直接「はじめまして」を伝えることができました。GitHubでしかやり取りしていなかった方と、初めてリアルで会えた瞬間でした。   
+セッション後のAsk the Speakerで、ようやくk1LoWさんに直接「はじめまして」を伝えることができました。ネットでのやり取りのみだった方と、初めてリアルで会えた瞬間でした。   
 [click] 普段はIssueやPRで英語コミュニケーションでしたが、日本語で対面で話すと解像度が一気に上がりました。  
 Day2はホワイトボードでアイデアをぶつけ合い、その場でコーディングも行いました。カンファレンスの廊下の魅力を始めて実感しました  
-[click] k1LoWさんが投稿してくれた会議の様子がこちらです。  
+[click] この写真は、その時に書き殴ったホワイトボードです。  
 [click] そして「福岡でPHPカンファレンスやりますよ」という話を聞いて、「絶対参加しよう！」という気持ちになりました。
 -->
 
@@ -940,8 +940,8 @@ transition: slide-left
 その後に各地の地方カンファレンスを行脚するというサイクルが生まれました。  
 
 まず、福岡での前夜祭LTでフィードバックをもらい、そのネタを元にプロポーザルとして提出しました。  
-[click] そしてPHPカンファレンス沖縄での登壇につながりました  
-[click] またカンファレンスの廊下でrunnへの要望や質問をもらって、それを持ち帰って実装する。その改善がまた次の登壇ネタになっていく——。  
+[click] そしてそれが、PHPカンファレンス沖縄での登壇につながりました  
+[click] またその登壇したカンファレンスの廊下でrunnへの要望や質問をもらって、それを持ち帰って実装する。その改善がまた次の登壇ネタになっていく——。  
 [click] このサイクルが、自分でも驚くほどの速度で回り始めました。そして今日ここにいます。
 -->
 
@@ -991,7 +991,7 @@ transition: slide-left
 
 runnの一人アドベントカレンダーです。12月1日から毎日、runnに関する記事をZennに投稿していました。  
 [click] すると、k1LoW氏から「本にしてみない？」と声がかかりました。  
-Zennにそんな機能あったな〜くらいの感覚でしたが、言われるがままホイホイ引き受けました。  
+技術書典とか書いたこともなかった自分ですが、言われるがままホイホイ引き受けました。  
 [click] こうして「runnチュートリアル」というZenn Bookを書き、技術書著者にもなりました。
 -->
 
@@ -1011,7 +1011,7 @@ layout: center
 </div>
 
 <!--
-こちらが実際に書いたZenn Bookです。興味があればぜひよろしくお願いします
+こちらが実際に書いたZenn Bookです。興味があればぜひよろしくお願いします。無料です！
 -->
 
 ---
@@ -1050,7 +1050,8 @@ transition: slide-up
 もうひとつ、アウトプットが成長につながったエピソードです。   
 飛び込みLTでスキーマ駆動開発フローを発表したところ、イベントでフィードバックをもらえて、それがeg-r2というライブラリのOSS化につながりました。  
 所属会社として初めてのOSSです。  
-[click] 活動を振り返ってみての気づきですが、外部に発信するとフィードバックがもらえる。それを実感し、意識してからは、OSS活動を続ける行動に自然と変わっていきました。
+[click] 活動を振り返ってみての気づきですが、OSS活動も含めて外部発信は最も「タイパ」が良いと感じています。
+なぜなら、【発信 ➔ 社外からのフィードバック ➔ 自身の成長 ➔ 社内への認知拡大】という強力な好循環が自然とできあがるからです。この価値を意識してからは、OSS活動を続ける行動に自然と変わっていきました。
 -->
 
 ---
@@ -1112,7 +1113,7 @@ layout: center
 <!--
 「若いうちに頑張らないと手遅れ」という言説があります。  
 [click] でもそれは本当でしょうか？  
-私のケースが反証します。  
+内発的なアウトプットは、いつからでも遅くないと考えています。  
 40代・元地方在住・子育て世代の私が、人生で今が一番アウトプットできています。
 -->
 
@@ -1123,7 +1124,7 @@ transition: slide-up
 # <mdi-weather-windy /> 3つの追い風
 40 代からアウトプットし始めた私のケース。ライフステージの変化と、環境の変化がありました
 
-<div class="mt-5 grid grid-cols-3 gap-5">
+<div v-click="1" class="mt-5 grid grid-cols-3 gap-5">
   <div class="rounded-xl border-2 border-amber-400/60 bg-amber-100/30 dark:bg-amber-400/10 p-5 shadow-md backdrop-blur-sm">
     <div class="text-3xl mb-3 text-center">👨‍👩‍👦</div>
     <div class="text-base font-bold text-amber-700 dark:text-amber-300 mb-3"><mdi-numeric-1-circle class="inline mr-1" />子育てのフェーズ変化</div>
@@ -1132,13 +1133,13 @@ transition: slide-up
       <div>→ 部活が入り、<span class="text-amber-700 dark:text-amber-300 font-bold">親離れ</span>が進む</div>
       <div>→ 「構ってもらえなくなる」タイミングで時間が生まれる</div>
     </div>
-    <div v-click="1" class="mt-4 p-3 rounded-lg bg-amber-100/60 dark:bg-amber-400/10 border border-amber-400/40 text-xs text-center text-slate-700 dark:text-white/85">
+    <div v-click="2" class="mt-4 p-3 rounded-lg bg-amber-100/60 dark:bg-amber-400/10 border border-amber-400/40 text-xs text-center text-slate-700 dark:text-white/85">
       <mdi-hand-wave-outline class="inline mr-1" />
       会場の皆さんはいかがですか？
     </div>
   </div>
 
-  <div v-click="2" class="rounded-xl border-2 border-blue-400/60 bg-blue-100/30 dark:bg-blue-400/10 p-5 shadow-md backdrop-blur-sm">
+  <div v-click="3" class="rounded-xl border-2 border-blue-400/60 bg-blue-100/30 dark:bg-blue-400/10 p-5 shadow-md backdrop-blur-sm">
     <div class="text-3xl mb-3 text-center">🤖</div>
     <div class="text-base font-bold text-blue-700 dark:text-blue-300 mb-3"><mdi-numeric-2-circle class="inline mr-1" />技術的障壁の低下</div>
     <div class="text-sm space-y-2 text-slate-800 dark:text-white">
@@ -1149,7 +1150,7 @@ transition: slide-up
     </div>
   </div>
 
-  <div v-click="3" class="rounded-xl border-2 border-green-400/60 bg-green-100/30 dark:bg-green-400/10 p-5 shadow-md backdrop-blur-sm">
+  <div v-click="4" class="rounded-xl border-2 border-green-400/60 bg-green-100/30 dark:bg-green-400/10 p-5 shadow-md backdrop-blur-sm">
     <div class="text-3xl mb-3 text-center">🗾</div>
     <div class="text-base font-bold text-green-700 dark:text-green-300 mb-3"><mdi-numeric-3-circle class="inline mr-1" />コミュニティの成熟</div>
     <div class="text-sm space-y-2 text-slate-800 dark:text-white">
@@ -1163,7 +1164,7 @@ transition: slide-up
 
 <!--
 あくまで私のケースですが、3つの追い風がありました。  
-一つ目が子育てのフェーズ変化。一番下の子が中学生になり、部活が入って親離れが進みました。「構ってもらえなくなる」タイミングで、逆に自分の活動時間が生まれました。  
+[click] 一つ目が子育てのフェーズ変化。一番下の子が中学生になり、部活が入って親離れが進みました。「構ってもらえなくなる」タイミングで、逆に自分の活動時間が生まれました。  
 [click] この点はみなさんのご家庭の事情にもよると思うので、ぜひ聞いてみたいところです。  
 [click] 二つ目は技術的障壁の低下。k1LoW氏のリポジトリは全て英語でしたが、DeepLで乗り越えました。最近ではAIでコードリーディングやIssue化もできて、コミュニケーションも開発も含めて、言語的な障壁はかなり少なくなりました。  
 [click] 三つ目はコミュニティの成熟  
@@ -1220,8 +1221,8 @@ transition: slide-left
       </div>
     </div>
     <div v-click="1" class="rounded-xl border-2 border-amber-400/60 bg-amber-100/30 dark:bg-amber-400/10 p-5 shadow-md backdrop-blur-sm">
-      <div class="font-bold text-amber-700 dark:text-amber-300 mb-2"><mdi-map-marker class="inline mr-2" />Go Conference mini in 鴨川</div>
-      <div class="text-sm text-slate-800 dark:text-white">「押しかけ」でrunn開発者会議を開催<br />憧れの<span class="text-amber-700 dark:text-amber-300 font-bold">はてな社</span>にもお邪魔できた<br /><span class="text-xs text-slate-700 dark:text-white/80">→ あの時行っておいてよかった</span></div>
+      <div class="font-bold text-amber-700 dark:text-amber-300 mb-2"><mdi-map-marker class="inline mr-2" />Go Conference mini in KYOTO</div>
+      <div class="text-sm text-slate-800 dark:text-white">「押しかけ」で<a href="https://zenn.dev/katzumi/scraps/f00a2d3e177b77">runn開発者会議 in 鴨川</a>を開催<br />憧れの<span class="text-amber-700 dark:text-amber-300 font-bold">はてな社</span>にもお邪魔できた<br /><span class="text-xs text-slate-700 dark:text-white/80">→ あの時行っておいてよかった</span></div>
     </div>
   </div>
 
@@ -1239,7 +1240,7 @@ transition: slide-left
 PHPカンファレンス福岡が、10年目を節目に幕を閉じました。  
 実行委員長らアカセさん達が幕引きを宣言されていて、去年が最後の開催になってしまいました。  
 k1LoW氏に会える身近なイベントがなくなってしまい、本当に悲しい気持ちです。  
-[click] Go Conference mini in 鴨川では「押しかけ」でrunn開発者会議を開催しました。  
+[click] Go Conference mini in KYOTOでは「押しかけ」でrunn開発者会議 in 鴨川を開催しました。  
 そして憧れのはてな社にもお邪魔できました。あの時行っておいてよかったと思っています。  
 [click] コミュニティも、憧れのエンジニアとの接点も、自分の「動ける状況」も——永遠ではありません。技術にも鮮度があって、旬で勢いがあるうちに乗っかるからこそ、自分自身も興味を持ち続けることができると思っています。
 -->
@@ -1287,7 +1288,7 @@ glowSeed: 42
 駆け出しのエンジニアになった時から意識してきたことがあります。  
 「1番にならなくてもいい。ただ時流がわかるポジションでいること」  
 イメージは波乗りです。  
-[click] サーフィンって、波に乗っている時間は実はほんの一瞬で、大半の時間はパドリング——つまり腕で漕いで沖に出たり、波を待ったりする時間になります。  
+[click] サーフィンは、波に乗っている時間は実はほんの一瞬で、大半の時間はパドリング——つまり腕で漕いで沖に出たり、波を待ったりする時間です。  
 パドリングで良いポジションにいないと、いい波が来ても乗れない。  
 キャリアも同じで、日頃から業界やサービスにどっぷり浸かって、興味を持ったことはまず試してみる。  
 やってみないと、自分に合うか・好きか嫌いかは分からないです。  
@@ -1297,7 +1298,7 @@ glowSeed: 42
 [click] そして波に乗る。タイミングが合えば、一気に良い連鎖がやってくる。  
 [click] 波が出来上がってからパドリングを始めても、波の先端には乗れないし、遠くまで運んでもらえない。  
 推し活を続けながら、波がどこから来るかを感じ取る。  
-今回の話で言えば、runnという推しへの活動がパドリングで、PHPerKaigi 2023が波のタイミングでした。
+私のケースでは、runnという推しへの活動がパドリングで、PHPコミュニティの広がりが波のタイミングでした。
 -->
 
 ---
@@ -1348,8 +1349,8 @@ class: text-center
 
 推し活動ができるタイミング、プラスの連鎖が発生するタイミング、自分の熱量のピーク。  
 そこに「時流や盛り上がりを読む力」と「それが自分には楽しいという内的な気づき」が重なることが大事です。  
-[click] すべてが揃うタイミングは、今だけかもしれない。  
-[click] あなたの「推し」は何ですか？そのタイミング、意外と今かもしれません。
+[click] すべてが揃うタイミングは、案外貴重だと考えています。  
+[click] あなたの「推し」は何ですか？好きかもと感じているなら、少し勇気を出して発信・推してみては如何でしょうか？
 -->
 
 ---
