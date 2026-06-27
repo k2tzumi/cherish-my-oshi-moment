@@ -400,7 +400,7 @@ transition: slide-left
     <ul class="space-y-3 text-base text-slate-800 dark:text-white">
       <li>アウトプットはしていたが<span class="text-amber-700 dark:text-amber-300 font-bold">自発的</span>ではなかった</li>
       <li>「評価されるために義務感でやっている」感が自分にはなじまなかった</li>
-      <li>でも社外発表している人への<br /><span class="text-amber-700 dark:text-amber-300 font-bold">憧れ</span>はずっとあった</li>
+      <li>でも<span class="text-amber-700 dark:text-amber-300 font-bold">組織の枠を超えて</span>活躍している人への<br /><span class="text-amber-700 dark:text-amber-300 font-bold">憧れ</span>はずっとあった</li>
     </ul>
   </div>
 </div>
@@ -410,7 +410,7 @@ transition: slide-left
 半期ごとにアウトプットする場があり、つよつよエンジニアからフィードバックをもらえる環境でした。  
 評価会は正直、プレッシャーもあって辛かったです。  
 業務としてのアウトプットは出していたものの、「評価のためにやっている」という義務感が拭えず、しっくりきていませんでした。  
-一方で、自分の意志で社外で発表しているエンジニアへの憧れは、ずっと心の中にありました。
+一方で、自分の意志で組織の枠組みを飛び越えて活躍しているエンジニアへの憧れは、ずっと心の中にありました。
 -->
 
 ---
@@ -504,15 +504,16 @@ Slack Bot Officer を自称する様になるものの
 </div>
 
 <!--
-そんな中、転職先のSlack workspace がどこか物静かで寂しく感じ、自分でBotを生やし始めました。  
-前職にいた「Bot職人」への憧れもありましたし、ちょうどTypeScriptを学びたい時期でもありました。
+そんな中、転職先のSlack workspace がどこか物静かで寂しく感じて、自分でBotを生やし始めました。  
+前職にいた「Bot職人」への憧れもありましたし、TypeScriptの勉強として取り組みました。
 
 気づけばBotの数もどんどん増えていって、そのうち社内で「Slack Bot Officer」を自称するようになりました。
 
 [click] 実は、このBot開発の取り組みには狙いがあり、部門を超えてエンジニアからフィードバックをもらうのに良い手段だと思っていました。
 
 [click] でも結局、社内での良い名刺代わりにはなったものの、そこから先への広がりはありませんでした。
-フィードバックが返ってくるわけでもなく、限定的なものでした。リポジトリは増えたものの、積極的に外部発信するということにはなりませんでした。
+継続したフィードバックがあるわけでもなく、外に出れない暇つぶしでした。  
+リポジトリは増えたものの、積極的に外部発信することはありませんでした。
 
 ここまでが「沈黙の十数年間」でした。
 -->
@@ -748,7 +749,7 @@ transition: slide-left
     <div class="rounded-xl border-2 border-blue-400/70 bg-blue-100/20 dark:bg-blue-400/10 p-3 text-center shadow-md backdrop-blur-sm">
       <img src="https://unavatar.io/x/tyamahori" alt="tyamahori icon" class="w-10 h-10 rounded-full mx-auto mb-2 border border-blue-300/70" />
       <div class="font-bold text-sm text-slate-900 dark:text-white">ちゃまほりさん(@tyamahori)</div>
-      <div class="text-xs text-slate-700 dark:text-white/80 mt-1">PHPerRoomで<br />k1LoWさんと繋がる</div>
+      <div class="text-xs text-slate-700 dark:text-white/80 mt-1">PHPerRoomで<br />アカセさんに打診</div>
     </div>
     <div class="rounded-xl border-2 border-green-400/70 bg-green-100/20 dark:bg-green-400/10 p-3 text-center shadow-md backdrop-blur-sm">
       <img src="https://unavatar.io/x/k1LoW" alt="k1LoW icon" class="w-10 h-10 rounded-full mx-auto mb-2 border border-green-300/70" />
@@ -763,7 +764,7 @@ transition: slide-left
   </div>
 
   <div class="mt-4 text-sm text-slate-700 dark:text-white/70 tracking-wide">
-    katzumi → ちゃまほりさん → k1LoWさん + アカセさん
+    katzumi → ちゃまほりさん → アカセさん → k1LoWさん
   </div>
 
   <div v-click="1" class="mt-4 text-xl text-amber-600 dark:text-amber-300 font-bold">
@@ -784,9 +785,11 @@ transition: slide-left
 </div>
 
 <!--
-ここまでの話、実はk1LoWさんはまだ一度もリアルで会っていない状態で進んでいました。  
+ここまでの話、実はk1LoWさんとはまだ一度もリアルでお会いしていませんでした。  
 実際にお会いするきっかけを作ってくれたのは、同僚のちゃまほりさんでした。  
-ツナギメエフエムでk1LoWさんとちゃまほりさんの回があって、その流れでちゃまほりさんが自分をk1LoWさんに繋いでくれたんです。  
+PHPerRoomでアカセさんに打診してくれていました。  
+そしてツナギメエフエムというPodcastでk1LoWさんとちゃまほりさんが共演しました。  
+その流れでちゃまほりさんが自分をk1LoWさんに繋いでくれました  
 [click] そしてPHPerKaigi 2023で、初めてお会いする機会が訪れました。  
 [click] x上ではこんなやり取りをしていました。
 -->
