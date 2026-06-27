@@ -924,7 +924,7 @@ transition: slide-left
     <div class="rounded-xl border-2 border-blue-400/70 bg-blue-100/30 dark:bg-blue-400/10 px-8 py-3 w-full text-center font-bold text-slate-900 dark:text-white shadow-md backdrop-blur-sm">
       前夜祭LT「クリーンアーキテクチャのアンチパターン」
     </div>
-    <div class="text-center text-sm font-bold text-blue-800 dark:text-blue-200 bg-blue-100/80 dark:bg-blue-500/15 border border-blue-300/80 dark:border-blue-300/30 rounded-full px-4 py-1">↓ フィードバックをもらう</div>
+    <div class="text-center text-sm font-bold text-blue-800 dark:text-blue-200 bg-blue-100/80 dark:bg-blue-500/15 border border-blue-300/80 dark:border-blue-300/30 rounded-full px-4 py-1">↓ フィードバックからプロポーザルを書く</div>
     <div v-click="1" class="rounded-xl border-2 border-green-400/70 bg-green-100/30 dark:bg-green-400/10 px-8 py-3 w-full text-center font-bold text-slate-900 dark:text-white shadow-md backdrop-blur-sm">
       PHPカンファレンス沖縄「ActiveRecordパターンの呪縛を学びほぐす」
     </div>
@@ -1243,7 +1243,7 @@ transition: slide-left
 <!--
 PHPカンファレンス福岡が10年の節目で幕を閉じました。  
 
-去年が最後の開催となってしまい、ケーイチローさんに会える身近なイベントの一つがなくなってしまい本当に悲しい気持ちです。
+去年が最後の開催となってしまい、k1LoWさんに会える身近なイベントの一つがなくなってしまい本当に悲しい気持ちです。
 [click] Go Conference mini in KYOTOでは「押しかけ」でrunn開発者会議 in 鴨川を開催し、憧れのはてな社にもお邪魔できました。あの時、思い切って行動しておいて本当によかったと思っています。
 [click] コミュニティも、憧れのエンジニアとの接点も、自分の「動ける状況」も、永遠ではありません。技術もコミュニティも、旬で勢いがあるうちに乗っかるからこそ、自分自身も熱量を保ち続けられます。
 -->
