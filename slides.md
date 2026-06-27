@@ -33,15 +33,17 @@ ttsConfig:
     - from: "YAML"
       to: "ヤムル"
     - from: "k1LoW"
-      to: "けーいちろー"  
+      to: "けーいちろー"
     - from: "PR"
-      to: "Pull Request"  
+      to: "Pull Request"
     - from: "PHPerKaigi"
-      to: "ペチパー会議"  
+      to: "ペチパー会議"
     - from: "x上"
-      to: "エックスじょう"  
+      to: "エックスじょう"
     - from: "BaaS"
-      to: "Backend as a Service"  
+      to: "Backend as a Service"
+    - from: "PHPerRoom"
+      to: "ペチパールーム"
 addons:
   - '@katzumi/slidev-addon-qrcode'
   - '@katzumi/slidev-addon-ogp-image'
@@ -73,9 +75,8 @@ v0.0.1
   <img src="./public/kinoko-conf-character.png" class="h-100 w-auto" alt="公式ロゴ" />
 </div>
 
-
 <!--
-本日は「推しは推せるときに推せ！ライフステージ変化に向き合う」というタイトルで、お話しさせていただきます。  
+本日は「推しは推せるときに推せ！ライフステージ変化に向き合う」というタイトルで、お話しさせていただきます。
 どうぞよろしくお願いいたします。
 -->
 
@@ -217,8 +218,8 @@ transition: fade-out
 </div>
 
 <!--
-本日は5つのパートでお話しします。  
-私自身が40代前半まで「何者でもなかった」状態から、推し活動を通してどのように変化していったのか？  
+本日は5つのパートでお話しします。
+私自身が40代前半まで「何者でもなかった」状態から、推し活動を通してどのように変化していったのか？
 その実体験を通して、「何かを始めるのに遅すぎることはないんだな」と、少しでも感じていただけたら嬉しいです。
 -->
 
@@ -237,7 +238,7 @@ class: py-4
   <div>34歳：B社モールのPLに。3拠点最大50名規模に。ホテル住まい</div>
   <div>35歳：モールリリース保守フェーズ。CMで死亡。部下の結婚式で弄られる</div>
   <div>36歳：モール事業が早々に終焉。2匹目のドジョウはおらず本業サービスが辛い状態に</div>
-  <div>37歳：ゲーム会社に買われる。Naver本社に呼ばれてサービスを説明。単身赴任へ切替</div>
+  <div>37歳：ゲーム会社に買われる。N社の本社(韓国)に呼ばれてサービスを説明。単身赴任へ切替</div>
   <div>38歳：前職のリファラルでVGへ。ポイントメディアの中の人に</div>
   <div>39歳：前職部下を協力会社として召喚し各種ポイント・アイテム交換の繋ぎこみ。大手とも連携</div>
   <div>40歳：航空大手A社モールをローンチ。所属部署が統合される</div>
@@ -252,12 +253,12 @@ class: py-4
 まず、自己紹介がてら40代になるまでの私を振り返ってみます。  
 キャリアの初期は、地方のSES会社からベンチャー企業へと渡り歩きながら、ずっとEC畑一筋。大小さまざまなECサイトやモールの開発・運用を泥臭くやってきました。
 そこから色々あって、旧VOYAGE　GROUPへ転職するなど、怒涛の10年でした。  
-やってきたことは、技術営業っぽい動きから、プロジェクトリーダー、バックエンドエンジニア、SREまで幅広く。今どきのカッコつけた言い方をすると、フルスタック・フルサイクル的なものでした。でも実態はただの何でも屋でした。それでも、目の前の仕事には全力で向き合ってきたつもりでした。  
-しかし、です。
-[click] これだけいろいろやってきたのに、当時の私は『完全なる社内弁慶』でした。  
-地方にいると技術コミュニティとの接点もほとんどなく、OSSにコントリビュートしたこともない。凄腕エンジニアたちは常にインターネットの向こう側の存在で、『すごいなぁ』とただ眺めているだけ。外の世界からは一切見えない、文字通り『何者でもないエンジニア』でした。
+やってきたことは、技術営業っぽい動きから、プロジェクトリーダー、バックエンドエンジニア、SREまで幅広く、今風に言えば「フルスタック・フルサイクル」な何でも屋でした。
 
-そんな私がどうやって対外的なアウトプットを始めるようになったのか、次のパートからお話しします
+[click] 目の前の仕事には全力でしたが、これだけ幅広く経験してきたにもかかわらず、当時の私は『完全なる社内弁慶』でした。  
+地方にいると技術コミュニティとの接点もほとんどなく、OSSにコントリビュートしたこともない。凄腕エンジニアたちは常にインターネットの向こう側の存在で、『すごいなぁ』とただ眺めているだけ。外の世界からは一切見えない、文字通り『何者でもないエンジニア』でした。  
+
+そんな私がどうやって対外的なアウトプットを始めるようになったのか、次のパートからお話しします。
 -->
 
 ---
@@ -271,7 +272,7 @@ transition: slide-up
     <simple-icons-zenn class="text-5xl text-green-400 mb-3" />
     <div class="text-lg font-bold mb-2 text-slate-900 dark:text-white">Zenn</div>
     <a href="https://zenn.dev/katzumi" target="_blank" class="text-sm text-green-700 dark:text-green-300">zenn.dev/katzumi</a>
-    <div class="mt-3 text-sm text-slate-700 dark:text-white/80 text-center">65記事・Zenn Book著者<br />トータル1,328Likes</div>
+    <div class="mt-3 text-sm text-slate-700 dark:text-white/80 text-center">65記事・Zenn Book著者<br />トータル1,327Likes</div>
   </div>
   <div class="rounded-xl border-2 border-slate-400/80 bg-slate-100/10 dark:bg-slate-400/10 p-5 flex flex-col items-center shadow-lg backdrop-blur-sm">
     <logos-github-octocat class="text-5xl mb-3" />
@@ -309,8 +310,8 @@ transition: slide-up
 では、アウトプットが全くなかった私が、今どれくらい変わったのか？  
 現在はこんな感じになっています。  
 
-Zennでの記事執筆、OSS貢献、各地のカンファレンスでの登壇。  
-おかげさまで記事がバズったり、登壇の機会を頂いたりしています。  
+Zennでの記事執筆、OSS貢献、各地のカンファレンスでの登壇。おかげさまで記事がバズったり、登壇の機会を頂いたりしています。
+
 こうしてカンファレンスの場に立っている自分は、30代の頃には想像すらできませんでした。  
 [click] 全部、40代に入ってからです。  
 何がきっかけでそうなったのか、順を追ってお話しします。
@@ -336,7 +337,7 @@ class: text-center
 </div>
 
 <!--
-PART 1。  
+パート1。  
 まず対外的なアウトプットがなかった期間についてお話します。
 -->
 
@@ -371,13 +372,14 @@ layout: center
 </div>
 
 <!--
-「自分には特別な強みなんてない」。そう思って過ごした時期が、私にもありました。  
-[click] 対外的に活躍するエンジニアは特別な人たちだと思っていました。  
-[click] 年齢的にも今さら始めても遅いかなと。  
-[click] 子育てや家庭があって時間も取れない。  
-[click] 語れるようなネタが自分にはない。  
-……かつての私も、まさにそうでした。  
-今日はそんな過去の自分に話しかけるつもりで、お話しします。
+「自分には特別な強みなんてない」。  
+[click] 対外的に活躍するエンジニアは特別な人たちで、  
+[click] 年齢的にも今さら始めても遅い。  
+[click] 家庭があって時間もなく、  
+[click] 語れるネタもない。  
+……かつての私は、まさにそう思い込んでいました。  
+
+今日は、そんな過去の自分へも語りかけるようにお話しします。
 -->
 
 ---
@@ -400,7 +402,7 @@ transition: slide-left
     <ul class="space-y-3 text-base text-slate-800 dark:text-white">
       <li>アウトプットはしていたが<span class="text-amber-700 dark:text-amber-300 font-bold">自発的</span>ではなかった</li>
       <li>「評価されるために義務感でやっている」感が自分にはなじまなかった</li>
-      <li>でも社外発表している人への<br /><span class="text-amber-700 dark:text-amber-300 font-bold">憧れ</span>はずっとあった</li>
+      <li>でも<span class="text-amber-700 dark:text-amber-300 font-bold">組織の枠を超えて</span>活躍している人への<br /><span class="text-amber-700 dark:text-amber-300 font-bold">憧れ</span>はずっとあった</li>
     </ul>
   </div>
 </div>
@@ -408,9 +410,11 @@ transition: slide-left
 <!--
 前職には「技術力評価会」という制度がありました。  
 半期ごとにアウトプットする場があり、つよつよエンジニアからフィードバックをもらえる環境でした。  
+
 評価会は正直、プレッシャーもあって辛かったです。  
-業務としてのアウトプットは出していたものの、「評価のためにやっている」という義務感が拭えず、しっくりきていませんでした。  
-一方で、自分の意志で社外で発表しているエンジニアへの憧れは、ずっと心の中にありました。
+業務としてのアウトプットはしていたものの、「評価のためにやっている」という義務感が拭えず、しっくりきていませんでした。  
+
+一方で、組織の枠を越えて自立的に活躍するエンジニアへの憧れも、ずっと心の中にありました。
 -->
 
 ---
@@ -504,15 +508,14 @@ Slack Bot Officer を自称する様になるものの
 </div>
 
 <!--
-そんな中、転職先のSlack workspace がどこか静かで寂しく感じて、自分でBotを生やし始めました。  
-前職にいた「Bot職人」への憧れもありましたし、ちょうどTypeScriptを学びたい時期でもあったんです。
+そんな中、転職先のSlack workspaceがどこか物静かで寂しく感じて、自分でBotを生やし始めました。  
+前職にいた「Bot職人」への憧れもありましたし、TypeScriptの学習課題として弄り始めました。
 
 気づけばBotの数もどんどん増えていって、そのうち社内で「Slack Bot Officer」を自称するようになりました。
 
-[click] 実は、ひとつ狙いがあり、部門を超えてエンジニアからフィードバックをもらうには、Bot開発は良い手段だと思っていました。
+[click] 実は、このBot開発で部門を超えたフィードバックを得たいという狙いがありました。
 
-[click] でも結局、この取り組みは社内での良い名刺代わりにはなったものの、そこから先への広がりはありませんでした。
-フィードバックが返ってくるわけでもなく、一緒にBotを作る仲間が増えるわけでもない。当然、対外的なアウトプットもゼロのままでした。
+[click] ですが、社内では良い名刺代わりになったものの、そこからの広がりはなく、結局は社内限定の取り組みにとどまって対外的な発信には至りませんでした。
 
 ここまでが「沈黙の十数年間」でした。
 -->
@@ -537,14 +540,15 @@ class: text-center
 </div>
 
 <!--
-PART 2。運命の出会いについてお話しします。
+パート2。  
+運命の出会いについてお話しします。
 -->
 
 ---
 transition: fade-out
 ---
 
-# <carbon-api /> 転機：レセプトBaaSという業務課題
+# <carbon-api /> 転機：レセプトBaaSでの技術課題
 スキーマ駆動×画面なし・複雑な請求フロー・シナリオテストへの渇望
 
 <div class="mt-6 grid grid-cols-2 gap-8">
@@ -567,9 +571,9 @@ transition: fade-out
 
 <!--
 転機は、新しいシステム開発における技術的な課題から始まりました。  
-画面を持たないAPI（BaaS）をスキーマ駆動開発することになったんですが、画面がないので従来のブラウザテストが使えない。  
+BaaSの開発方針としてスキーマ駆動開発を採用したものの、画面を持たないAPIであるため、従来のブラウザテストの手法が適用できないという課題がありました。  
 しかも請求処理は複数ステップにまたがり、組み合わせも膨大で、単体のAPIテストだけでは品質を担保できませんでした。  
-シナリオベースでAPIテストできるツールが必要だったんですが、当時はほとんど選択肢がありませんでした。
+そこで、シナリオベースでAPIテストを行えるツールが必要だと考えましたが、当時はまだ選択肢がほとんどありませんでした。
 -->
 
 ---
@@ -583,7 +587,7 @@ class: hide-global-bottom
 </div>
 
 <!--
-そんなときに見つけたのが、このrunnというAPIシナリオテストツールでした。
+そんなときに見つけたのが、このrunnというAPIシナリオテストのツールでした。
 -->
 
 ---
@@ -603,16 +607,16 @@ layout: center
 
 <!--
 このツールを知ったのは、作者のk1LoWさんの記事でした。  
-初見だったのですが、YAMLでAPIの呼び出し順を並べるだけでシナリオになる！  
+初見だったのですが、APIの呼び出しステップをYAML上に並べるだけでシナリオになる！  
 直感的に「こうかけば動きそう！」と理解できました。  
-「これだ！」と思って、すぐに試し始めたのが最初の一歩でした。
+「これだ！」と思って、すぐに試し始めたのが最初でした。
 -->
 
 ---
 transition: slide-left
 ---
 
-# <logos-github-octocat /> 勇気を出して、最初のPull Requestを送った日
+# <logos-github-octocat /> 勇気を出して、最初のPull Requestを送る
 
 <div class="mt-6 grid grid-cols-2 gap-8">
   <div class="space-y-4">
@@ -651,10 +655,11 @@ transition: slide-left
 しかし最初はうまく動きませんでした。  
 動かない原因を調べるために、ソースコードを読んでみることにしました。
 
-すると、runnはまだ初期段階でコード量が少なく、Go言語自体もシンプルで、当時Goを勉強中だった自分でも追える規模だったんです。  
+すると、runnはまだ初期段階でコード量が少なく、Go言語自体もシンプルで、当時Goを勉強中だった自分でも追える規模でした。  
 「もしかして自分でもわかるのでは？」と感じて、動かなかった箇所を修正し、初めてのPRを送ってみました。
 
-それがすぐにマージされたんです。  
+それがすぐにマージしてもらえました！  
+
 一度受け入れてもらえると「次もいけるかも」と思えて、Issue作成やPRを積極的に送るようになりました。
 
 BaaSの開発が進むにつれてrunnへの改善ポイントも次々と見つかり、気づけば送ったPRの数は現時点で77件になりました。
@@ -682,7 +687,7 @@ transition: slide-left
 まだリアルで対面すらしていない、送ったPRも10件に満たない頃でした。
 
 振り返ると、k1LoWさんは自分の小さな改善や提案を毎回受け止めてくれて、議論にも丁寧に答えてくれていました。  
-ディスカッションの中で、自分の提案の点と点をつないでコンセプトを汲み取って貰えたときは、本当に嬉しかったです。  
+ディスカッションの中で、自分の提案の点と点をつないでコンセプトを汲み取って貰えたときは、本当に嬉しかったです。
 そして招待をもらったことで、「もっとコミットして、自分のアイデアも持ち寄りながら一緒にrunnを良くしていこう」という気持ちになりました。
 -->
 
@@ -701,7 +706,7 @@ runn 開発で学び、気づけば変わっていた自分——k1LoW さんへ
       <li>Documentation as Code の考え方</li>
       <li>CLIでもインタフェース設計が重要になるということ</li>
       <li>テスティングライブラリとCLIツールのバランス設計</li>
-      <li>Golangのモダンな開発スタイル</li>
+      <li>Goのモダンな開発スタイル</li>
     </ul>
   </div>
 
@@ -721,12 +726,12 @@ runn 開発で学び、気づけば変わっていた自分——k1LoW さんへ
 
 <!--
 コミッターとして開発に参加していく中で、runn開発から多くを学びました。  
-開発者フレンドリーな設計、Documentation as Code、CLIのインタフェース設計、ライブラリとCLIのバランス、そしてGolangのモダンな開発スタイルも学びました。  
+開発者フレンドリーな設計、Documentation as Code、CLIのインタフェース設計、ライブラリとCLIのバランス、そしてGoのモダンな開発スタイルも学びました。  
 k1LoWさんとの機能拡張の議論は難しさもありつつも、その分ワクワクする機会をたくさん経験できました。  
 
 リーナスの言葉を借りれば「それがぼくには楽しかったから」。　　
 
-かつて特別な人たちだと思っていた「対外的に活躍するエンジニア」の世界に、気づけば自分もいる。ここまでの景色を見せてくれたk1LoWさんには、本当に感謝しかないです。
+かつて特別な人たちだと思っていた「対外的に活躍するエンジニア」の世界に、気づけば自分もいる。ここまでの景色を見せてくれたケーイチローさんには、本当に感謝しかないです。
 -->
 
 ---
@@ -747,11 +752,11 @@ transition: slide-left
     <div class="rounded-xl border-2 border-blue-400/70 bg-blue-100/20 dark:bg-blue-400/10 p-3 text-center shadow-md backdrop-blur-sm">
       <img src="https://unavatar.io/x/tyamahori" alt="tyamahori icon" class="w-10 h-10 rounded-full mx-auto mb-2 border border-blue-300/70" />
       <div class="font-bold text-sm text-slate-900 dark:text-white">ちゃまほりさん(@tyamahori)</div>
-      <div class="text-xs text-slate-700 dark:text-white/80 mt-1">PHPerRoomで<br />k1LoW氏と繋がる</div>
+      <div class="text-xs text-slate-700 dark:text-white/80 mt-1">PHPerRoomで<br />アカセさんに打診</div>
     </div>
     <div class="rounded-xl border-2 border-green-400/70 bg-green-100/20 dark:bg-green-400/10 p-3 text-center shadow-md backdrop-blur-sm">
       <img src="https://unavatar.io/x/k1LoW" alt="k1LoW icon" class="w-10 h-10 rounded-full mx-auto mb-2 border border-green-300/70" />
-      <div class="font-bold text-sm text-slate-900 dark:text-white">k1LoW氏</div>
+      <div class="font-bold text-sm text-slate-900 dark:text-white">k1LoWさん</div>
       <div class="text-xs text-slate-700 dark:text-white/80 mt-1">runnの作者</div>
     </div>
     <div class="rounded-xl border-2 border-amber-400/70 bg-amber-100/20 dark:bg-amber-400/10 p-3 text-center shadow-md backdrop-blur-sm">
@@ -762,7 +767,7 @@ transition: slide-left
   </div>
 
   <div class="mt-4 text-sm text-slate-700 dark:text-white/70 tracking-wide">
-    katzumi → ちゃまほり → k1LoW + アカセさん
+    katzumi → ちゃまほりさん → アカセさん → k1LoWさん
   </div>
 
   <div v-click="1" class="mt-4 text-xl text-amber-600 dark:text-amber-300 font-bold">
@@ -783,9 +788,10 @@ transition: slide-left
 </div>
 
 <!--
-ここまでの話、実は自分とk1LoWさんはまだ一度もリアルで会っていない状態で進んでいました。  
+ここまでの話、実はk1LoWさんとはまだ一度もリアルでお会いしていませんでした。
 実際にお会いするきっかけを作ってくれたのは、同僚のちゃまほりさんでした。  
-ツナギメエフエムでk1LoWさんとちゃまほりさんの回があって、その流れでちゃまほりさんが自分をk1LoW氏に繋いでくれたんです。  
+PHPerRoomでアカセさんに打診し、Podcastの「ツナギメエフエム」での共演を経て、私をk1LoWさんに繋いでくれました。
+
 [click] そしてPHPerKaigi 2023で、初めてお会いする機会が訪れました。  
 [click] x上ではこんなやり取りをしていました。
 -->
@@ -801,7 +807,7 @@ hallway track の魅力
   <div class="space-y-4">
     <div class="rounded-xl border-2 border-blue-400/70 bg-blue-100/20 dark:bg-blue-400/10 p-4 shadow-md backdrop-blur-sm">
       <div class="font-bold text-blue-700 dark:text-blue-300 mb-2 flex items-center justify-between gap-2">
-        <span><img src="https://unavatar.io/x/k1LoW" alt="k1LoW profile icon" class="w-6 h-6 rounded-full border border-blue-300/70" />k1LoW氏のセッションを客席で聴く　<carbon-presentation-file class="inline mr-1" /></span>
+        <span><img src="https://unavatar.io/x/k1LoW" alt="k1LoW profile icon" class="w-6 h-6 rounded-full border border-blue-300/70" />k1LoWさんのセッションを客席で聴く　<carbon-presentation-file class="inline mr-1" /></span>
       </div>
       <div class="text-sm text-slate-800 dark:text-white">"Win Testing Trophy Easily"<br />runnが生まれた動機が語られる</div>
     </div>
@@ -836,12 +842,12 @@ hallway track の魅力
 </div>
 
 <!--
-そのPHPerKaigi 2023の当日。まずk1LoW氏のセッション「Win Testing Trophy Easily」を客席で聴いていました。  
-[click] そしたら登壇中に突然、「データ駆動テストの拡張をしてくれたコントリビューターが本日会場に来てくれていると思います」と触れられて、かなり驚きました。  
-セッション後のAsk the Speakerで、ようやくk1LoWさんに直接「はじめまして」を伝えることができました。GitHubでしかやり取りしていなかった方と、初めてリアルで会えた瞬間でした。   
-[click] 普段はIssueやPRで英語コミュニケーションでしたが、日本語で対面で話すと解像度が一気に上がりました。  
-Day2はホワイトボードでアイデアをぶつけ合い、その場でコーディングも行いました。カンファレンスの廊下の魅力を始めて実感しました  
-[click] k1LoWさんが投稿してくれた会議の様子がこちらです。  
+そのPHPerKaigi 2023の当日。まずk1LoWさんのセッションをトラックで聴いていました。  
+[click] そしたら登壇の中で突然、「データ駆動テストの拡張をしてくれたコントリビューターが本日会場に来てくれていると思います」と触れられて、かなり驚きました。  
+セッション後のAsk the Speakerで、ようやくk1LoWさんに直接「はじめまして」を伝えることができました。  
+ネット上のみでのやり取りしていた方と、初めてリアルで会えた瞬間でした。   
+[click] 普段はIssueやPRで英語コミュニケーションでしたが、日本語で対面で話すと解像度が一気に上がりました。Day2はホワイトボードでアイデアをぶつけ合い、その場でコーディングも行うなど、カンファレンスの廊下の魅力を初めて実感しました。
+[click] この写真は、そのrunn開発者会議で書き殴ったホワイトボードです。  
 [click] そして「福岡でPHPカンファレンスやりますよ」という話を聞いて、「絶対参加しよう！」という気持ちになりました。
 -->
 
@@ -865,7 +871,7 @@ class: text-center
 </div>
 
 <!--
-PART 3  
+パート 3  
 推し駆動サイクルについてお話しします。
 -->
 
@@ -902,10 +908,8 @@ transition: slide-left
 </div>
 
 <!--
-PHPカンファレンス福岡2023では、プロポーザルを5本提出しました。  
-「推しに会いに行く！」という気合で。  
-[click] 正直に言うと、プロポーザルが落ちても行くつもりでいました。  
-でも幸い採択されて、前夜祭LTで初めての対外登壇を果たしました。
+PHPカンファレンス福岡2023では、「推しに会いに行く！」という気合でプロポーザルを5本提出しました。
+[click] 正直、落ちても行くつもりでしたが、幸い採択されて前夜祭LTで初めての対外登壇を果たしました。
 -->
 
 ---
@@ -913,14 +917,14 @@ transition: slide-left
 ---
 
 # <mdi-cached /> サイクルが回り始めた
-地方カンファレンスを行脚しはじめる
+推し活動を狙いつつ地方カンファレンスを行脚しはじめる
 
 <div class="mt-6 max-w-3xl mx-auto">
   <div class="flex flex-col items-center gap-2">
     <div class="rounded-xl border-2 border-blue-400/70 bg-blue-100/30 dark:bg-blue-400/10 px-8 py-3 w-full text-center font-bold text-slate-900 dark:text-white shadow-md backdrop-blur-sm">
       前夜祭LT「クリーンアーキテクチャのアンチパターン」
     </div>
-    <div class="text-center text-sm font-bold text-blue-800 dark:text-blue-200 bg-blue-100/80 dark:bg-blue-500/15 border border-blue-300/80 dark:border-blue-300/30 rounded-full px-4 py-1">↓ フィードバックをもらう</div>
+    <div class="text-center text-sm font-bold text-blue-800 dark:text-blue-200 bg-blue-100/80 dark:bg-blue-500/15 border border-blue-300/80 dark:border-blue-300/30 rounded-full px-4 py-1">↓ フィードバックからプロポーザルを書く</div>
     <div v-click="1" class="rounded-xl border-2 border-green-400/70 bg-green-100/30 dark:bg-green-400/10 px-8 py-3 w-full text-center font-bold text-slate-900 dark:text-white shadow-md backdrop-blur-sm">
       PHPカンファレンス沖縄「ActiveRecordパターンの呪縛を学びほぐす」
     </div>
@@ -937,12 +941,14 @@ transition: slide-left
 </div>
 
 <!--
-その後に各地の地方カンファレンスを行脚するというサイクルが生まれました。  
+その後、各地の地方カンファレンスを行脚するサイクルが生まれました。
 
-まず、福岡での前夜祭LTでフィードバックをもらい、そのネタを元にプロポーザルとして提出しました。  
-[click] そしてPHPカンファレンス沖縄での登壇につながりました  
-[click] またカンファレンスの廊下でrunnへの要望や質問をもらって、それを持ち帰って実装する。その改善がまた次の登壇ネタになっていく——。  
+まず、福岡での前夜祭LTでフィードバックをもらい、そのネタを元にプロポーザルを作成して  
+[click] PHPカンファレンス沖縄での登壇に繋げました。
+[click] さらに、そのカンファレンスでrunnへの要望や質問をもらって、持ち帰って実装し、その改善がまた次の登壇ネタになっていく——。  
 [click] このサイクルが、自分でも驚くほどの速度で回り始めました。そして今日ここにいます。
+
+当時、同じく各地で登壇されていたk1LoWさんと同じイベントで採択され、現地でrunnの開発者会議を開くチャンスを狙っていました。
 -->
 
 ---
@@ -967,7 +973,7 @@ transition: slide-left
     <div v-click="1" class="rounded-xl border-2 border-pink-400/70 bg-pink-100/30 dark:bg-pink-400/10 p-5 shadow-md backdrop-blur-sm">
       <div class="font-bold text-pink-700 dark:text-pink-300 mb-3 flex items-center justify-center gap-2">
         <img src="https://unavatar.io/x/k1LoW" alt="k1LoW icon" class="w-6 h-6 rounded-full border border-pink-300/70" />
-        <span>k1LoW氏から連絡<mdi-star class="inline mr-2" /></span>
+        <span>k1LoWさんから連絡<mdi-star class="inline mr-2" /></span>
       </div>
       <div class="text-xl italic text-pink-700 dark:text-pink-200 font-bold">"本にしてみない？"</div>
       <div class="text-sm text-slate-700 dark:text-white/80 mt-3">→ 二つ返事で引き受ける</div>
@@ -990,9 +996,9 @@ transition: slide-left
 継続発信のエピソードをひとつ紹介します。  
 
 runnの一人アドベントカレンダーです。12月1日から毎日、runnに関する記事をZennに投稿していました。  
-[click] すると、k1LoW氏から「本にしてみない？」と声がかかりました。  
-Zennにそんな機能あったな〜くらいの感覚でしたが、言われるがままホイホイ引き受けました。  
-[click] こうして「runnチュートリアル」というZenn Bookを書き、技術書著者にもなりました。
+[click] すると、k1LoWさんから「本にしてみない？」と声がかかりました。  
+技術書を書いたこともなかった自分ですが、二つ返事で引き受け、  
+[click] Zenn Book「runnチュートリアル」を書き上げました。
 -->
 
 ---
@@ -1011,7 +1017,7 @@ layout: center
 </div>
 
 <!--
-こちらが実際に書いたZenn Bookです。興味があればぜひよろしくお願いします
+無料のZenn Bookです。興味があればぜひよろしくお願いします！
 -->
 
 ---
@@ -1028,7 +1034,7 @@ transition: slide-up
     </div>
     <div class="text-center text-3xl text-slate-600 dark:text-white/40">↓</div>
     <div class="rounded-xl border-2 border-green-400/70 bg-green-100/30 dark:bg-green-400/10 p-5 shadow-md backdrop-blur-sm">
-      <div class="font-bold text-green-700 dark:text-green-300 mb-3"><logos-github-octocat class="inline mr-2" />eg-r2 をOSS化</div>
+      <div class="font-bold text-green-700 dark:text-green-300 mb-3"><logos-github-octocat class="inline mr-2" />eg-r2 というLaravel向けライブラリをOSS化</div>
       <div class="text-sm text-slate-800 dark:text-white">所属会社として<span class="text-green-700 dark:text-green-300 font-bold">初めて</span>のOSS化</div>
     </div>
   </div>
@@ -1048,9 +1054,10 @@ transition: slide-up
 
 <!--
 もうひとつ、アウトプットが成長につながったエピソードです。   
-飛び込みLTでスキーマ駆動開発フローを発表したところ、イベントでフィードバックをもらえて、それがeg-r2というライブラリのOSS化につながりました。  
-所属会社として初めてのOSSです。  
-[click] 活動を振り返ってみての気づきですが、外部に発信するとフィードバックがもらえる。それを実感し、意識してからは、OSS活動を続ける行動に自然と変わっていきました。
+飛び込みLTでスキーマ駆動開発のフローを発表したところ反響があり、それが「eg-r2」というライブラリのOSS化につながりました。所属会社として初めてのOSSです。
+
+[click] 活動を振り返って気づいたのは、外部発信がもたらす「相乗効果」の大きさです。　
+【発信 ➔ 社外からのフィードバック ➔ 自身の成長 ➔ 社内への認知拡大】という強力な好循環が自然とできあがります。このサイクルを実感してからは、自然と発信活動を続けられるようになりました。
 -->
 
 ---
@@ -1073,8 +1080,8 @@ class: text-center
 </div>
 
 <!--
-PART 4  
-ライフステージを味方にする話をします。
+パート 4  
+ライフステージ変化へに向き合う話をします
 -->
 
 ---
@@ -1112,7 +1119,7 @@ layout: center
 <!--
 「若いうちに頑張らないと手遅れ」という言説があります。  
 [click] でもそれは本当でしょうか？  
-私のケースが反証します。  
+内発的なアウトプットは、何歳からでも遅くありません。　　
 40代・元地方在住・子育て世代の私が、人生で今が一番アウトプットできています。
 -->
 
@@ -1123,7 +1130,7 @@ transition: slide-up
 # <mdi-weather-windy /> 3つの追い風
 40 代からアウトプットし始めた私のケース。ライフステージの変化と、環境の変化がありました
 
-<div class="mt-5 grid grid-cols-3 gap-5">
+<div v-click="1" class="mt-5 grid grid-cols-3 gap-5">
   <div class="rounded-xl border-2 border-amber-400/60 bg-amber-100/30 dark:bg-amber-400/10 p-5 shadow-md backdrop-blur-sm">
     <div class="text-3xl mb-3 text-center">👨‍👩‍👦</div>
     <div class="text-base font-bold text-amber-700 dark:text-amber-300 mb-3"><mdi-numeric-1-circle class="inline mr-1" />子育てのフェーズ変化</div>
@@ -1132,7 +1139,7 @@ transition: slide-up
       <div>→ 部活が入り、<span class="text-amber-700 dark:text-amber-300 font-bold">親離れ</span>が進む</div>
       <div>→ 「構ってもらえなくなる」タイミングで時間が生まれる</div>
     </div>
-    <div v-click="1" class="mt-4 p-3 rounded-lg bg-amber-100/60 dark:bg-amber-400/10 border border-amber-400/40 text-xs text-center text-slate-700 dark:text-white/85">
+    <div class="mt-4 p-3 rounded-lg bg-amber-100/60 dark:bg-amber-400/10 border border-amber-400/40 text-xs text-center text-slate-700 dark:text-white/85">
       <mdi-hand-wave-outline class="inline mr-1" />
       会場の皆さんはいかがですか？
     </div>
@@ -1142,7 +1149,7 @@ transition: slide-up
     <div class="text-3xl mb-3 text-center">🤖</div>
     <div class="text-base font-bold text-blue-700 dark:text-blue-300 mb-3"><mdi-numeric-2-circle class="inline mr-1" />技術的障壁の低下</div>
     <div class="text-sm space-y-2 text-slate-800 dark:text-white">
-      <div>k1LoW氏のリポジトリは全英語</div>
+      <div>k1LoWさんのリポジトリは全英語</div>
       <div>→ <span class="text-blue-700 dark:text-blue-300 font-bold">DeepL</span>で乗り越えた</div>
       <div>→ AIでコードリーディング・Issue化も</div>
       <div class="mt-2 text-blue-700/85 dark:text-blue-200 text-xs">コミュニケーションや開発も含めて<br />言語的な障壁が少なくなりました</div>
@@ -1163,12 +1170,10 @@ transition: slide-up
 
 <!--
 あくまで私のケースですが、3つの追い風がありました。  
-一つ目が子育てのフェーズ変化。一番下の子が中学生になり、部活が入って親離れが進みました。「構ってもらえなくなる」タイミングで、逆に自分の活動時間が生まれました。  
-[click] この点はみなさんのご家庭の事情にもよると思うので、ぜひ聞いてみたいところです。  
-[click] 二つ目は技術的障壁の低下。k1LoW氏のリポジトリは全て英語でしたが、DeepLで乗り越えました。最近ではAIでコードリーディングやIssue化もできて、コミュニケーションも開発も含めて、言語的な障壁はかなり少なくなりました。  
-[click] 三つ目はコミュニティの成熟  
-地方カンファレンスが活発化し、funabashi.devや多摩.devのようなマイクロコミュニティも次々と生まれています。元地方在住だからこそ、積極的に地方カンファレンスに参加したいという気持ちになっています。  
-地方カンファレンスが今凄く熱いと感じていて、また実際に参加すると凄く良い刺激を貰っていいます
+[click] 一つ目が「子育てのフェーズ変化」です。一番下の子が中学生になり、親離れが進んだことで、自分の活動時間が生まれました。
+[click] 二つ目は「技術的障壁の低下」です。英語でのやり取りはDeepLで乗り越え、最近ではAIでのコード読解やIssue化も容易になり、言語や開発のハードルはかなり下がりました。
+[click] 三つ目はコミュニティの成熟。  
+地方カンファレンスが活発化し、funabashi.devや多摩.devのようなマイクロコミュニティも次々と生まれています。元地方在住だからこそ積極的に参加して刺激を受け、つながりを広げることができました。
 -->
 
 ---
@@ -1198,7 +1203,7 @@ class: text-center
 
 <!--
 最後
-PART 5です。
+パート 5です。
 -->
 
 ---
@@ -1216,12 +1221,12 @@ transition: slide-left
         <div>PHPカンファレンス福岡が10年目を節目に終了</div>
         <div class="text-slate-700 dark:text-white/70">実行委員長らから幕引きを宣言</div>
         <div class="mt-2 text-red-700 dark:text-red-300 font-bold">去年（2025年）が最後になってしまった</div>
-        <div class="text-sm text-slate-700 dark:text-white/80 mt-1">k1LoW氏に会える身近なイベントがなくなり、凄く悲しい気持ち</div>
+        <div class="text-sm text-slate-700 dark:text-white/80 mt-1">k1LoWさんに会える身近なイベントがなくなり、凄く悲しい気持ち</div>
       </div>
     </div>
     <div v-click="1" class="rounded-xl border-2 border-amber-400/60 bg-amber-100/30 dark:bg-amber-400/10 p-5 shadow-md backdrop-blur-sm">
-      <div class="font-bold text-amber-700 dark:text-amber-300 mb-2"><mdi-map-marker class="inline mr-2" />Go Conference mini in 鴨川</div>
-      <div class="text-sm text-slate-800 dark:text-white">「押しかけ」でrunn開発者会議を開催<br />憧れの<span class="text-amber-700 dark:text-amber-300 font-bold">はてな社</span>にもお邪魔できた<br /><span class="text-xs text-slate-700 dark:text-white/80">→ あの時行っておいてよかった</span></div>
+      <div class="font-bold text-amber-700 dark:text-amber-300 mb-2"><mdi-map-marker class="inline mr-2" />Go Conference mini in KYOTO</div>
+      <div class="text-sm text-slate-800 dark:text-white">「押しかけ」で<a href="https://zenn.dev/katzumi/scraps/f00a2d3e177b77">runn開発者会議 in 鴨川</a>を開催<br />憧れの<span class="text-amber-700 dark:text-amber-300 font-bold">はてな社</span>にもお邪魔できた<br /><span class="text-xs text-slate-700 dark:text-white/80">→ あの時行っておいてよかった</span></div>
     </div>
   </div>
 
@@ -1236,12 +1241,11 @@ transition: slide-left
 </div>
 
 <!--
-PHPカンファレンス福岡が、10年目を節目に幕を閉じました。  
-実行委員長らアカセさん達が幕引きを宣言されていて、去年が最後の開催になってしまいました。  
-k1LoW氏に会える身近なイベントがなくなってしまい、本当に悲しい気持ちです。  
-[click] Go Conference mini in 鴨川では「押しかけ」でrunn開発者会議を開催しました。  
-そして憧れのはてな社にもお邪魔できました。あの時行っておいてよかったと思っています。  
-[click] コミュニティも、憧れのエンジニアとの接点も、自分の「動ける状況」も——永遠ではありません。技術にも鮮度があって、旬で勢いがあるうちに乗っかるからこそ、自分自身も興味を持ち続けることができると思っています。
+PHPカンファレンス福岡が10年の節目で幕を閉じました。  
+
+去年が最後の開催となってしまい、k1LoWさんに会える身近なイベントの一つがなくなってしまい本当に悲しい気持ちです。
+[click] Go Conference mini in KYOTOでは「押しかけ」でrunn開発者会議 in 鴨川を開催し、憧れのはてな社にもお邪魔できました。あの時、思い切って行動しておいて本当によかったと思っています。
+[click] コミュニティも、憧れのエンジニアとの接点も、自分の「動ける状況」も、永遠ではありません。技術もコミュニティも、旬で勢いがあるうちに乗っかるからこそ、自分自身も熱量を保ち続けられます。
 -->
 
 ---
@@ -1255,29 +1259,29 @@ glowSeed: 42
   駆け出しの頃から意識してきたこと
 </div>
 
-<div class="text-2xl font-bold text-center text-amber-700 dark:text-amber-300 mb-6">
+<div v-click="1" class="text-2xl font-bold text-center text-amber-700 dark:text-amber-300 mb-6">
   「1番にならなくてもいい。<br />ただ <span v-mark.underline.amber="0">時流がわかるポジション</span> でいること」
 </div>
 
 <div class="grid grid-cols-3 gap-5 max-w-3xl mx-auto">
-  <div v-click="1" class="rounded-xl border-2 border-blue-400/60 bg-blue-100/30 dark:bg-blue-400/10 p-5 text-center shadow-md backdrop-blur-sm">
+  <div v-click="2" class="rounded-xl border-2 border-blue-400/60 bg-blue-100/30 dark:bg-blue-400/10 p-5 text-center shadow-md backdrop-blur-sm">
     <div class="text-4xl mb-3">🚣</div>
     <div class="font-bold text-blue-700 dark:text-blue-300 text-base">パドリング期</div>
     <div class="text-xs mt-2 text-slate-700 dark:text-white/70">業界・サービスをやり込む<br />興味を持ったことを試し続ける</div>
   </div>
-  <div v-click="2" class="rounded-xl border-2 border-amber-400/60 bg-amber-100/30 dark:bg-amber-400/10 p-5 text-center shadow-md backdrop-blur-sm">
+  <div v-click="3" class="rounded-xl border-2 border-amber-400/60 bg-amber-100/30 dark:bg-amber-400/10 p-5 text-center shadow-md backdrop-blur-sm">
     <div class="text-4xl mb-3">🌊</div>
     <div class="font-bold text-amber-700 dark:text-amber-300 text-base">波を読む</div>
     <div class="text-xs mt-2 text-slate-700 dark:text-white/70">タイミングを見定める<br />波の先端に乗れるか</div>
   </div>
-  <div v-click="3" class="rounded-xl border-2 border-green-400/60 bg-green-100/30 dark:bg-green-400/10 p-5 text-center shadow-md backdrop-blur-sm">
+  <div v-click="4" class="rounded-xl border-2 border-green-400/60 bg-green-100/30 dark:bg-green-400/10 p-5 text-center shadow-md backdrop-blur-sm">
     <div class="text-4xl mb-3">🏄</div>
     <div class="font-bold text-green-700 dark:text-green-300 text-base">波に乗る</div>
     <div class="text-xs mt-2 text-slate-700 dark:text-white/70">一気に良い連鎖が<br />やってくる</div>
   </div>
 </div>
 
-<div v-click="4" class="mt-5 rounded-xl border-2 border-pink-400/60 bg-pink-100/30 dark:bg-pink-400/10 p-4 max-w-3xl mx-auto text-center text-sm text-slate-800 dark:text-white shadow-md backdrop-blur-sm">
+<div v-click="5" class="mt-5 rounded-xl border-2 border-pink-400/60 bg-pink-100/30 dark:bg-pink-400/10 p-4 max-w-3xl mx-auto text-center text-sm text-slate-800 dark:text-white shadow-md backdrop-blur-sm">
   波は出来上がってから<span class="text-red-700 dark:text-red-400 font-bold">パドリングしても遠くまで運んでもらえない</span><br />
   推し活（パドリング）を続けながら、<span class="text-pink-700 dark:text-pink-300 font-bold">波がどこから来るかを感じ取る</span>
 </div>
@@ -1285,19 +1289,18 @@ glowSeed: 42
 <!--
 では、そのタイミングをどう掴むか。  
 駆け出しのエンジニアになった時から意識してきたことがあります。  
-「1番にならなくてもいい。ただ時流がわかるポジションでいること」  
+[click]「1番にならなくてもいい。ただ時流がわかるポジションでいること」  
 イメージは波乗りです。  
-[click] サーフィンって、波に乗っている時間は実はほんの一瞬で、大半の時間はパドリング——つまり腕で漕いで沖に出たり、波を待ったりする時間になります。  
+[click] サーフィンは、波に乗っている時間は実はほんの一瞬で、大半の時間はパドリング（漕ぐこと）に費やされます。
 パドリングで良いポジションにいないと、いい波が来ても乗れない。  
 キャリアも同じで、日頃から業界やサービスにどっぷり浸かって、興味を持ったことはまず試してみる。  
-やってみないと、自分に合うか・好きか嫌いかは分からないです。  
-私の場合は、自宅サーバーを作って遊ぶところから始まりました。  
+やってみないと、自分に合うか・好きか嫌いかは分からないです。    
 [click] 次に波を読む。パドリングしながら、どこから波が来そうかを感じ取るフェーズです。  
 新しい技術の盛り上がりや、まわりのコミュニティの広がり、——そういう「うねり」を察知できるのは、日頃からその界隈に浸かっているからこそです。  
-[click] そして波に乗る。タイミングが合えば、一気に良い連鎖がやってくる。  
-[click] 波が出来上がってからパドリングを始めても、波の先端には乗れないし、遠くまで運んでもらえない。  
+[click] そして波に乗る。タイミングが合えば、一気に良い波に乗って遠くまで運んでもらえます。
+[click] 波が出来上がってからパドリングを始めても、波の先端には乗れません。  
 推し活を続けながら、波がどこから来るかを感じ取る。  
-今回の話で言えば、runnという推しへの活動がパドリングで、PHPerKaigi 2023が波のタイミングでした。
+私の場合はWeb業界で泥臭くパドリング（もがき漂い）を続け、runnへのPRをきっかけにうねりを捉え、コミュニティの波に一気に乗った形でした。
 -->
 
 ---
@@ -1348,8 +1351,8 @@ class: text-center
 
 推し活動ができるタイミング、プラスの連鎖が発生するタイミング、自分の熱量のピーク。  
 そこに「時流や盛り上がりを読む力」と「それが自分には楽しいという内的な気づき」が重なることが大事です。  
-[click] すべてが揃うタイミングは、今だけかもしれない。  
-[click] あなたの「推し」は何ですか？そのタイミング、意外と今かもしれません。
+[click] こうした好機が重なるチャンスは、人生において決して多くはありません。 
+[click] あなたの「推し」は何ですか？好きかもと感じているなら、少し勇気を出して今すぐ推してみてはいかがでしょうか。
 -->
 
 ---
@@ -1387,12 +1390,11 @@ class: text-center
 まとめです。  
 
 推しを見つける。特別な強みは不要で、熱量だけあればいい。  
-パドリングを続ける。好き・興味を発信すると、必要な情報や反応が自分のところに集まってきます。  
-そのために、自分なりのフィードバックサイクルを意識して作るのが大事です。  
-フィードバックが返ってきたら、次のアウトプットを出す。深くも広くも試し、取り組みを変えながら飽きずに回していく。  
-やり方は人それぞれなので、自分に合う回し方を見つけるのがポイントです。  
-[click] 何歳からでも、どんな環境からでも、熱量さえあれば未来は変えられる。  
-「いまから、ここから」、ぜひ一歩踏み出してみてください。  
+パドリングを続ける。好き・興味を発信すると、必要な情報やフィードバックが自然と集まり、好循環が生まれます。  
+アプローチを深く、広く変えながら、飽きずに回し続けられる「自分に合ったフィードバックサイクル」を意識して作ることが重要です。
+[click] 何歳からでも、どんな環境からでも、熱量さえあれば未来は変えられます。  
+「いまから、ここから」、ぜひ一歩踏み出してみてください。
+
 ご清聴ありがとうございました！
 -->
 
