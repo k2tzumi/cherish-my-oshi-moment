@@ -55,7 +55,7 @@ addons:
 # 推しは推せるときに推せ！<br />ライフステージ変化に向き合う
 
 エンジニアがこの先生きのこるためのカンファレンス 2026 June 28, 2026.  
-v0.0.1  
+v0.0.2  
 @katzumi（かつみ）
 
 <div @click="$slidev.nav.next" class="mt-12 py-1" hover:bg="white op-10">
