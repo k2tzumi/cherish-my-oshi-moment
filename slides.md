@@ -512,7 +512,7 @@ Slack Bot Officer を自称する様になるものの
 [click] 実は、このBot開発の取り組みには狙いがあり、部門を超えてエンジニアからフィードバックをもらうのに良い手段だと思っていました。
 
 [click] でも結局、この取り組みは社内での良い名刺代わりにはなったものの、そこから先への広がりはありませんでした。
-フィードバックが返ってくるわけでもなく、一緒にBotを作る仲間が増えるわけでもない。当然、対外的なアウトプットもゼロのままでした。
+フィードバックが返ってくるわけでもなく、限定的なものでした。リポジトリは増えたものの、積極的に外まで発信するということはしませんでした。
 
 ここまでが「沈黙の十数年間」でした。
 -->
@@ -544,7 +544,7 @@ PART 2。運命の出会いについてお話しします。
 transition: fade-out
 ---
 
-# <carbon-api /> 転機：レセプトBaaSという業務課題
+# <carbon-api /> 転機：レセプトBaaSでの技術課題
 スキーマ駆動×画面なし・複雑な請求フロー・シナリオテストへの渇望
 
 <div class="mt-6 grid grid-cols-2 gap-8">
@@ -612,7 +612,7 @@ layout: center
 transition: slide-left
 ---
 
-# <logos-github-octocat /> 勇気を出して、最初のPull Requestを送った日
+# <logos-github-octocat /> 勇気を出して、最初のPull Requestを送る
 
 <div class="mt-6 grid grid-cols-2 gap-8">
   <div class="space-y-4">
@@ -747,11 +747,11 @@ transition: slide-left
     <div class="rounded-xl border-2 border-blue-400/70 bg-blue-100/20 dark:bg-blue-400/10 p-3 text-center shadow-md backdrop-blur-sm">
       <img src="https://unavatar.io/x/tyamahori" alt="tyamahori icon" class="w-10 h-10 rounded-full mx-auto mb-2 border border-blue-300/70" />
       <div class="font-bold text-sm text-slate-900 dark:text-white">ちゃまほりさん(@tyamahori)</div>
-      <div class="text-xs text-slate-700 dark:text-white/80 mt-1">PHPerRoomで<br />k1LoW氏と繋がる</div>
+      <div class="text-xs text-slate-700 dark:text-white/80 mt-1">PHPerRoomで<br />k1LoWさんと繋がる</div>
     </div>
     <div class="rounded-xl border-2 border-green-400/70 bg-green-100/20 dark:bg-green-400/10 p-3 text-center shadow-md backdrop-blur-sm">
       <img src="https://unavatar.io/x/k1LoW" alt="k1LoW icon" class="w-10 h-10 rounded-full mx-auto mb-2 border border-green-300/70" />
-      <div class="font-bold text-sm text-slate-900 dark:text-white">k1LoW氏</div>
+      <div class="font-bold text-sm text-slate-900 dark:text-white">k1LoWさん</div>
       <div class="text-xs text-slate-700 dark:text-white/80 mt-1">runnの作者</div>
     </div>
     <div class="rounded-xl border-2 border-amber-400/70 bg-amber-100/20 dark:bg-amber-400/10 p-3 text-center shadow-md backdrop-blur-sm">
@@ -785,7 +785,7 @@ transition: slide-left
 <!--
 ここまでの話、実は自分とk1LoWさんはまだ一度もリアルで会っていない状態で進んでいました。  
 実際にお会いするきっかけを作ってくれたのは、同僚のちゃまほりさんでした。  
-ツナギメエフエムでk1LoWさんとちゃまほりさんの回があって、その流れでちゃまほりさんが自分をk1LoW氏に繋いでくれたんです。  
+ツナギメエフエムでk1LoWさんとちゃまほりさんの回があって、その流れでちゃまほりさんが自分をk1LoWさんに繋いでくれたんです。  
 [click] そしてPHPerKaigi 2023で、初めてお会いする機会が訪れました。  
 [click] x上ではこんなやり取りをしていました。
 -->
@@ -801,7 +801,7 @@ hallway track の魅力
   <div class="space-y-4">
     <div class="rounded-xl border-2 border-blue-400/70 bg-blue-100/20 dark:bg-blue-400/10 p-4 shadow-md backdrop-blur-sm">
       <div class="font-bold text-blue-700 dark:text-blue-300 mb-2 flex items-center justify-between gap-2">
-        <span><img src="https://unavatar.io/x/k1LoW" alt="k1LoW profile icon" class="w-6 h-6 rounded-full border border-blue-300/70" />k1LoW氏のセッションを客席で聴く　<carbon-presentation-file class="inline mr-1" /></span>
+        <span><img src="https://unavatar.io/x/k1LoW" alt="k1LoW profile icon" class="w-6 h-6 rounded-full border border-blue-300/70" />k1LoWさんのセッションを客席で聴く　<carbon-presentation-file class="inline mr-1" /></span>
       </div>
       <div class="text-sm text-slate-800 dark:text-white">"Win Testing Trophy Easily"<br />runnが生まれた動機が語られる</div>
     </div>
@@ -836,9 +836,10 @@ hallway track の魅力
 </div>
 
 <!--
-そのPHPerKaigi 2023の当日。まずk1LoW氏のセッションをトラックで聴いていました。  
+そのPHPerKaigi 2023の当日。まずk1LoWさんのセッションをトラックで聴いていました。  
 [click] そしたら登壇中に突然、「データ駆動テストの拡張をしてくれたコントリビューターが本日会場に来てくれていると思います」と触れられて、かなり驚きました。  
-セッション後のAsk the Speakerで、ようやくk1LoWさんに直接「はじめまして」を伝えることができました。ネットでのやり取りのみだった方と、初めてリアルで会えた瞬間でした。   
+セッション後のAsk the Speakerで、ようやくk1LoWさんに直接「はじめまして」を伝えることができました。  
+ネットでのやり取りのみだった方と、初めてリアルで会えた瞬間でした。   
 [click] 普段はIssueやPRで英語コミュニケーションでしたが、日本語で対面で話すと解像度が一気に上がりました。  
 Day2はホワイトボードでアイデアをぶつけ合い、その場でコーディングも行いました。カンファレンスの廊下の魅力を始めて実感しました  
 [click] この写真は、その時に書き殴ったホワイトボードです。  
@@ -913,7 +914,7 @@ transition: slide-left
 ---
 
 # <mdi-cached /> サイクルが回り始めた
-地方カンファレンスを行脚しはじめる
+推し活動を狙いつつ地方カンファレンスを行脚しはじめる
 
 <div class="mt-6 max-w-3xl mx-auto">
   <div class="flex flex-col items-center gap-2">
@@ -938,6 +939,7 @@ transition: slide-left
 
 <!--
 その後に各地の地方カンファレンスを行脚するというサイクルが生まれました。  
+その頃、k1LoWさんも積極的にカンファレンスに参加されていました。
 
 まず、福岡での前夜祭LTでフィードバックをもらい、そのネタを元にプロポーザルとして提出しました。  
 [click] そしてそれが、PHPカンファレンス沖縄での登壇につながりました  
@@ -967,7 +969,7 @@ transition: slide-left
     <div v-click="1" class="rounded-xl border-2 border-pink-400/70 bg-pink-100/30 dark:bg-pink-400/10 p-5 shadow-md backdrop-blur-sm">
       <div class="font-bold text-pink-700 dark:text-pink-300 mb-3 flex items-center justify-center gap-2">
         <img src="https://unavatar.io/x/k1LoW" alt="k1LoW icon" class="w-6 h-6 rounded-full border border-pink-300/70" />
-        <span>k1LoW氏から連絡<mdi-star class="inline mr-2" /></span>
+        <span>k1LoWさんから連絡<mdi-star class="inline mr-2" /></span>
       </div>
       <div class="text-xl italic text-pink-700 dark:text-pink-200 font-bold">"本にしてみない？"</div>
       <div class="text-sm text-slate-700 dark:text-white/80 mt-3">→ 二つ返事で引き受ける</div>
@@ -990,7 +992,7 @@ transition: slide-left
 継続発信のエピソードをひとつ紹介します。  
 
 runnの一人アドベントカレンダーです。12月1日から毎日、runnに関する記事をZennに投稿していました。  
-[click] すると、k1LoW氏から「本にしてみない？」と声がかかりました。  
+[click] すると、k1LoWさんから「本にしてみない？」と声がかかりました。  
 技術書典とか書いたこともなかった自分ですが、言われるがままホイホイ引き受けました。  
 [click] こうして「runnチュートリアル」というZenn Bookを書き、技術書著者にもなりました。
 -->
@@ -1049,9 +1051,13 @@ transition: slide-up
 <!--
 もうひとつ、アウトプットが成長につながったエピソードです。   
 飛び込みLTでスキーマ駆動開発フローを発表したところ、イベントでフィードバックをもらえて、それがeg-r2というライブラリのOSS化につながりました。  
+
 所属会社として初めてのOSSです。  
-[click] 活動を振り返ってみての気づきですが、OSS活動も含めて外部発信は最も「タイパ」が良いと感じています。
-なぜなら、【発信 ➔ 社外からのフィードバック ➔ 自身の成長 ➔ 社内への認知拡大】という強力な好循環が自然とできあがるからです。この価値を意識してからは、OSS活動を続ける行動に自然と変わっていきました。
+[click] 活動を振り返ってみての気づきですが、OSS活動も含めて外部発信は最も「タイパ」が良いと感じています。  
+
+なぜなら、【発信 ➔ 社外からのフィードバック ➔ 自身の成長 ➔ 社内への認知拡大】という強力な好循環が自然とできあがるからです。  
+
+この価値を意識してからは、OSS活動を続ける行動に自然と変わっていきました。
 -->
 
 ---
@@ -1143,7 +1149,7 @@ transition: slide-up
     <div class="text-3xl mb-3 text-center">🤖</div>
     <div class="text-base font-bold text-blue-700 dark:text-blue-300 mb-3"><mdi-numeric-2-circle class="inline mr-1" />技術的障壁の低下</div>
     <div class="text-sm space-y-2 text-slate-800 dark:text-white">
-      <div>k1LoW氏のリポジトリは全英語</div>
+      <div>k1LoWさんのリポジトリは全英語</div>
       <div>→ <span class="text-blue-700 dark:text-blue-300 font-bold">DeepL</span>で乗り越えた</div>
       <div>→ AIでコードリーディング・Issue化も</div>
       <div class="mt-2 text-blue-700/85 dark:text-blue-200 text-xs">コミュニケーションや開発も含めて<br />言語的な障壁が少なくなりました</div>
@@ -1166,10 +1172,11 @@ transition: slide-up
 あくまで私のケースですが、3つの追い風がありました。  
 [click] 一つ目が子育てのフェーズ変化。一番下の子が中学生になり、部活が入って親離れが進みました。「構ってもらえなくなる」タイミングで、逆に自分の活動時間が生まれました。  
 [click] この点はみなさんのご家庭の事情にもよると思うので、ぜひ聞いてみたいところです。  
-[click] 二つ目は技術的障壁の低下。k1LoW氏のリポジトリは全て英語でしたが、DeepLで乗り越えました。最近ではAIでコードリーディングやIssue化もできて、コミュニケーションも開発も含めて、言語的な障壁はかなり少なくなりました。  
-[click] 三つ目はコミュニティの成熟  
+[click] 二つ目は技術的障壁の低下。  
+k1LoWさんのリポジトリは全て英語でしたが、DeepLで乗り越えました。最近ではAIでコードリーディングやIssue化もできて、コミュニケーションも開発も含めて、言語的な障壁はかなり少なくなりました。  
+[click] 三つ目はコミュニティの成熟。  
 地方カンファレンスが活発化し、funabashi.devや多摩.devのようなマイクロコミュニティも次々と生まれています。元地方在住だからこそ、積極的に地方カンファレンスに参加したいという気持ちになっています。  
-地方カンファレンスが今凄く熱いと感じていて、また実際に参加すると凄く良い刺激を貰っていいます
+地方カンファレンスが今凄く熱いと感じていて、また実際に参加すると凄く良い刺激をいつも頂いています。
 -->
 
 ---
@@ -1217,7 +1224,7 @@ transition: slide-left
         <div>PHPカンファレンス福岡が10年目を節目に終了</div>
         <div class="text-slate-700 dark:text-white/70">実行委員長らから幕引きを宣言</div>
         <div class="mt-2 text-red-700 dark:text-red-300 font-bold">去年（2025年）が最後になってしまった</div>
-        <div class="text-sm text-slate-700 dark:text-white/80 mt-1">k1LoW氏に会える身近なイベントがなくなり、凄く悲しい気持ち</div>
+        <div class="text-sm text-slate-700 dark:text-white/80 mt-1">k1LoWさんに会える身近なイベントがなくなり、凄く悲しい気持ち</div>
       </div>
     </div>
     <div v-click="1" class="rounded-xl border-2 border-amber-400/60 bg-amber-100/30 dark:bg-amber-400/10 p-5 shadow-md backdrop-blur-sm">
@@ -1239,7 +1246,7 @@ transition: slide-left
 <!--
 PHPカンファレンス福岡が、10年目を節目に幕を閉じました。  
 実行委員長らアカセさん達が幕引きを宣言されていて、去年が最後の開催になってしまいました。  
-k1LoW氏に会える身近なイベントがなくなってしまい、本当に悲しい気持ちです。  
+k1LoWさんに会える身近なイベントがなくなってしまい、本当に悲しい気持ちです。  
 [click] Go Conference mini in KYOTOでは「押しかけ」でrunn開発者会議 in 鴨川を開催しました。  
 そして憧れのはてな社にもお邪魔できました。あの時行っておいてよかったと思っています。  
 [click] コミュニティも、憧れのエンジニアとの接点も、自分の「動ける状況」も——永遠ではありません。技術にも鮮度があって、旬で勢いがあるうちに乗っかるからこそ、自分自身も興味を持ち続けることができると思っています。
@@ -1298,7 +1305,7 @@ glowSeed: 42
 [click] そして波に乗る。タイミングが合えば、一気に良い連鎖がやってくる。  
 [click] 波が出来上がってからパドリングを始めても、波の先端には乗れないし、遠くまで運んでもらえない。  
 推し活を続けながら、波がどこから来るかを感じ取る。  
-私のケースでは、runnという推しへの活動がパドリングで、PHPコミュニティの広がりが波のタイミングでした。
+私のケースでは、EC及びWeb業界で漂い続けたのがパドリングで、runnにPRを送ったのがターニングポイントで、OSS活動やPHPコミュニティの広がりが波のタイミングでした。
 -->
 
 ---
