@@ -1412,6 +1412,10 @@ transition: fade-out
     <div class="font-bold text-slate-800 dark:text-white/85 mb-3">つながる先</div>
     <div class="text-sm space-y-2">
       <div class="flex items-center gap-2 text-slate-800 dark:text-slate-100">
+        <mdi-twitter class="text-blue-500" />
+        <a href="https://x.com/katzchum" target="_blank" class="underline decoration-slate-400/70">x.com/katzchum</a>
+      </div>
+      <div class="flex items-center gap-2 text-slate-800 dark:text-slate-100">
         <simple-icons-zenn class="text-green-500" />
         <a href="https://zenn.dev/katzumi" target="_blank" class="underline decoration-slate-400/70">zenn.dev/katzumi</a>
       </div>
