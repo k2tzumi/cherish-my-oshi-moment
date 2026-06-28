@@ -1,5 +1,8 @@
 # Changelog
 
+## [v0.0.3](https://github.com/k2tzumi/cherish-my-oshi-moment/compare/v0.0.2...v0.0.3) - 2026-06-28
+- Add x link by @k2tzumi in https://github.com/k2tzumi/cherish-my-oshi-moment/pull/15
+
 ## [v0.0.2](https://github.com/k2tzumi/cherish-my-oshi-moment/compare/v0.0.1...v0.0.2) - 2026-06-27
 - Fix hash by @k2tzumi in https://github.com/k2tzumi/cherish-my-oshi-moment/pull/13
 
